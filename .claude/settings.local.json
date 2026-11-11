@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(which ng:*)",
+      "Read(//Users/dmitrysekhno/.nvm/versions/node/**)",
+      "Read(//usr/local/lib/node_modules/**)",
+      "Read(//opt/homebrew/lib/node_modules/**)",
+      "Read(//opt/homebrew/Cellar/node/23.11.0/bin/**)",
+      "Read(//Users/dmitrysekhno/.nvm/alias/**)",
+      "Bash(cat:*)",
+      "Bash(/opt/homebrew/lib/node_modules/@angular/cli/bin/ng.js version:*)",
+      "Bash(export:*)",
+      "Bash(cd:*)",
+      "Bash(lsof:*)",
+      "Bash(pkill:*)",
+      "Bash(rm:*)"
+    ]
+  }
+}

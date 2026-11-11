@@ -1,0 +1,160 @@
+<div class="page-header">
+  <h1>
+    <mat-icon class="header-icon">pin</mat-icon>
+    Numbers — Spanish vs Catalan
+  </h1>
+  <p class="subtitle">Learn how numbers are written in Spanish (Castellano) and compare them with Catalan (Català).</p>
+</div>
+
+<mat-tab-group animationDuration="200ms" color="primary">
+
+  <!-- THEORY TAB -->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="tab-icon">menu_book</mat-icon>
+      Theory
+    </ng-template>
+
+    @if (loading) {
+      <div class="loading-container"><mat-spinner /></div>
+    } @else {
+      <mat-card class="table-card">
+        <mat-card-content>
+          <table mat-table [dataSource]="numbers" class="numbers-table">
+
+            <ng-container matColumnDef="value">
+              <th mat-header-cell *matHeaderCellDef>Number</th>
+              <td mat-cell *matCellDef="let row">
+                <span class="number-value">{{ row.value }}</span>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="spanish">
+              <th mat-header-cell *matHeaderCellDef>
+                <div class="lang-header"><span class="flag">🇪🇸</span> Spanish</div>
+              </th>
+              <td mat-cell *matCellDef="let row">
+                <div class="word-cell">
+                  <span class="word spanish-word">{{ row.spanish }}</span>
+                  @if (speech.isSupported) {
+                    <button mat-icon-button class="speak-btn"
+                            [class.speaking]="speech.isSpeaking(row.spanish, 'es-ES')"
+                            (click)="speech.speak(row.spanish, 'es-ES')"
+                            matTooltip="Pronounce in Spanish">
+                      <mat-icon>{{ speech.isSpeaking(row.spanish, 'es-ES') ? 'volume_up' : 'volume_down' }}</mat-icon>
+                    </button>
+                  }
+                </div>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="catalan">
+              <th mat-header-cell *matHeaderCellDef>
+                <div class="lang-header"><span class="flag">🏴󠁥󠁳󠁣󠁴󠁿</span> Catalan</div>
+              </th>
+              <td mat-cell *matCellDef="let row">
+                <div class="word-cell">
+                  <span class="word catalan-word">{{ row.catalan }}</span>
+                  @if (speech.isSupported) {
+                    <button mat-icon-button class="speak-btn"
+                            [class.speaking]="speech.isSpeaking(row.catalan, 'ca-ES')"
+                            (click)="speech.speak(row.catalan, 'ca-ES')"
+                            matTooltip="Pronounce in Catalan">
+                      <mat-icon>{{ speech.isSpeaking(row.catalan, 'ca-ES') ? 'volume_up' : 'volume_down' }}</mat-icon>
+                    </button>
+                  }
+                </div>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="notes">
+              <th mat-header-cell *matHeaderCellDef>Notes</th>
+              <td mat-cell *matCellDef="let row">
+                @if (row.notes) {
+                  <span class="note-text">
+                    <mat-icon class="note-icon" [matTooltip]="row.notes">info_outline</mat-icon>
+                    {{ row.notes }}
+                  </span>
+                }
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="data-row"></tr>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    }
+  </mat-tab>
+
+  <!-- PRACTICE TAB -->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="tab-icon">sports_esports</mat-icon>
+      Practice
+    </ng-template>
+    <div class="tab-content">
+      <app-practice (quizCompleted)="loadHistory()" />
+    </div>
+  </mat-tab>
+
+  <!-- HISTORY TAB -->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="tab-icon">history</mat-icon>
+      Results
+      @if (testResults.length > 0) {
+        <span class="badge">{{ testResults.length }}</span>
+      }
+    </ng-template>
+    <div class="tab-content">
+      @if (historyLoading) {
+        <div class="loading-container"><mat-spinner /></div>
+      } @else if (testResults.length === 0) {
+        <div class="empty-history">
+          <mat-icon>assignment</mat-icon>
+          <p>No test results yet. Complete a quiz to see your scores here!</p>
+        </div>
+      } @else {
+        <mat-card>
+          <mat-card-content>
+            <table mat-table [dataSource]="testResults" class="history-table">
+
+              <ng-container matColumnDef="completedAt">
+                <th mat-header-cell *matHeaderCellDef>Date</th>
+                <td mat-cell *matCellDef="let row">{{ row.completedAt | date:'dd MMM yyyy, HH:mm' }}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="score">
+                <th mat-header-cell *matHeaderCellDef>Score</th>
+                <td mat-cell *matCellDef="let row">
+                  <span class="score-badge">{{ row.score }} / {{ row.totalQuestions }}</span>
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="percentage">
+                <th mat-header-cell *matHeaderCellDef>Percentage</th>
+                <td mat-cell *matCellDef="let row">
+                  <span class="pct" [class.great]="scorePercent(row) >= 80" [class.ok]="scorePercent(row) >= 60 && scorePercent(row) < 80" [class.poor]="scorePercent(row) < 60">
+                    {{ scorePercent(row) }}%
+                  </span>
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef>Status</th>
+                <td mat-cell *matCellDef="let row">
+                  <mat-chip [color]="statusColor(row)" highlighted>{{ statusLabel(row) }}</mat-chip>
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="historyColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: historyColumns;"></tr>
+            </table>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  </mat-tab>
+
+</mat-tab-group>
