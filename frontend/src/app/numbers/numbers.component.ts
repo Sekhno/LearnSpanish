@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
@@ -16,7 +16,6 @@ import { TestResult } from '../models/test-result.model';
 import { PracticeComponent } from './practice/practice.component';
 
 @Component({
-  selector: 'app-numbers',
   imports: [
     DatePipe,
     MatTableModule, MatCardModule, MatProgressSpinnerModule,
@@ -32,27 +31,27 @@ export class NumbersComponent implements OnInit {
   private readonly quizService = inject(QuizService);
   readonly speech = inject(SpeechService);
 
-  numbers: NumberEntry[] = [];
-  testResults: TestResult[] = [];
-  loading = true;
-  historyLoading = false;
+  readonly numbers = signal<NumberEntry[]>([]);
+  readonly testResults = signal<TestResult[]>([]);
+  readonly loading = signal(true);
+  readonly historyLoading = signal(false);
 
   displayedColumns = ['value', 'spanish', 'catalan', 'notes'];
   historyColumns = ['completedAt', 'score', 'percentage', 'status'];
 
   ngOnInit(): void {
     this.topicsService.getNumbers().subscribe({
-      next: (data) => { this.numbers = data; this.loading = false; },
-      error: () => { this.loading = false; }
+      next: (data) => { this.numbers.set(data); this.loading.set(false); },
+      error: () => { this.loading.set(false); }
     });
     this.loadHistory();
   }
 
   loadHistory(): void {
-    this.historyLoading = true;
+    this.historyLoading.set(true);
     this.quizService.getTestResults('numbers').subscribe({
-      next: (results) => { this.testResults = results; this.historyLoading = false; },
-      error: () => { this.historyLoading = false; }
+      next: (results) => { this.testResults.set(results); this.historyLoading.set(false); },
+      error: () => { this.historyLoading.set(false); }
     });
   }
 

@@ -12,7 +12,8 @@ public class TopicController {
     @GetMapping
     public List<Topic> getTopics() {
         return List.of(
-            new Topic("numbers", "Numbers", "Learn numbers in Spanish with Catalan comparison", "pin")
+            new Topic("numbers",  "Numbers",  "Learn numbers in Spanish with Catalan comparison", "pin"),
+            new Topic("shopping", "Shopping", "Phrases and vocabulary for shopping in Spain",     "shopping_cart")
         );
     }
 }

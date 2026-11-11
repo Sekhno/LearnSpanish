@@ -6,7 +6,7 @@
     </mat-toolbar>
 
     <mat-nav-list>
-      @for (topic of topics; track topic.id) {
+      @for (topic of topics(); track topic.id) {
         <a mat-list-item [routerLink]="['/', topic.id]" routerLinkActive="active-link">
           <mat-icon matListItemIcon>{{ topic.icon }}</mat-icon>
           <span matListItemTitle>{{ topic.title }}</span>
@@ -19,7 +19,7 @@
     <mat-toolbar color="primary" class="main-toolbar">
       <span>Spanish Language Learning</span>
       <span class="spacer"></span>
-      @if (user$ | async; as user) {
+      @if (user(); as user) {
         <span class="username">{{ user.username }}</span>
       }
       <button mat-icon-button matTooltip="Logout" (click)="logout()">

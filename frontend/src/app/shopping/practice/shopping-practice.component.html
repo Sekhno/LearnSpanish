@@ -1,0 +1,120 @@
+@switch (state()) {
+
+  @case ('idle') {
+    <div class="idle-screen">
+      <mat-icon class="idle-icon">shopping_cart</mat-icon>
+      <h2>Shopping Practice</h2>
+      <p>Переклади 10 слів з англійської на іспанську або каталанську.<br>
+         Вибери правильний варіант із трьох запропонованих.</p>
+      <button mat-raised-button color="primary" (click)="startQuiz()">
+        <mat-icon>play_arrow</mat-icon>
+        Розпочати
+      </button>
+    </div>
+  }
+
+  @case ('loading') {
+    <div class="center-screen">
+      <mat-spinner />
+      <p>Підготовка тесту...</p>
+    </div>
+  }
+
+  @case ('running') {
+    <div class="quiz-screen">
+      <div class="quiz-header">
+        <span class="question-counter">Питання {{ currentIndex() + 1 }} / {{ questions().length }}</span>
+        <span class="lang-badge">{{ langLabel() }}</span>
+      </div>
+      <mat-progress-bar mode="determinate" [value]="progress()" class="progress-bar" />
+
+      <mat-card class="question-card">
+        <mat-card-content>
+          <div class="word-display">
+            <span class="big-word">{{ currentQuestion().english }}</span>
+            <span class="word-hint">Як це буде {{ currentQuestion().targetLanguage === 'spanish' ? 'іспанською' : 'каталанською' }}?</span>
+          </div>
+
+          <div class="options-grid">
+            @for (option of currentQuestion().options; track option) {
+              <button mat-stroked-button
+                      class="option-btn"
+                      [class.selected]="getOptionState(option) === 'selected'"
+                      [class.correct]="getOptionState(option) === 'correct'"
+                      [class.wrong]="getOptionState(option) === 'wrong'"
+                      [disabled]="isAnswerRevealed()"
+                      (click)="selectAnswer(option)">
+                {{ option }}
+              </button>
+            }
+          </div>
+
+          @if (isAnswerRevealed()) {
+            <div class="feedback">
+              @if (currentIndex() < questions().length - 1) {
+                <button mat-raised-button color="primary" (click)="nextQuestion()">
+                  Далі <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+                </button>
+              } @else {
+                <button mat-raised-button color="primary" (click)="nextQuestion()">
+                  Завершити <mat-icon iconPositionEnd>done_all</mat-icon>
+                </button>
+              }
+            </div>
+          }
+        </mat-card-content>
+      </mat-card>
+    </div>
+  }
+
+  @case ('submitting') {
+    <div class="center-screen">
+      <mat-spinner />
+      <p>Збереження результатів...</p>
+    </div>
+  }
+
+  @case ('finished') {
+    @if (result(); as res) {
+      <div class="result-screen">
+        <div class="score-circle"
+             [class.great]="scorePercent() >= 80"
+             [class.ok]="scorePercent() >= 60 && scorePercent() < 80"
+             [class.poor]="scorePercent() < 60">
+          <span class="score-number">{{ res.score }}/{{ res.total }}</span>
+          <span class="score-pct">{{ scorePercent() }}%</span>
+        </div>
+
+        <h2 class="result-title">
+          @if (scorePercent() >= 80) { Відмінно! }
+          @else if (scorePercent() >= 60) { Непогано! }
+          @else { Продовжуй практикуватись! }
+        </h2>
+
+        <div class="result-details">
+          @for (item of res.results; track item.id) {
+            <div class="result-row" [class.correct]="item.correct" [class.wrong]="!item.correct">
+              <mat-icon>{{ item.correct ? 'check_circle' : 'cancel' }}</mat-icon>
+              <span class="result-english">{{ item.english }}</span>
+              <span class="result-lang-badge" [class.spanish]="item.targetLanguage === 'spanish'">
+                {{ item.targetLanguage === 'spanish' ? '🇪🇸' : '🏴󠁥󠁳󠁣󠁴󠁿' }}
+              </span>
+              <span class="result-answer" [class.wrong-text]="!item.correct">{{ item.selectedAnswer }}</span>
+              @if (!item.correct) {
+                <span class="result-correct">→ {{ item.correctAnswer }}</span>
+              }
+            </div>
+          }
+        </div>
+
+        <div class="result-actions">
+          <button mat-raised-button color="primary" (click)="startQuiz()">
+            <mat-icon>refresh</mat-icon>
+            Ще раз
+          </button>
+        </div>
+      </div>
+    }
+  }
+
+}

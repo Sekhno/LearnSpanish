@@ -1,0 +1,36 @@
+@use '../styles/topic';
+@include topic.page-chrome();
+
+.phrases-table,
+.items-table,
+.history-table { width: 100%; }
+
+.english-text  { color: rgba(0,0,0,0.6); font-style: italic; }
+.ukrainian-text { color: rgba(0,0,0,0.75); font-weight: 500; }
+
+// Category filter chips
+.filter-chips {
+  margin-bottom: 16px;
+
+  mat-chip { cursor: pointer; }
+
+  .active-chip {
+    background-color: #3f51b5 !important;
+    color: white !important;
+  }
+}
+
+// Vocabulary category sections
+.category-section { margin-bottom: 24px; }
+
+.category-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(0,0,0,0.75);
+
+  .cat-emoji { font-size: 1.3rem; }
+}

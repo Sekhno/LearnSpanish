@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
@@ -32,21 +32,25 @@ export class LoginComponent {
     username: ['', Validators.required],
     password: ['', Validators.required]
   });
-  loading = false;
-  error: string | null = null;
-  hidePassword = true;
+  readonly loading = signal(false);
+  readonly error = signal<string | null>(null);
+  readonly hidePassword = signal(true);
+
+  togglePassword(): void {
+    this.hidePassword.update(v => !v);
+  }
 
   submit() {
     if (this.form.invalid) return;
-    this.loading = true;
-    this.error = null;
+    this.loading.set(true);
+    this.error.set(null);
 
     const { username, password } = this.form.value;
     this.authService.login(username, password).subscribe({
       next: () => this.router.navigate(['/']),
       error: () => {
-        this.error = 'Invalid username or password';
-        this.loading = false;
+        this.error.set('Invalid username or password');
+        this.loading.set(false);
       }
     });
   }

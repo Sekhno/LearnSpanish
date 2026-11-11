@@ -1,6 +1,5 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive, Router } from '@angular/router';
-import { AsyncPipe } from '@angular/common';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
@@ -14,7 +13,7 @@ import { Topic } from '../models/topic.model';
 @Component({
   selector: 'app-layout',
   imports: [
-    RouterOutlet, RouterLink, RouterLinkActive, AsyncPipe,
+    RouterOutlet, RouterLink, RouterLinkActive,
     MatSidenavModule, MatToolbarModule, MatListModule,
     MatIconModule, MatButtonModule, MatTooltipModule
   ],
@@ -26,11 +25,11 @@ export class LayoutComponent implements OnInit {
   private readonly topicsService = inject(TopicsService);
   private readonly router = inject(Router);
 
-  user$ = this.authService.user$;
-  topics: Topic[] = [];
+  readonly user = this.authService.user;
+  readonly topics = signal<Topic[]>([]);
 
   ngOnInit(): void {
-    this.topicsService.getTopics().subscribe(t => this.topics = t);
+    this.topicsService.getTopics().subscribe(t => this.topics.set(t));
   }
 
   logout(): void {

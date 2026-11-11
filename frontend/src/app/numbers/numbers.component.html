@@ -15,12 +15,12 @@
       Theory
     </ng-template>
 
-    @if (loading) {
+    @if (loading()) {
       <div class="loading-container"><mat-spinner /></div>
     } @else {
       <mat-card class="table-card">
         <mat-card-content>
-          <table mat-table [dataSource]="numbers" class="numbers-table">
+          <table mat-table [dataSource]="numbers()" class="numbers-table">
 
             <ng-container matColumnDef="value">
               <th mat-header-cell *matHeaderCellDef>Number</th>
@@ -103,14 +103,14 @@
     <ng-template mat-tab-label>
       <mat-icon class="tab-icon">history</mat-icon>
       Results
-      @if (testResults.length > 0) {
-        <span class="badge">{{ testResults.length }}</span>
+      @if (testResults().length > 0) {
+        <span class="badge">{{ testResults().length }}</span>
       }
     </ng-template>
     <div class="tab-content">
-      @if (historyLoading) {
+      @if (historyLoading()) {
         <div class="loading-container"><mat-spinner /></div>
-      } @else if (testResults.length === 0) {
+      } @else if (testResults().length === 0) {
         <div class="empty-history">
           <mat-icon>assignment</mat-icon>
           <p>No test results yet. Complete a quiz to see your scores here!</p>
@@ -118,7 +118,7 @@
       } @else {
         <mat-card>
           <mat-card-content>
-            <table mat-table [dataSource]="testResults" class="history-table">
+            <table mat-table [dataSource]="testResults()" class="history-table">
 
               <ng-container matColumnDef="completedAt">
                 <th mat-header-cell *matHeaderCellDef>Date</th>

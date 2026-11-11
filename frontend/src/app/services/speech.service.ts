@@ -2,7 +2,7 @@ import { Injectable, signal } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class SpeechService {
-  readonly isSupported = 'speechSynthesis' in window;
+  readonly isSupported = !!window.speechSynthesis;
 
   /** Key of currently speaking word: "{text}:{lang}" */
   readonly speakingKey = signal<string | null>(null);

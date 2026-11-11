@@ -1,0 +1,161 @@
+// Shared styles for topic pages (numbers, shopping, …)
+// Usage: @use '../styles/topic'; @include topic.page-chrome();
+
+@mixin page-chrome() {
+
+  // ── Page header ──────────────────────────────────────
+  .page-header {
+    margin-bottom: 20px;
+
+    h1 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 6px;
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+
+    .header-icon {
+      font-size: 2rem;
+      width: 2rem;
+      height: 2rem;
+      color: #3f51b5;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: rgba(0,0,0,0.6);
+    }
+  }
+
+  // ── Tab chrome ───────────────────────────────────────
+  .tab-icon {
+    margin-right: 6px;
+    font-size: 1.1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    vertical-align: middle;
+  }
+
+  .badge {
+    background: #3f51b5;
+    color: white;
+    border-radius: 10px;
+    padding: 1px 6px;
+    font-size: 0.7rem;
+    margin-left: 6px;
+  }
+
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .tab-content {
+    padding-top: 16px;
+  }
+
+  // ── Tables ───────────────────────────────────────────
+  mat-card {
+    overflow: hidden;
+  }
+
+  .lang-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .flag { font-size: 1.1rem; }
+  }
+
+  .word-cell {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .word, .phrase {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  // Both class names used across components
+  .spanish-word, .spanish-text { color: #c62828; }
+  .catalan-word,  .catalan-text  { color: #1565c0; }
+
+  .speak-btn {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    opacity: 0;
+    transition: opacity 0.15s, color 0.15s;
+
+    mat-icon {
+      position: relative; bottom: 6px; right: 2px;
+      font-size: 18px;
+      width: 18px;
+      height: 18px;
+      color: rgba(0,0,0,0.35);
+    }
+
+    &.speaking mat-icon { color: #3f51b5; }
+    &.speaking          { opacity: 1; }
+  }
+
+  // cursor: default is required for Safari — without any cursor value,
+  // Safari ignores :hover events on <tr> elements entirely
+  .data-row        { cursor: default; }
+  .data-row:hover .speak-btn { opacity: 1; }
+  .data-row:hover            { background: rgba(0,0,0,0.03); }
+
+  .note-text {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    font-size: 0.82rem;
+    color: rgba(0,0,0,0.6);
+  }
+
+  .note-icon {
+    font-size: 1rem;
+    width: 1rem;
+    height: 1rem;
+    color: #f57c00;
+    cursor: default;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  // ── History table ────────────────────────────────────
+  .score-badge {
+    font-weight: 600;
+    color: #3f51b5;
+  }
+
+  .pct {
+    font-weight: 700;
+    &.great { color: #2e7d32; }
+    &.ok    { color: #e65100; }
+    &.poor  { color: #c62828; }
+  }
+
+  .empty-history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 48px;
+    color: rgba(0,0,0,0.5);
+    text-align: center;
+
+    mat-icon {
+      font-size: 3rem;
+      width: 3rem;
+      height: 3rem;
+    }
+
+    p { margin: 0; }
+  }
+}
