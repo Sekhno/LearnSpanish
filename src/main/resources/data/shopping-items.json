@@ -1,100 +1,3215 @@
 [
-  { "id": 1,  "category": "FRUIT",      "english": "Apple",             "ukrainian": "Яблуко",             "spanish": "manzana",          "catalan": "poma",           "notes": null },
-  { "id": 2,  "category": "FRUIT",      "english": "Banana",            "ukrainian": "Банан",              "spanish": "plátano",          "catalan": "plàtan",         "notes": null },
-  { "id": 3,  "category": "FRUIT",      "english": "Orange",            "ukrainian": "Апельсин",           "spanish": "naranja",          "catalan": "taronja",        "notes": null },
-  { "id": 4,  "category": "FRUIT",      "english": "Lemon",             "ukrainian": "Лимон",              "spanish": "limón",            "catalan": "llimona",        "notes": null },
-  { "id": 5,  "category": "FRUIT",      "english": "Strawberry",        "ukrainian": "Полуниця",           "spanish": "fresa",            "catalan": "maduixa",        "notes": null },
-  { "id": 6,  "category": "FRUIT",      "english": "Grapes",            "ukrainian": "Виноград",           "spanish": "uva",              "catalan": "raïm",           "notes": null },
-  { "id": 7,  "category": "FRUIT",      "english": "Peach",             "ukrainian": "Персик",             "spanish": "melocotón",        "catalan": "préssec",        "notes": null },
-  { "id": 8,  "category": "FRUIT",      "english": "Pear",              "ukrainian": "Груша",              "spanish": "pera",             "catalan": "pera",           "notes": null },
-  { "id": 9,  "category": "FRUIT",      "english": "Watermelon",        "ukrainian": "Кавун",              "spanish": "sandía",           "catalan": "síndria",        "notes": null },
-  { "id": 10, "category": "FRUIT",      "english": "Melon",             "ukrainian": "Диня",               "spanish": "melón",            "catalan": "meló",           "notes": null },
-  { "id": 11, "category": "FRUIT",      "english": "Plum",              "ukrainian": "Слива",              "spanish": "ciruela",          "catalan": "pruna",          "notes": null },
-  { "id": 12, "category": "FRUIT",      "english": "Cherry",            "ukrainian": "Черешня",            "spanish": "cereza",           "catalan": "cirera",         "notes": null },
-  { "id": 13, "category": "FRUIT",      "english": "Pineapple",         "ukrainian": "Ананас",             "spanish": "piña",             "catalan": "pinya",          "notes": null },
-  { "id": 14, "category": "FRUIT",      "english": "Mango",             "ukrainian": "Манго",              "spanish": "mango",            "catalan": "mango",          "notes": null },
-  { "id": 15, "category": "FRUIT",      "english": "Kiwi",              "ukrainian": "Ківі",               "spanish": "kiwi",             "catalan": "kiwi",           "notes": null },
-  { "id": 16, "category": "FRUIT",      "english": "Tangerine",         "ukrainian": "Мандарин",           "spanish": "mandarina",        "catalan": "mandarina",      "notes": null },
-  { "id": 17, "category": "FRUIT",      "english": "Pomegranate",       "ukrainian": "Гранат",             "spanish": "granada",          "catalan": "magrana",        "notes": null },
-  { "id": 18, "category": "FRUIT",      "english": "Avocado",           "ukrainian": "Авокадо",            "spanish": "aguacate",         "catalan": "alvocat",        "notes": "Very popular in Spain" },
-
-  { "id": 19, "category": "VEGETABLE",  "english": "Tomato",            "ukrainian": "Помідор",            "spanish": "tomate",           "catalan": "tomàquet",       "notes": null },
-  { "id": 20, "category": "VEGETABLE",  "english": "Cucumber",          "ukrainian": "Огірок",             "spanish": "pepino",           "catalan": "cogombre",       "notes": null },
-  { "id": 21, "category": "VEGETABLE",  "english": "Carrot",            "ukrainian": "Морква",             "spanish": "zanahoria",        "catalan": "pastanaga",      "notes": null },
-  { "id": 22, "category": "VEGETABLE",  "english": "Potato",            "ukrainian": "Картопля",           "spanish": "patata",           "catalan": "patata",         "notes": null },
-  { "id": 23, "category": "VEGETABLE",  "english": "Onion",             "ukrainian": "Цибуля",             "spanish": "cebolla",          "catalan": "ceba",           "notes": null },
-  { "id": 24, "category": "VEGETABLE",  "english": "Garlic",            "ukrainian": "Часник",             "spanish": "ajo",              "catalan": "all",            "notes": null },
-  { "id": 25, "category": "VEGETABLE",  "english": "Bell pepper",       "ukrainian": "Перець болгарський", "spanish": "pimiento",         "catalan": "pebrot",         "notes": null },
-  { "id": 26, "category": "VEGETABLE",  "english": "Eggplant",          "ukrainian": "Баклажан",           "spanish": "berenjena",        "catalan": "albergínia",     "notes": null },
-  { "id": 27, "category": "VEGETABLE",  "english": "Zucchini",          "ukrainian": "Кабачок",            "spanish": "calabacín",        "catalan": "carbassó",       "notes": null },
-  { "id": 28, "category": "VEGETABLE",  "english": "Cabbage",           "ukrainian": "Капуста",            "spanish": "col",              "catalan": "col",            "notes": null },
-  { "id": 29, "category": "VEGETABLE",  "english": "Spinach",           "ukrainian": "Шпинат",             "spanish": "espinaca",         "catalan": "espinac",        "notes": null },
-  { "id": 30, "category": "VEGETABLE",  "english": "Lettuce",           "ukrainian": "Салат листовий",     "spanish": "lechuga",          "catalan": "enciam",         "notes": null },
-  { "id": 31, "category": "VEGETABLE",  "english": "Broccoli",          "ukrainian": "Броколі",            "spanish": "brócoli",          "catalan": "bròquil",        "notes": null },
-  { "id": 32, "category": "VEGETABLE",  "english": "Mushrooms",         "ukrainian": "Гриби",              "spanish": "champiñones",      "catalan": "bolets",         "notes": null },
-  { "id": 33, "category": "VEGETABLE",  "english": "Peas",              "ukrainian": "Горох",              "spanish": "guisantes",        "catalan": "pèsols",         "notes": null },
-  { "id": 34, "category": "VEGETABLE",  "english": "Green beans",       "ukrainian": "Квасоля стручкова",  "spanish": "judías verdes",    "catalan": "mongetes verdes","notes": null },
-  { "id": 35, "category": "VEGETABLE",  "english": "Beetroot",          "ukrainian": "Буряк",              "spanish": "remolacha",        "catalan": "remolatxa",      "notes": null },
-  { "id": 36, "category": "VEGETABLE",  "english": "Pumpkin",           "ukrainian": "Гарбуз",             "spanish": "calabaza",         "catalan": "carabassa",      "notes": null },
-  { "id": 37, "category": "VEGETABLE",  "english": "Artichoke",         "ukrainian": "Артишок",            "spanish": "alcachofa",        "catalan": "carxofa",        "notes": "Common in Catalan cuisine" },
-
-  { "id": 38, "category": "MEAT",       "english": "Meat",              "ukrainian": "М'ясо",              "spanish": "carne",            "catalan": "carn",           "notes": null },
-  { "id": 39, "category": "MEAT",       "english": "Chicken",           "ukrainian": "Курка",              "spanish": "pollo",            "catalan": "pollastre",      "notes": null },
-  { "id": 40, "category": "MEAT",       "english": "Beef",              "ukrainian": "Яловичина",          "spanish": "ternera",          "catalan": "vedella",        "notes": null },
-  { "id": 41, "category": "MEAT",       "english": "Pork",              "ukrainian": "Свинина",            "spanish": "cerdo",            "catalan": "porc",           "notes": null },
-  { "id": 42, "category": "MEAT",       "english": "Lamb",              "ukrainian": "Ягнятина",           "spanish": "cordero",          "catalan": "anyell",         "notes": null },
-  { "id": 43, "category": "MEAT",       "english": "Turkey",            "ukrainian": "Індичка",            "spanish": "pavo",             "catalan": "gall dindi",     "notes": null },
-  { "id": 44, "category": "MEAT",       "english": "Ham",               "ukrainian": "Шинка",              "spanish": "jamón",            "catalan": "pernil",         "notes": "jamón serrano / ibérico" },
-  { "id": 45, "category": "MEAT",       "english": "Sausages",          "ukrainian": "Сосиски",            "spanish": "salchichas",       "catalan": "salsitxes",      "notes": null },
-  { "id": 46, "category": "MEAT",       "english": "Ground meat",       "ukrainian": "Фарш",               "spanish": "carne picada",     "catalan": "carn picada",    "notes": null },
-  { "id": 47, "category": "MEAT",       "english": "Bacon",             "ukrainian": "Бекон",              "spanish": "beicon",           "catalan": "cansalada",      "notes": null },
-
-  { "id": 48, "category": "SEAFOOD",    "english": "Fish",              "ukrainian": "Риба",               "spanish": "pescado",          "catalan": "peix",           "notes": null },
-  { "id": 49, "category": "SEAFOOD",    "english": "Salmon",            "ukrainian": "Лосось",             "spanish": "salmón",           "catalan": "salmó",          "notes": null },
-  { "id": 50, "category": "SEAFOOD",    "english": "Tuna",              "ukrainian": "Тунець",             "spanish": "atún",             "catalan": "tonyina",        "notes": null },
-  { "id": 51, "category": "SEAFOOD",    "english": "Cod",               "ukrainian": "Тріска",             "spanish": "bacalao",          "catalan": "bacallà",        "notes": "Very traditional in Catalonia" },
-  { "id": 52, "category": "SEAFOOD",    "english": "Shrimp",            "ukrainian": "Креветки",           "spanish": "gambas",           "catalan": "gambes",         "notes": null },
-  { "id": 53, "category": "SEAFOOD",    "english": "Mussels",           "ukrainian": "Мідії",              "spanish": "mejillones",       "catalan": "musclos",        "notes": null },
-  { "id": 54, "category": "SEAFOOD",    "english": "Squid",             "ukrainian": "Кальмар",            "spanish": "calamar",          "catalan": "calamar",        "notes": null },
-  { "id": 55, "category": "SEAFOOD",    "english": "Octopus",           "ukrainian": "Восьминіг",          "spanish": "pulpo",            "catalan": "pop",            "notes": null },
-  { "id": 56, "category": "SEAFOOD",    "english": "Anchovies",         "ukrainian": "Анчоуси",            "spanish": "anchoas",          "catalan": "anxoves",        "notes": "Very popular in Catalonia" },
-
-  { "id": 57, "category": "DAIRY",      "english": "Milk",              "ukrainian": "Молоко",             "spanish": "leche",            "catalan": "llet",           "notes": null },
-  { "id": 58, "category": "DAIRY",      "english": "Cheese",            "ukrainian": "Сир твердий",        "spanish": "queso",            "catalan": "formatge",       "notes": null },
-  { "id": 59, "category": "DAIRY",      "english": "Yogurt",            "ukrainian": "Йогурт",             "spanish": "yogur",            "catalan": "iogurt",         "notes": null },
-  { "id": 60, "category": "DAIRY",      "english": "Butter",            "ukrainian": "Вершкове масло",     "spanish": "mantequilla",      "catalan": "mantega",        "notes": null },
-  { "id": 61, "category": "DAIRY",      "english": "Cream",             "ukrainian": "Вершки",             "spanish": "nata",             "catalan": "nata",           "notes": null },
-  { "id": 62, "category": "DAIRY",      "english": "Eggs",              "ukrainian": "Яйця",               "spanish": "huevos",           "catalan": "ous",            "notes": null },
-  { "id": 63, "category": "DAIRY",      "english": "Sour cream",        "ukrainian": "Сметана",            "spanish": "crema agria",      "catalan": "crema agra",     "notes": null },
-
-  { "id": 64, "category": "BAKERY",     "english": "Bread",             "ukrainian": "Хліб",               "spanish": "pan",              "catalan": "pa",             "notes": null },
-  { "id": 65, "category": "BAKERY",     "english": "Baguette",          "ukrainian": "Багет",              "spanish": "baguette",         "catalan": "baguette",       "notes": null },
-  { "id": 66, "category": "BAKERY",     "english": "Croissant",         "ukrainian": "Круасан",            "spanish": "croissant",        "catalan": "croissant",      "notes": null },
-  { "id": 67, "category": "BAKERY",     "english": "Flour",             "ukrainian": "Борошно",            "spanish": "harina",           "catalan": "farina",         "notes": null },
-  { "id": 68, "category": "BAKERY",     "english": "Pastry",            "ukrainian": "Тістечко",           "spanish": "pastel",           "catalan": "pastís",         "notes": null },
-
-  { "id": 69, "category": "DRINKS",     "english": "Water",             "ukrainian": "Вода",               "spanish": "agua",             "catalan": "aigua",          "notes": null },
-  { "id": 70, "category": "DRINKS",     "english": "Sparkling water",   "ukrainian": "Газована вода",      "spanish": "agua con gas",     "catalan": "aigua amb gas",  "notes": null },
-  { "id": 71, "category": "DRINKS",     "english": "Orange juice",      "ukrainian": "Сік апельсиновий",   "spanish": "zumo de naranja",  "catalan": "suc de taronja", "notes": null },
-  { "id": 72, "category": "DRINKS",     "english": "Wine",              "ukrainian": "Вино",               "spanish": "vino",             "catalan": "vi",             "notes": null },
-  { "id": 73, "category": "DRINKS",     "english": "Beer",              "ukrainian": "Пиво",               "spanish": "cerveza",          "catalan": "cervesa",        "notes": null },
-  { "id": 74, "category": "DRINKS",     "english": "Coffee",            "ukrainian": "Кава",               "spanish": "café",             "catalan": "cafè",           "notes": null },
-  { "id": 75, "category": "DRINKS",     "english": "Milkshake",         "ukrainian": "Молочний коктейль",  "spanish": "batido",           "catalan": "batut",          "notes": null },
-
-  { "id": 76, "category": "PANTRY",     "english": "Olive oil",         "ukrainian": "Оливкова олія",      "spanish": "aceite de oliva",  "catalan": "oli d'oliva",    "notes": "Essential in Spanish cooking" },
-  { "id": 77, "category": "PANTRY",     "english": "Salt",              "ukrainian": "Сіль",               "spanish": "sal",              "catalan": "sal",            "notes": null },
-  { "id": 78, "category": "PANTRY",     "english": "Sugar",             "ukrainian": "Цукор",              "spanish": "azúcar",           "catalan": "sucre",          "notes": null },
-  { "id": 79, "category": "PANTRY",     "english": "Rice",              "ukrainian": "Рис",                "spanish": "arroz",            "catalan": "arròs",          "notes": null },
-  { "id": 80, "category": "PANTRY",     "english": "Pasta",             "ukrainian": "Макарони",           "spanish": "pasta",            "catalan": "pasta",          "notes": null },
-  { "id": 81, "category": "PANTRY",     "english": "Canned goods",      "ukrainian": "Консерви",           "spanish": "conservas",        "catalan": "conserves",      "notes": null },
-  { "id": 82, "category": "PANTRY",     "english": "Tomato sauce",      "ukrainian": "Томатна паста",      "spanish": "tomate frito",     "catalan": "tomàquet fregit","notes": "Fried tomato sauce — a Spanish staple" },
-  { "id": 83, "category": "PANTRY",     "english": "Vinegar",           "ukrainian": "Оцет",               "spanish": "vinagre",          "catalan": "vinagre",        "notes": null },
-  { "id": 84, "category": "PANTRY",     "english": "Honey",             "ukrainian": "Мед",                "spanish": "miel",             "catalan": "mel",            "notes": null },
-  { "id": 85, "category": "PANTRY",     "english": "Chickpeas",         "ukrainian": "Нут",                "spanish": "garbanzos",        "catalan": "cigrons",        "notes": "Very common in Spanish cuisine" },
-
-  { "id": 86, "category": "HYGIENE",    "english": "Soap",              "ukrainian": "Мило",               "spanish": "jabón",            "catalan": "sabó",           "notes": null },
-  { "id": 87, "category": "HYGIENE",    "english": "Shampoo",           "ukrainian": "Шампунь",            "spanish": "champú",           "catalan": "xampú",          "notes": null },
-  { "id": 88, "category": "HYGIENE",    "english": "Toilet paper",      "ukrainian": "Туалетний папір",    "spanish": "papel higiénico",  "catalan": "paper higiènic", "notes": null },
-  { "id": 89, "category": "HYGIENE",    "english": "Toothpaste",        "ukrainian": "Зубна паста",        "spanish": "pasta de dientes", "catalan": "pasta de dents", "notes": null },
-  { "id": 90, "category": "HYGIENE",    "english": "Deodorant",         "ukrainian": "Дезодорант",         "spanish": "desodorante",      "catalan": "desodorant",     "notes": null }
+  {
+    "id": 1,
+    "category": "FRUIT",
+    "english": "Apple",
+    "ukrainian": "Яблуко",
+    "spanish": "manzana",
+    "catalan": "poma",
+    "notes": null
+  },
+  {
+    "id": 2,
+    "category": "FRUIT",
+    "english": "Banana",
+    "ukrainian": "Банан",
+    "spanish": "plátano",
+    "catalan": "plàtan",
+    "notes": null
+  },
+  {
+    "id": 3,
+    "category": "FRUIT",
+    "english": "Orange",
+    "ukrainian": "Апельсин",
+    "spanish": "naranja",
+    "catalan": "taronja",
+    "notes": null
+  },
+  {
+    "id": 4,
+    "category": "FRUIT",
+    "english": "Lemon",
+    "ukrainian": "Лимон",
+    "spanish": "limón",
+    "catalan": "llimona",
+    "notes": null
+  },
+  {
+    "id": 5,
+    "category": "FRUIT",
+    "english": "Strawberry",
+    "ukrainian": "Полуниця",
+    "spanish": "fresa",
+    "catalan": "maduixa",
+    "notes": null
+  },
+  {
+    "id": 6,
+    "category": "FRUIT",
+    "english": "Grapes",
+    "ukrainian": "Виноград",
+    "spanish": "uvas",
+    "catalan": "raïm",
+    "notes": "Іспанською uva — одна виноградина; uvas — виноград. Каталанське raïm — збірна назва."
+  },
+  {
+    "id": 7,
+    "category": "FRUIT",
+    "english": "Peach",
+    "ukrainian": "Персик",
+    "spanish": "melocotón",
+    "catalan": "préssec",
+    "notes": null
+  },
+  {
+    "id": 8,
+    "category": "FRUIT",
+    "english": "Pear",
+    "ukrainian": "Груша",
+    "spanish": "pera",
+    "catalan": "pera",
+    "notes": null
+  },
+  {
+    "id": 9,
+    "category": "FRUIT",
+    "english": "Watermelon",
+    "ukrainian": "Кавун",
+    "spanish": "sandía",
+    "catalan": "síndria",
+    "notes": null
+  },
+  {
+    "id": 10,
+    "category": "FRUIT",
+    "english": "Melon",
+    "ukrainian": "Диня",
+    "spanish": "melón",
+    "catalan": "meló",
+    "notes": null
+  },
+  {
+    "id": 11,
+    "category": "FRUIT",
+    "english": "Plum",
+    "ukrainian": "Слива",
+    "spanish": "ciruela",
+    "catalan": "pruna",
+    "notes": null
+  },
+  {
+    "id": 12,
+    "category": "FRUIT",
+    "english": "Cherry",
+    "ukrainian": "Черешня",
+    "spanish": "cereza",
+    "catalan": "cirera",
+    "notes": null
+  },
+  {
+    "id": 13,
+    "category": "FRUIT",
+    "english": "Pineapple",
+    "ukrainian": "Ананас",
+    "spanish": "piña",
+    "catalan": "pinya",
+    "notes": null
+  },
+  {
+    "id": 14,
+    "category": "FRUIT",
+    "english": "Mango",
+    "ukrainian": "Манго",
+    "spanish": "mango",
+    "catalan": "mango",
+    "notes": null
+  },
+  {
+    "id": 15,
+    "category": "FRUIT",
+    "english": "Kiwi",
+    "ukrainian": "Ківі",
+    "spanish": "kiwi",
+    "catalan": "kiwi",
+    "notes": null
+  },
+  {
+    "id": 16,
+    "category": "FRUIT",
+    "english": "Tangerine",
+    "ukrainian": "Мандарин",
+    "spanish": "mandarina",
+    "catalan": "mandarina",
+    "notes": null
+  },
+  {
+    "id": 17,
+    "category": "FRUIT",
+    "english": "Pomegranate",
+    "ukrainian": "Гранат",
+    "spanish": "granada",
+    "catalan": "magrana",
+    "notes": null
+  },
+  {
+    "id": 18,
+    "category": "FRUIT",
+    "english": "Avocado",
+    "ukrainian": "Авокадо",
+    "spanish": "aguacate",
+    "catalan": "alvocat",
+    "notes": "У кулінарній класифікації тут віднесено до фруктів."
+  },
+  {
+    "id": 19,
+    "category": "VEGETABLE",
+    "english": "Tomato",
+    "ukrainian": "Помідор",
+    "spanish": "tomate",
+    "catalan": "tomàquet",
+    "notes": null
+  },
+  {
+    "id": 20,
+    "category": "VEGETABLE",
+    "english": "Cucumber",
+    "ukrainian": "Огірок",
+    "spanish": "pepino",
+    "catalan": "cogombre",
+    "notes": null
+  },
+  {
+    "id": 21,
+    "category": "VEGETABLE",
+    "english": "Carrot",
+    "ukrainian": "Морква",
+    "spanish": "zanahoria",
+    "catalan": "pastanaga",
+    "notes": null
+  },
+  {
+    "id": 22,
+    "category": "VEGETABLE",
+    "english": "Potato",
+    "ukrainian": "Картопля",
+    "spanish": "patata",
+    "catalan": "patata",
+    "notes": null
+  },
+  {
+    "id": 23,
+    "category": "VEGETABLE",
+    "english": "Onion",
+    "ukrainian": "Цибуля",
+    "spanish": "cebolla",
+    "catalan": "ceba",
+    "notes": null
+  },
+  {
+    "id": 24,
+    "category": "VEGETABLE",
+    "english": "Garlic",
+    "ukrainian": "Часник",
+    "spanish": "ajo",
+    "catalan": "all",
+    "notes": null
+  },
+  {
+    "id": 25,
+    "category": "VEGETABLE",
+    "english": "Bell pepper",
+    "ukrainian": "Солодкий перець",
+    "spanish": "pimiento",
+    "catalan": "pebrot",
+    "notes": null
+  },
+  {
+    "id": 26,
+    "category": "VEGETABLE",
+    "english": "Eggplant",
+    "ukrainian": "Баклажан",
+    "spanish": "berenjena",
+    "catalan": "albergínia",
+    "notes": null
+  },
+  {
+    "id": 27,
+    "category": "VEGETABLE",
+    "english": "Zucchini",
+    "ukrainian": "Кабачок",
+    "spanish": "calabacín",
+    "catalan": "carbassó",
+    "notes": null
+  },
+  {
+    "id": 28,
+    "category": "VEGETABLE",
+    "english": "Cabbage",
+    "ukrainian": "Капуста",
+    "spanish": "col",
+    "catalan": "col",
+    "notes": null
+  },
+  {
+    "id": 29,
+    "category": "VEGETABLE",
+    "english": "Spinach",
+    "ukrainian": "Шпинат",
+    "spanish": "espinacas",
+    "catalan": "espinacs",
+    "notes": "Для харчового продукту звичайно вживають множину."
+  },
+  {
+    "id": 30,
+    "category": "VEGETABLE",
+    "english": "Lettuce",
+    "ukrainian": "Салат листовий",
+    "spanish": "lechuga",
+    "catalan": "enciam",
+    "notes": null
+  },
+  {
+    "id": 31,
+    "category": "VEGETABLE",
+    "english": "Broccoli",
+    "ukrainian": "Броколі",
+    "spanish": "brócoli",
+    "catalan": "bròcoli",
+    "notes": "Bròcoli — броколі; bròquil позначає інший різновид капусти, із діалектними відмінностями. Джерело: TERMCAT, https://termcat.cat/ca/actualitat/apunts/diu-brocoli-o-broquil"
+  },
+  {
+    "id": 32,
+    "category": "MUSHROOMS",
+    "english": "Mushrooms",
+    "ukrainian": "Гриби",
+    "spanish": "setas",
+    "catalan": "bolets",
+    "notes": "Setas / bolets — їстівні гриби загалом; champiñones / xampinyons — печериці."
+  },
+  {
+    "id": 33,
+    "category": "VEGETABLE",
+    "english": "Peas",
+    "ukrainian": "Горох",
+    "spanish": "guisantes",
+    "catalan": "pèsols",
+    "notes": null
+  },
+  {
+    "id": 34,
+    "category": "VEGETABLE",
+    "english": "Green beans",
+    "ukrainian": "Квасоля стручкова",
+    "spanish": "judías verdes",
+    "catalan": "mongetes verdes",
+    "notes": null
+  },
+  {
+    "id": 35,
+    "category": "VEGETABLE",
+    "english": "Beetroot",
+    "ukrainian": "Буряк",
+    "spanish": "remolacha",
+    "catalan": "remolatxa",
+    "notes": null
+  },
+  {
+    "id": 36,
+    "category": "VEGETABLE",
+    "english": "Pumpkin",
+    "ukrainian": "Гарбуз",
+    "spanish": "calabaza",
+    "catalan": "carbassa",
+    "notes": "Carabassa — також нормативний варіант."
+  },
+  {
+    "id": 37,
+    "category": "VEGETABLE",
+    "english": "Artichoke",
+    "ukrainian": "Артишок",
+    "spanish": "alcachofa",
+    "catalan": "carxofa",
+    "notes": "Поширений у каталонській кухні."
+  },
+  {
+    "id": 38,
+    "category": "MEAT",
+    "english": "Meat",
+    "ukrainian": "М'ясо",
+    "spanish": "carne",
+    "catalan": "carn",
+    "notes": null
+  },
+  {
+    "id": 39,
+    "category": "MEAT",
+    "english": "Chicken",
+    "ukrainian": "Курка",
+    "spanish": "pollo",
+    "catalan": "pollastre",
+    "notes": null
+  },
+  {
+    "id": 40,
+    "category": "MEAT",
+    "english": "Beef",
+    "ukrainian": "Яловичина",
+    "spanish": "carne de vacuno",
+    "catalan": "carn de boví",
+    "notes": "Загальна назва яловичини. Ternera / vedella — телятина або м’ясо молодої худоби; поширене на цінниках."
+  },
+  {
+    "id": 41,
+    "category": "MEAT",
+    "english": "Pork",
+    "ukrainian": "Свинина",
+    "spanish": "carne de cerdo",
+    "catalan": "carn de porc",
+    "notes": null
+  },
+  {
+    "id": 42,
+    "category": "MEAT",
+    "english": "Lamb",
+    "ukrainian": "Ягнятина",
+    "spanish": "cordero",
+    "catalan": "carn de xai",
+    "notes": "Xai — звична в Каталонії назва ягняти; anyell — також правильне слово."
+  },
+  {
+    "id": 43,
+    "category": "MEAT",
+    "english": "Turkey",
+    "ukrainian": "Індичка",
+    "spanish": "pavo",
+    "catalan": "gall dindi",
+    "notes": null
+  },
+  {
+    "id": 44,
+    "category": "MEAT",
+    "english": "Ham",
+    "ukrainian": "Шинка",
+    "spanish": "jamón",
+    "catalan": "pernil",
+    "notes": "jamón serrano / ibérico"
+  },
+  {
+    "id": 45,
+    "category": "MEAT",
+    "english": "Sausages",
+    "ukrainian": "Ковбаски",
+    "spanish": "salchichas",
+    "catalan": "salsitxes",
+    "notes": "Зазвичай свіжі ковбаски; сосиски франкфуртського типу — salchichas de Frankfurt / salsitxes de Frankfurt."
+  },
+  {
+    "id": 46,
+    "category": "MEAT",
+    "english": "Ground meat",
+    "ukrainian": "Фарш",
+    "spanish": "carne picada",
+    "catalan": "carn picada",
+    "notes": null
+  },
+  {
+    "id": 47,
+    "category": "MEAT",
+    "english": "Bacon",
+    "ukrainian": "Бекон",
+    "spanish": "beicon",
+    "catalan": "bacó",
+    "notes": "Бекон; cansalada — ширше поняття, свиняча грудинка або сало."
+  },
+  {
+    "id": 48,
+    "category": "SEAFOOD",
+    "english": "Fish",
+    "ukrainian": "Риба",
+    "spanish": "pescado",
+    "catalan": "peix",
+    "notes": null
+  },
+  {
+    "id": 49,
+    "category": "SEAFOOD",
+    "english": "Salmon",
+    "ukrainian": "Лосось",
+    "spanish": "salmón",
+    "catalan": "salmó",
+    "notes": null
+  },
+  {
+    "id": 50,
+    "category": "SEAFOOD",
+    "english": "Tuna",
+    "ukrainian": "Тунець",
+    "spanish": "atún",
+    "catalan": "tonyina",
+    "notes": null
+  },
+  {
+    "id": 51,
+    "category": "SEAFOOD",
+    "english": "Cod",
+    "ukrainian": "Тріска",
+    "spanish": "bacalao",
+    "catalan": "bacallà",
+    "notes": "Традиційний продукт каталонської кухні."
+  },
+  {
+    "id": 52,
+    "category": "SEAFOOD",
+    "english": "Shrimp",
+    "ukrainian": "Креветки",
+    "spanish": "gambas",
+    "catalan": "gambes",
+    "notes": null
+  },
+  {
+    "id": 53,
+    "category": "SEAFOOD",
+    "english": "Mussels",
+    "ukrainian": "Мідії",
+    "spanish": "mejillones",
+    "catalan": "musclos",
+    "notes": null
+  },
+  {
+    "id": 54,
+    "category": "SEAFOOD",
+    "english": "Squid",
+    "ukrainian": "Кальмар",
+    "spanish": "calamar",
+    "catalan": "calamar",
+    "notes": null
+  },
+  {
+    "id": 55,
+    "category": "SEAFOOD",
+    "english": "Octopus",
+    "ukrainian": "Восьминіг",
+    "spanish": "pulpo",
+    "catalan": "pop",
+    "notes": null
+  },
+  {
+    "id": 56,
+    "category": "SEAFOOD",
+    "english": "Anchovies",
+    "ukrainian": "Анчоуси",
+    "spanish": "anchoas",
+    "catalan": "anxoves",
+    "notes": "На етикетках часто означає солоні або консервовані анчоуси."
+  },
+  {
+    "id": 57,
+    "category": "DAIRY",
+    "english": "Milk",
+    "ukrainian": "Молоко",
+    "spanish": "leche",
+    "catalan": "llet",
+    "notes": null
+  },
+  {
+    "id": 58,
+    "category": "DAIRY",
+    "english": "Cheese",
+    "ukrainian": "Сир",
+    "spanish": "queso",
+    "catalan": "formatge",
+    "notes": "Загальна назва сиру, не лише твердого."
+  },
+  {
+    "id": 59,
+    "category": "DAIRY",
+    "english": "Yogurt",
+    "ukrainian": "Йогурт",
+    "spanish": "yogur",
+    "catalan": "iogurt",
+    "notes": null
+  },
+  {
+    "id": 60,
+    "category": "DAIRY",
+    "english": "Butter",
+    "ukrainian": "Вершкове масло",
+    "spanish": "mantequilla",
+    "catalan": "mantega",
+    "notes": null
+  },
+  {
+    "id": 61,
+    "category": "DAIRY",
+    "english": "Cream",
+    "ukrainian": "Вершки",
+    "spanish": "nata",
+    "catalan": "nata",
+    "notes": null
+  },
+  {
+    "id": 62,
+    "category": "EGGS",
+    "english": "Eggs",
+    "ukrainian": "Яйця",
+    "spanish": "huevos",
+    "catalan": "ous",
+    "notes": null
+  },
+  {
+    "id": 63,
+    "category": "DAIRY",
+    "english": "Sour cream",
+    "ukrainian": "Сметана",
+    "spanish": "crema agria",
+    "catalan": "crema agra",
+    "notes": null
+  },
+  {
+    "id": 64,
+    "category": "BAKERY",
+    "english": "Bread",
+    "ukrainian": "Хліб",
+    "spanish": "pan",
+    "catalan": "pa",
+    "notes": null
+  },
+  {
+    "id": 65,
+    "category": "BAKERY",
+    "english": "Baguette",
+    "ukrainian": "Багет",
+    "spanish": "baguette",
+    "catalan": "baguet",
+    "notes": null
+  },
+  {
+    "id": 66,
+    "category": "BAKERY",
+    "english": "Croissant",
+    "ukrainian": "Круасан",
+    "spanish": "croissant",
+    "catalan": "croissant",
+    "notes": null
+  },
+  {
+    "id": 67,
+    "category": "PANTRY",
+    "english": "Flour",
+    "ukrainian": "Борошно",
+    "spanish": "harina",
+    "catalan": "farina",
+    "notes": null
+  },
+  {
+    "id": 68,
+    "category": "BAKERY",
+    "english": "Cake",
+    "ukrainian": "Торт; пиріг",
+    "spanish": "pastel",
+    "catalan": "pastís",
+    "notes": "Pastel / pastís — загальна назва торта або пирога; маленьке тістечко — pastelito / pastisset."
+  },
+  {
+    "id": 69,
+    "category": "DRINKS",
+    "english": "Water",
+    "ukrainian": "Вода",
+    "spanish": "agua",
+    "catalan": "aigua",
+    "notes": null
+  },
+  {
+    "id": 70,
+    "category": "DRINKS",
+    "english": "Sparkling water",
+    "ukrainian": "Газована вода",
+    "spanish": "agua con gas",
+    "catalan": "aigua amb gas",
+    "notes": null
+  },
+  {
+    "id": 71,
+    "category": "DRINKS",
+    "english": "Orange juice",
+    "ukrainian": "Сік апельсиновий",
+    "spanish": "zumo de naranja",
+    "catalan": "suc de taronja",
+    "notes": null
+  },
+  {
+    "id": 72,
+    "category": "DRINKS",
+    "english": "Wine",
+    "ukrainian": "Вино",
+    "spanish": "vino",
+    "catalan": "vi",
+    "notes": null
+  },
+  {
+    "id": 73,
+    "category": "DRINKS",
+    "english": "Beer",
+    "ukrainian": "Пиво",
+    "spanish": "cerveza",
+    "catalan": "cervesa",
+    "notes": null
+  },
+  {
+    "id": 74,
+    "category": "DRINKS",
+    "english": "Coffee",
+    "ukrainian": "Кава",
+    "spanish": "café",
+    "catalan": "cafè",
+    "notes": null
+  },
+  {
+    "id": 75,
+    "category": "DRINKS",
+    "english": "Milkshake",
+    "ukrainian": "Молочний коктейль",
+    "spanish": "batido",
+    "catalan": "batut",
+    "notes": null
+  },
+  {
+    "id": 76,
+    "category": "PANTRY",
+    "english": "Olive oil",
+    "ukrainian": "Оливкова олія",
+    "spanish": "aceite de oliva",
+    "catalan": "oli d'oliva",
+    "notes": "Базовий продукт для приготування їжі."
+  },
+  {
+    "id": 77,
+    "category": "PANTRY",
+    "english": "Salt",
+    "ukrainian": "Сіль",
+    "spanish": "sal",
+    "catalan": "sal",
+    "notes": null
+  },
+  {
+    "id": 78,
+    "category": "PANTRY",
+    "english": "Sugar",
+    "ukrainian": "Цукор",
+    "spanish": "azúcar",
+    "catalan": "sucre",
+    "notes": null
+  },
+  {
+    "id": 79,
+    "category": "PANTRY",
+    "english": "Rice",
+    "ukrainian": "Рис",
+    "spanish": "arroz",
+    "catalan": "arròs",
+    "notes": null
+  },
+  {
+    "id": 80,
+    "category": "PANTRY",
+    "english": "Pasta",
+    "ukrainian": "Макарони",
+    "spanish": "pasta",
+    "catalan": "pasta",
+    "notes": null
+  },
+  {
+    "id": 81,
+    "category": "PANTRY",
+    "english": "Canned goods",
+    "ukrainian": "Консерви",
+    "spanish": "conservas",
+    "catalan": "conserves",
+    "notes": null
+  },
+  {
+    "id": 82,
+    "category": "PANTRY",
+    "english": "Fried tomato sauce",
+    "ukrainian": "Томатний соус з обсмажених помідорів",
+    "spanish": "tomate frito",
+    "catalan": "tomàquet fregit",
+    "notes": "Не концентрована томатна паста: та — concentrado de tomate / concentrat de tomàquet."
+  },
+  {
+    "id": 83,
+    "category": "PANTRY",
+    "english": "Vinegar",
+    "ukrainian": "Оцет",
+    "spanish": "vinagre",
+    "catalan": "vinagre",
+    "notes": null
+  },
+  {
+    "id": 84,
+    "category": "PANTRY",
+    "english": "Honey",
+    "ukrainian": "Мед",
+    "spanish": "miel",
+    "catalan": "mel",
+    "notes": null
+  },
+  {
+    "id": 85,
+    "category": "PANTRY",
+    "english": "Chickpeas",
+    "ukrainian": "Нут",
+    "spanish": "garbanzos",
+    "catalan": "cigrons",
+    "notes": "Поширений інгредієнт іспанської та каталонської кухні."
+  },
+  {
+    "id": 86,
+    "category": "HYGIENE",
+    "english": "Soap",
+    "ukrainian": "Мило",
+    "spanish": "jabón",
+    "catalan": "sabó",
+    "notes": null
+  },
+  {
+    "id": 87,
+    "category": "HYGIENE",
+    "english": "Shampoo",
+    "ukrainian": "Шампунь",
+    "spanish": "champú",
+    "catalan": "xampú",
+    "notes": null
+  },
+  {
+    "id": 88,
+    "category": "HYGIENE",
+    "english": "Toilet paper",
+    "ukrainian": "Туалетний папір",
+    "spanish": "papel higiénico",
+    "catalan": "paper higiènic",
+    "notes": null
+  },
+  {
+    "id": 89,
+    "category": "HYGIENE",
+    "english": "Toothpaste",
+    "ukrainian": "Зубна паста",
+    "spanish": "pasta de dientes",
+    "catalan": "pasta de dents",
+    "notes": null
+  },
+  {
+    "id": 90,
+    "category": "HYGIENE",
+    "english": "Deodorant",
+    "ukrainian": "Дезодорант",
+    "spanish": "desodorante",
+    "catalan": "desodorant",
+    "notes": null
+  },
+  {
+    "id": 91,
+    "category": "FRUIT",
+    "english": "Apricot",
+    "ukrainian": "Абрикос",
+    "spanish": "albaricoque",
+    "catalan": "albercoc",
+    "notes": null
+  },
+  {
+    "id": 92,
+    "category": "FRUIT",
+    "english": "Fig",
+    "ukrainian": "Інжир",
+    "spanish": "higo",
+    "catalan": "figa",
+    "notes": null
+  },
+  {
+    "id": 93,
+    "category": "FRUIT",
+    "english": "Raspberry",
+    "ukrainian": "Малина",
+    "spanish": "frambuesa",
+    "catalan": "gerd",
+    "notes": null
+  },
+  {
+    "id": 94,
+    "category": "FRUIT",
+    "english": "Blueberry",
+    "ukrainian": "Лохина",
+    "spanish": "arándano azul",
+    "catalan": "nabiu blau",
+    "notes": null
+  },
+  {
+    "id": 95,
+    "category": "VEGETABLE",
+    "english": "Cauliflower",
+    "ukrainian": "Цвітна капуста",
+    "spanish": "coliflor",
+    "catalan": "coliflor",
+    "notes": null
+  },
+  {
+    "id": 96,
+    "category": "VEGETABLE",
+    "english": "Leek",
+    "ukrainian": "Цибуля-порей",
+    "spanish": "puerro",
+    "catalan": "porro",
+    "notes": null
+  },
+  {
+    "id": 97,
+    "category": "VEGETABLE",
+    "english": "Celery",
+    "ukrainian": "Селера",
+    "spanish": "apio",
+    "catalan": "api",
+    "notes": null
+  },
+  {
+    "id": 98,
+    "category": "VEGETABLE",
+    "english": "Sweet potato",
+    "ukrainian": "Батат",
+    "spanish": "boniato",
+    "catalan": "moniato",
+    "notes": null
+  },
+  {
+    "id": 99,
+    "category": "VEGETABLE",
+    "english": "Radish",
+    "ukrainian": "Редиска",
+    "spanish": "rábano",
+    "catalan": "rave",
+    "notes": null
+  },
+  {
+    "id": 100,
+    "category": "MUSHROOMS",
+    "english": "Button mushrooms",
+    "ukrainian": "Печериці",
+    "spanish": "champiñones",
+    "catalan": "xampinyons",
+    "notes": null
+  },
+  {
+    "id": 101,
+    "category": "PANTRY",
+    "english": "Lentils",
+    "ukrainian": "Сочевиця",
+    "spanish": "lentejas",
+    "catalan": "llenties",
+    "notes": null
+  },
+  {
+    "id": 102,
+    "category": "PANTRY",
+    "english": "White beans",
+    "ukrainian": "Біла квасоля",
+    "spanish": "alubias blancas",
+    "catalan": "mongetes seques",
+    "notes": null
+  },
+  {
+    "id": 103,
+    "category": "PANTRY",
+    "english": "Oats",
+    "ukrainian": "Овес",
+    "spanish": "avena",
+    "catalan": "civada",
+    "notes": null
+  },
+  {
+    "id": 104,
+    "category": "PANTRY",
+    "english": "Black pepper",
+    "ukrainian": "Чорний перець",
+    "spanish": "pimienta negra",
+    "catalan": "pebre negre",
+    "notes": null
+  },
+  {
+    "id": 105,
+    "category": "PANTRY",
+    "english": "Paprika",
+    "ukrainian": "Мелена паприка",
+    "spanish": "pimentón",
+    "catalan": "pebre vermell",
+    "notes": null
+  },
+  {
+    "id": 106,
+    "category": "PANTRY",
+    "english": "Cumin",
+    "ukrainian": "Кмин римський (зіра)",
+    "spanish": "comino",
+    "catalan": "comí",
+    "notes": null
+  },
+  {
+    "id": 107,
+    "category": "PANTRY",
+    "english": "Olives",
+    "ukrainian": "Оливки",
+    "spanish": "aceitunas",
+    "catalan": "olives",
+    "notes": null
+  },
+  {
+    "id": 108,
+    "category": "PANTRY",
+    "english": "Almonds",
+    "ukrainian": "Мигдаль",
+    "spanish": "almendras",
+    "catalan": "ametlles",
+    "notes": null
+  },
+  {
+    "id": 109,
+    "category": "PANTRY",
+    "english": "Walnuts",
+    "ukrainian": "Волоські горіхи",
+    "spanish": "nueces",
+    "catalan": "nous",
+    "notes": null
+  },
+  {
+    "id": 110,
+    "category": "PANTRY",
+    "english": "Jam",
+    "ukrainian": "Джем",
+    "spanish": "mermelada",
+    "catalan": "melmelada",
+    "notes": null
+  },
+  {
+    "id": 111,
+    "category": "PANTRY",
+    "english": "Tomato paste",
+    "ukrainian": "Томатна паста",
+    "spanish": "concentrado de tomate",
+    "catalan": "concentrat de tomàquet",
+    "notes": null
+  },
+  {
+    "id": 112,
+    "category": "DRINKS",
+    "english": "Tea",
+    "ukrainian": "Чай",
+    "spanish": "té",
+    "catalan": "te",
+    "notes": null
+  },
+  {
+    "id": 113,
+    "category": "DRINKS",
+    "english": "Still water",
+    "ukrainian": "Негазована вода",
+    "spanish": "agua sin gas",
+    "catalan": "aigua sense gas",
+    "notes": null
+  },
+  {
+    "id": 114,
+    "category": "DRINKS",
+    "english": "Coffee with milk",
+    "ukrainian": "Кава з молоком",
+    "spanish": "café con leche",
+    "catalan": "cafè amb llet",
+    "notes": null
+  },
+  {
+    "id": 115,
+    "category": "DRINKS",
+    "english": "Espresso",
+    "ukrainian": "Еспресо",
+    "spanish": "café solo",
+    "catalan": "cafè sol",
+    "notes": null
+  },
+  {
+    "id": 116,
+    "category": "DRINKS",
+    "english": "Decaffeinated coffee",
+    "ukrainian": "Кава без кофеїну",
+    "spanish": "café descafeinado",
+    "catalan": "cafè descafeïnat",
+    "notes": null
+  },
+  {
+    "id": 117,
+    "category": "DAIRY",
+    "english": "Fresh cheese",
+    "ukrainian": "Свіжий сир",
+    "spanish": "queso fresco",
+    "catalan": "formatge fresc",
+    "notes": null
+  },
+  {
+    "id": 118,
+    "category": "DAIRY",
+    "english": "Lactose-free milk",
+    "ukrainian": "Безлактозне молоко",
+    "spanish": "leche sin lactosa",
+    "catalan": "llet sense lactosa",
+    "notes": null
+  },
+  {
+    "id": 119,
+    "category": "MEAT",
+    "english": "Veal",
+    "ukrainian": "Телятина",
+    "spanish": "ternera",
+    "catalan": "vedella",
+    "notes": null
+  },
+  {
+    "id": 120,
+    "category": "MEAT",
+    "english": "Chicken breast",
+    "ukrainian": "Куряча грудка",
+    "spanish": "pechuga de pollo",
+    "catalan": "pit de pollastre",
+    "notes": null
+  },
+  {
+    "id": 121,
+    "category": "SEAFOOD",
+    "english": "Hake",
+    "ukrainian": "Хек",
+    "spanish": "merluza",
+    "catalan": "lluç",
+    "notes": null
+  },
+  {
+    "id": 122,
+    "category": "SEAFOOD",
+    "english": "Sardines",
+    "ukrainian": "Сардини",
+    "spanish": "sardinas",
+    "catalan": "sardines",
+    "notes": null
+  },
+  {
+    "id": 123,
+    "category": "SEAFOOD",
+    "english": "Clams",
+    "ukrainian": "Молюски (венерки)",
+    "spanish": "almejas",
+    "catalan": "cloïsses",
+    "notes": null
+  },
+  {
+    "id": 124,
+    "category": "BAKERY",
+    "english": "Wholemeal bread",
+    "ukrainian": "Цільнозерновий хліб",
+    "spanish": "pan integral",
+    "catalan": "pa integral",
+    "notes": null
+  },
+  {
+    "id": 125,
+    "category": "BAKERY",
+    "english": "Sliced bread",
+    "ukrainian": "Тостовий хліб",
+    "spanish": "pan de molde",
+    "catalan": "pa de motlle",
+    "notes": null
+  },
+  {
+    "id": 126,
+    "category": "SHOPPING",
+    "english": "Supermarket",
+    "ukrainian": "Супермаркет",
+    "spanish": "supermercado",
+    "catalan": "supermercat",
+    "notes": null
+  },
+  {
+    "id": 127,
+    "category": "SHOPPING",
+    "english": "Market",
+    "ukrainian": "Ринок",
+    "spanish": "mercado",
+    "catalan": "mercat",
+    "notes": null
+  },
+  {
+    "id": 128,
+    "category": "SHOPPING",
+    "english": "Bakery",
+    "ukrainian": "Пекарня",
+    "spanish": "panadería",
+    "catalan": "fleca",
+    "notes": null
+  },
+  {
+    "id": 129,
+    "category": "SHOPPING",
+    "english": "Butcher's shop",
+    "ukrainian": "М’ясна крамниця",
+    "spanish": "carnicería",
+    "catalan": "carnisseria",
+    "notes": null
+  },
+  {
+    "id": 130,
+    "category": "SHOPPING",
+    "english": "Fish shop",
+    "ukrainian": "Рибна крамниця",
+    "spanish": "pescadería",
+    "catalan": "peixateria",
+    "notes": null
+  },
+  {
+    "id": 131,
+    "category": "SHOPPING",
+    "english": "Greengrocer's",
+    "ukrainian": "Овочева крамниця",
+    "spanish": "frutería",
+    "catalan": "fruiteria",
+    "notes": null
+  },
+  {
+    "id": 132,
+    "category": "SHOPPING",
+    "english": "Checkout",
+    "ukrainian": "Каса",
+    "spanish": "caja",
+    "catalan": "caixa",
+    "notes": null
+  },
+  {
+    "id": 133,
+    "category": "SHOPPING",
+    "english": "Queue",
+    "ukrainian": "Черга",
+    "spanish": "cola",
+    "catalan": "cua",
+    "notes": null
+  },
+  {
+    "id": 134,
+    "category": "SHOPPING",
+    "english": "Receipt",
+    "ukrainian": "Касовий чек",
+    "spanish": "tique",
+    "catalan": "tiquet",
+    "notes": null
+  },
+  {
+    "id": 135,
+    "category": "SHOPPING",
+    "english": "Bag",
+    "ukrainian": "Пакет; сумка",
+    "spanish": "bolsa",
+    "catalan": "bossa",
+    "notes": null
+  },
+  {
+    "id": 136,
+    "category": "SHOPPING",
+    "english": "Price",
+    "ukrainian": "Ціна",
+    "spanish": "precio",
+    "catalan": "preu",
+    "notes": null
+  },
+  {
+    "id": 137,
+    "category": "SHOPPING",
+    "english": "Discount",
+    "ukrainian": "Знижка",
+    "spanish": "descuento",
+    "catalan": "descompte",
+    "notes": null
+  },
+  {
+    "id": 138,
+    "category": "SHOPPING",
+    "english": "Offer",
+    "ukrainian": "Акційна пропозиція",
+    "spanish": "oferta",
+    "catalan": "oferta",
+    "notes": null
+  },
+  {
+    "id": 139,
+    "category": "SHOPPING",
+    "english": "Size (clothing)",
+    "ukrainian": "Розмір одягу",
+    "spanish": "talla",
+    "catalan": "talla",
+    "notes": null
+  },
+  {
+    "id": 140,
+    "category": "SHOPPING",
+    "english": "Fitting room",
+    "ukrainian": "Примірочна",
+    "spanish": "probador",
+    "catalan": "emprovador",
+    "notes": null
+  },
+  {
+    "id": 141,
+    "category": "SHOPPING",
+    "english": "Return (purchase)",
+    "ukrainian": "Повернення покупки",
+    "spanish": "devolución",
+    "catalan": "devolució",
+    "notes": null
+  },
+  {
+    "id": 142,
+    "category": "SHOPPING",
+    "english": "Cash",
+    "ukrainian": "Готівка",
+    "spanish": "efectivo",
+    "catalan": "efectiu",
+    "notes": null
+  },
+  {
+    "id": 143,
+    "category": "SHOPPING",
+    "english": "Bank card",
+    "ukrainian": "Банківська картка",
+    "spanish": "tarjeta bancaria",
+    "catalan": "targeta bancària",
+    "notes": null
+  },
+  {
+    "id": 144,
+    "category": "SHOPPING",
+    "english": "Change (money)",
+    "ukrainian": "Решта",
+    "spanish": "cambio",
+    "catalan": "canvi",
+    "notes": null
+  },
+  {
+    "id": 145,
+    "category": "SHOPPING",
+    "english": "Kilogram",
+    "ukrainian": "Кілограм",
+    "spanish": "kilo",
+    "catalan": "quilo",
+    "notes": null
+  },
+  {
+    "id": 146,
+    "category": "SHOPPING",
+    "english": "Half a kilo",
+    "ukrainian": "Пів кілограма",
+    "spanish": "medio kilo",
+    "catalan": "mig quilo",
+    "notes": null
+  },
+  {
+    "id": 147,
+    "category": "SHOPPING",
+    "english": "One hundred grams",
+    "ukrainian": "Сто грамів",
+    "spanish": "cien gramos",
+    "catalan": "cent grams",
+    "notes": null
+  },
+  {
+    "id": 148,
+    "category": "SHOPPING",
+    "english": "Expiry date",
+    "ukrainian": "Термін придатності",
+    "spanish": "fecha de caducidad",
+    "catalan": "data de caducitat",
+    "notes": null
+  },
+  {
+    "id": 149,
+    "category": "SHOPPING",
+    "english": "Ingredients",
+    "ukrainian": "Інгредієнти",
+    "spanish": "ingredientes",
+    "catalan": "ingredients",
+    "notes": null
+  },
+  {
+    "id": 150,
+    "category": "RESTAURANT",
+    "english": "Menu",
+    "ukrainian": "Меню",
+    "spanish": "carta",
+    "catalan": "carta",
+    "notes": null
+  },
+  {
+    "id": 151,
+    "category": "RESTAURANT",
+    "english": "Set menu of the day",
+    "ukrainian": "Комплексний обід дня",
+    "spanish": "menú del día",
+    "catalan": "menú del dia",
+    "notes": null
+  },
+  {
+    "id": 152,
+    "category": "RESTAURANT",
+    "english": "Bill (restaurant)",
+    "ukrainian": "Рахунок у ресторані",
+    "spanish": "cuenta",
+    "catalan": "compte",
+    "notes": null
+  },
+  {
+    "id": 153,
+    "category": "RESTAURANT",
+    "english": "Table",
+    "ukrainian": "Стіл",
+    "spanish": "mesa",
+    "catalan": "taula",
+    "notes": null
+  },
+  {
+    "id": 154,
+    "category": "RESTAURANT",
+    "english": "Reservation",
+    "ukrainian": "Бронювання",
+    "spanish": "reserva",
+    "catalan": "reserva",
+    "notes": null
+  },
+  {
+    "id": 155,
+    "category": "RESTAURANT",
+    "english": "Breakfast",
+    "ukrainian": "Сніданок",
+    "spanish": "desayuno",
+    "catalan": "esmorzar",
+    "notes": null
+  },
+  {
+    "id": 156,
+    "category": "RESTAURANT",
+    "english": "Lunch",
+    "ukrainian": "Обід",
+    "spanish": "comida del mediodía",
+    "catalan": "dinar",
+    "notes": null
+  },
+  {
+    "id": 157,
+    "category": "RESTAURANT",
+    "english": "Dinner",
+    "ukrainian": "Вечеря",
+    "spanish": "cena",
+    "catalan": "sopar",
+    "notes": null
+  },
+  {
+    "id": 158,
+    "category": "RESTAURANT",
+    "english": "Sandwich (bread roll)",
+    "ukrainian": "Сендвіч у булці або багеті",
+    "spanish": "bocadillo",
+    "catalan": "entrepà",
+    "notes": null
+  },
+  {
+    "id": 159,
+    "category": "RESTAURANT",
+    "english": "Bread with tomato",
+    "ukrainian": "Хліб із помідором",
+    "spanish": "pan con tomate",
+    "catalan": "pa amb tomàquet",
+    "notes": null
+  },
+  {
+    "id": 160,
+    "category": "RESTAURANT",
+    "english": "To take away",
+    "ukrainian": "Із собою",
+    "spanish": "para llevar",
+    "catalan": "per emportar",
+    "notes": null
+  },
+  {
+    "id": 161,
+    "category": "RESTAURANT",
+    "english": "Without gluten",
+    "ukrainian": "Без глютену",
+    "spanish": "sin gluten",
+    "catalan": "sense gluten",
+    "notes": null
+  },
+  {
+    "id": 162,
+    "category": "RESTAURANT",
+    "english": "Without lactose",
+    "ukrainian": "Без лактози",
+    "spanish": "sin lactosa",
+    "catalan": "sense lactosa",
+    "notes": null
+  },
+  {
+    "id": 163,
+    "category": "RESTAURANT",
+    "english": "Vegetarian (dish)",
+    "ukrainian": "Вегетаріанська страва",
+    "spanish": "plato vegetariano",
+    "catalan": "plat vegetarià",
+    "notes": null
+  },
+  {
+    "id": 164,
+    "category": "RESTAURANT",
+    "english": "Vegan (dish)",
+    "ukrainian": "Веганська страва",
+    "spanish": "plato vegano",
+    "catalan": "plat vegà",
+    "notes": null
+  },
+  {
+    "id": 165,
+    "category": "RESTAURANT",
+    "english": "Well cooked",
+    "ukrainian": "Добре просмажене",
+    "spanish": "bien hecho",
+    "catalan": "ben fet",
+    "notes": null
+  },
+  {
+    "id": 166,
+    "category": "COMMUNICATION",
+    "english": "Hello",
+    "ukrainian": "Привіт",
+    "spanish": "hola",
+    "catalan": "hola",
+    "notes": null
+  },
+  {
+    "id": 167,
+    "category": "COMMUNICATION",
+    "english": "Good morning",
+    "ukrainian": "Доброго ранку",
+    "spanish": "buenos días",
+    "catalan": "bon dia",
+    "notes": null
+  },
+  {
+    "id": 168,
+    "category": "COMMUNICATION",
+    "english": "Good afternoon",
+    "ukrainian": "Добрий день (після обіду)",
+    "spanish": "buenas tardes",
+    "catalan": "bona tarda",
+    "notes": null
+  },
+  {
+    "id": 169,
+    "category": "COMMUNICATION",
+    "english": "Good night",
+    "ukrainian": "Добраніч",
+    "spanish": "buenas noches",
+    "catalan": "bona nit",
+    "notes": null
+  },
+  {
+    "id": 170,
+    "category": "COMMUNICATION",
+    "english": "Goodbye",
+    "ukrainian": "До побачення",
+    "spanish": "adiós",
+    "catalan": "adeu",
+    "notes": null
+  },
+  {
+    "id": 171,
+    "category": "COMMUNICATION",
+    "english": "Please",
+    "ukrainian": "Будь ласка",
+    "spanish": "por favor",
+    "catalan": "si us plau",
+    "notes": null
+  },
+  {
+    "id": 172,
+    "category": "COMMUNICATION",
+    "english": "Thank you",
+    "ukrainian": "Дякую",
+    "spanish": "gracias",
+    "catalan": "gràcies",
+    "notes": null
+  },
+  {
+    "id": 173,
+    "category": "COMMUNICATION",
+    "english": "You're welcome",
+    "ukrainian": "Нема за що",
+    "spanish": "de nada",
+    "catalan": "de res",
+    "notes": null
+  },
+  {
+    "id": 174,
+    "category": "COMMUNICATION",
+    "english": "Excuse me",
+    "ukrainian": "Перепрошую",
+    "spanish": "perdona",
+    "catalan": "perdona",
+    "notes": "Неформальне звертання до однієї особи; ввічлива форма: perdone / perdoni."
+  },
+  {
+    "id": 175,
+    "category": "COMMUNICATION",
+    "english": "Yes",
+    "ukrainian": "Так",
+    "spanish": "sí",
+    "catalan": "sí",
+    "notes": null
+  },
+  {
+    "id": 176,
+    "category": "COMMUNICATION",
+    "english": "No",
+    "ukrainian": "Ні",
+    "spanish": "no",
+    "catalan": "no",
+    "notes": null
+  },
+  {
+    "id": 177,
+    "category": "COMMUNICATION",
+    "english": "I don't understand",
+    "ukrainian": "Я не розумію",
+    "spanish": "no entiendo",
+    "catalan": "no ho entenc",
+    "notes": null
+  },
+  {
+    "id": 178,
+    "category": "COMMUNICATION",
+    "english": "Could you repeat that?",
+    "ukrainian": "Можете повторити?",
+    "spanish": "¿Puedes repetirlo?",
+    "catalan": "Ho pots repetir?",
+    "notes": "Неформальне звертання; ввічливо: ¿Puede repetirlo? / Ho pot repetir?"
+  },
+  {
+    "id": 179,
+    "category": "COMMUNICATION",
+    "english": "More slowly, please",
+    "ukrainian": "Повільніше, будь ласка",
+    "spanish": "más despacio, por favor",
+    "catalan": "més a poc a poc, si us plau",
+    "notes": null
+  },
+  {
+    "id": 180,
+    "category": "COMMUNICATION",
+    "english": "I am learning Catalan",
+    "ukrainian": "Я вивчаю каталанську",
+    "spanish": "estoy aprendiendo catalán",
+    "catalan": "estic aprenent català",
+    "notes": null
+  },
+  {
+    "id": 181,
+    "category": "COMMUNICATION",
+    "english": "I am learning Spanish",
+    "ukrainian": "Я вивчаю іспанську",
+    "spanish": "estoy aprendiendo español",
+    "catalan": "estic aprenent castellà",
+    "notes": null
+  },
+  {
+    "id": 182,
+    "category": "COMMUNICATION",
+    "english": "Do you speak English?",
+    "ukrainian": "Ви розмовляєте англійською?",
+    "spanish": "¿Hablas inglés?",
+    "catalan": "Parles anglès?",
+    "notes": "Неформальне звертання; ввічливо: ¿Habla inglés? / Parla anglès?"
+  },
+  {
+    "id": 183,
+    "category": "COMMUNICATION",
+    "english": "How much does it cost?",
+    "ukrainian": "Скільки це коштує?",
+    "spanish": "¿Cuánto cuesta?",
+    "catalan": "Quant costa?",
+    "notes": null
+  },
+  {
+    "id": 184,
+    "category": "COMMUNICATION",
+    "english": "Where is the toilet?",
+    "ukrainian": "Де туалет?",
+    "spanish": "¿Dónde está el baño?",
+    "catalan": "On és el lavabo?",
+    "notes": null
+  },
+  {
+    "id": 185,
+    "category": "COMMUNICATION",
+    "english": "I would like this",
+    "ukrainian": "Я хотів би це",
+    "spanish": "quisiera esto",
+    "catalan": "voldria això",
+    "notes": null
+  },
+  {
+    "id": 186,
+    "category": "COMMUNICATION",
+    "english": "Can I pay by card?",
+    "ukrainian": "Можна оплатити карткою?",
+    "spanish": "¿Puedo pagar con tarjeta?",
+    "catalan": "Puc pagar amb targeta?",
+    "notes": null
+  },
+  {
+    "id": 187,
+    "category": "COMMUNICATION",
+    "english": "Who is last in the queue?",
+    "ukrainian": "Хто останній у черзі?",
+    "spanish": "¿Quién es el último?",
+    "catalan": "Qui és l'últim?",
+    "notes": null
+  },
+  {
+    "id": 188,
+    "category": "TRANSPORT",
+    "english": "Metro",
+    "ukrainian": "Метро",
+    "spanish": "metro",
+    "catalan": "metro",
+    "notes": null
+  },
+  {
+    "id": 189,
+    "category": "TRANSPORT",
+    "english": "Bus",
+    "ukrainian": "Автобус",
+    "spanish": "autobús",
+    "catalan": "autobús",
+    "notes": null
+  },
+  {
+    "id": 190,
+    "category": "TRANSPORT",
+    "english": "Tram",
+    "ukrainian": "Трамвай",
+    "spanish": "tranvía",
+    "catalan": "tramvia",
+    "notes": null
+  },
+  {
+    "id": 191,
+    "category": "TRANSPORT",
+    "english": "Train",
+    "ukrainian": "Потяг",
+    "spanish": "tren",
+    "catalan": "tren",
+    "notes": null
+  },
+  {
+    "id": 192,
+    "category": "TRANSPORT",
+    "english": "Suburban trains",
+    "ukrainian": "Приміські потяги",
+    "spanish": "Cercanías",
+    "catalan": "Rodalies",
+    "notes": "Rodalies — звична місцева назва приміських залізничних перевезень у Каталонії."
+  },
+  {
+    "id": 193,
+    "category": "TRANSPORT",
+    "english": "Station",
+    "ukrainian": "Станція",
+    "spanish": "estación",
+    "catalan": "estació",
+    "notes": null
+  },
+  {
+    "id": 194,
+    "category": "TRANSPORT",
+    "english": "Bus stop",
+    "ukrainian": "Автобусна зупинка",
+    "spanish": "parada de autobús",
+    "catalan": "parada d'autobús",
+    "notes": null
+  },
+  {
+    "id": 195,
+    "category": "TRANSPORT",
+    "english": "Platform",
+    "ukrainian": "Платформа",
+    "spanish": "andén",
+    "catalan": "andana",
+    "notes": null
+  },
+  {
+    "id": 196,
+    "category": "TRANSPORT",
+    "english": "Ticket",
+    "ukrainian": "Квиток",
+    "spanish": "billete",
+    "catalan": "bitllet",
+    "notes": null
+  },
+  {
+    "id": 197,
+    "category": "TRANSPORT",
+    "english": "Travel pass",
+    "ukrainian": "Проїзний",
+    "spanish": "abono de transporte",
+    "catalan": "abonament de transport",
+    "notes": null
+  },
+  {
+    "id": 198,
+    "category": "TRANSPORT",
+    "english": "Transfer (transport)",
+    "ukrainian": "Пересадка",
+    "spanish": "transbordo",
+    "catalan": "transbordament",
+    "notes": null
+  },
+  {
+    "id": 199,
+    "category": "TRANSPORT",
+    "english": "Line",
+    "ukrainian": "Маршрут; лінія",
+    "spanish": "línea",
+    "catalan": "línia",
+    "notes": null
+  },
+  {
+    "id": 200,
+    "category": "TRANSPORT",
+    "english": "Direction (transport)",
+    "ukrainian": "Напрямок руху",
+    "spanish": "dirección",
+    "catalan": "direcció",
+    "notes": null
+  },
+  {
+    "id": 201,
+    "category": "TRANSPORT",
+    "english": "Entrance",
+    "ukrainian": "Вхід",
+    "spanish": "entrada",
+    "catalan": "entrada",
+    "notes": null
+  },
+  {
+    "id": 202,
+    "category": "TRANSPORT",
+    "english": "Exit",
+    "ukrainian": "Вихід",
+    "spanish": "salida",
+    "catalan": "sortida",
+    "notes": null
+  },
+  {
+    "id": 203,
+    "category": "TRANSPORT",
+    "english": "Lift",
+    "ukrainian": "Ліфт",
+    "spanish": "ascensor",
+    "catalan": "ascensor",
+    "notes": null
+  },
+  {
+    "id": 204,
+    "category": "TRANSPORT",
+    "english": "Escalator",
+    "ukrainian": "Ескалатор",
+    "spanish": "escalera mecánica",
+    "catalan": "escala mecànica",
+    "notes": null
+  },
+  {
+    "id": 205,
+    "category": "TRANSPORT",
+    "english": "Delay",
+    "ukrainian": "Затримка",
+    "spanish": "retraso",
+    "catalan": "retard",
+    "notes": null
+  },
+  {
+    "id": 206,
+    "category": "TRANSPORT",
+    "english": "Airport",
+    "ukrainian": "Аеропорт",
+    "spanish": "aeropuerto",
+    "catalan": "aeroport",
+    "notes": null
+  },
+  {
+    "id": 207,
+    "category": "TRANSPORT",
+    "english": "Bicycle",
+    "ukrainian": "Велосипед",
+    "spanish": "bicicleta",
+    "catalan": "bicicleta",
+    "notes": null
+  },
+  {
+    "id": 208,
+    "category": "TRANSPORT",
+    "english": "Cycle lane",
+    "ukrainian": "Велодоріжка",
+    "spanish": "carril bici",
+    "catalan": "carril bici",
+    "notes": null
+  },
+  {
+    "id": 209,
+    "category": "TRANSPORT",
+    "english": "Pedestrian crossing",
+    "ukrainian": "Пішохідний перехід",
+    "spanish": "paso de peatones",
+    "catalan": "pas de vianants",
+    "notes": null
+  },
+  {
+    "id": 210,
+    "category": "TRANSPORT",
+    "english": "Traffic light",
+    "ukrainian": "Світлофор",
+    "spanish": "semáforo",
+    "catalan": "semàfor",
+    "notes": null
+  },
+  {
+    "id": 211,
+    "category": "CITY",
+    "english": "Street",
+    "ukrainian": "Вулиця",
+    "spanish": "calle",
+    "catalan": "carrer",
+    "notes": null
+  },
+  {
+    "id": 212,
+    "category": "CITY",
+    "english": "Square",
+    "ukrainian": "Площа",
+    "spanish": "plaza",
+    "catalan": "plaça",
+    "notes": null
+  },
+  {
+    "id": 213,
+    "category": "CITY",
+    "english": "Neighbourhood",
+    "ukrainian": "Район міста",
+    "spanish": "barrio",
+    "catalan": "barri",
+    "notes": null
+  },
+  {
+    "id": 214,
+    "category": "CITY",
+    "english": "Address",
+    "ukrainian": "Адреса",
+    "spanish": "dirección",
+    "catalan": "adreça",
+    "notes": null
+  },
+  {
+    "id": 215,
+    "category": "CITY",
+    "english": "Postcode",
+    "ukrainian": "Поштовий індекс",
+    "spanish": "código postal",
+    "catalan": "codi postal",
+    "notes": null
+  },
+  {
+    "id": 216,
+    "category": "CITY",
+    "english": "Town hall",
+    "ukrainian": "Міська рада",
+    "spanish": "ayuntamiento",
+    "catalan": "ajuntament",
+    "notes": null
+  },
+  {
+    "id": 217,
+    "category": "CITY",
+    "english": "Library",
+    "ukrainian": "Бібліотека",
+    "spanish": "biblioteca",
+    "catalan": "biblioteca",
+    "notes": null
+  },
+  {
+    "id": 218,
+    "category": "CITY",
+    "english": "Post office",
+    "ukrainian": "Поштове відділення",
+    "spanish": "oficina de correos",
+    "catalan": "oficina de correus",
+    "notes": null
+  },
+  {
+    "id": 219,
+    "category": "CITY",
+    "english": "Park",
+    "ukrainian": "Парк",
+    "spanish": "parque",
+    "catalan": "parc",
+    "notes": null
+  },
+  {
+    "id": 220,
+    "category": "CITY",
+    "english": "Beach",
+    "ukrainian": "Пляж",
+    "spanish": "playa",
+    "catalan": "platja",
+    "notes": null
+  },
+  {
+    "id": 221,
+    "category": "CITY",
+    "english": "Left",
+    "ukrainian": "Ліворуч",
+    "spanish": "a la izquierda",
+    "catalan": "a l'esquerra",
+    "notes": null
+  },
+  {
+    "id": 222,
+    "category": "CITY",
+    "english": "Right",
+    "ukrainian": "Праворуч",
+    "spanish": "a la derecha",
+    "catalan": "a la dreta",
+    "notes": null
+  },
+  {
+    "id": 223,
+    "category": "CITY",
+    "english": "Straight ahead",
+    "ukrainian": "Прямо",
+    "spanish": "todo recto",
+    "catalan": "tot recte",
+    "notes": null
+  },
+  {
+    "id": 224,
+    "category": "CITY",
+    "english": "Near",
+    "ukrainian": "Близько",
+    "spanish": "cerca",
+    "catalan": "a prop",
+    "notes": null
+  },
+  {
+    "id": 225,
+    "category": "CITY",
+    "english": "Far",
+    "ukrainian": "Далеко",
+    "spanish": "lejos",
+    "catalan": "lluny",
+    "notes": null
+  },
+  {
+    "id": 226,
+    "category": "HOUSING",
+    "english": "Flat",
+    "ukrainian": "Квартира",
+    "spanish": "piso",
+    "catalan": "pis",
+    "notes": null
+  },
+  {
+    "id": 227,
+    "category": "HOUSING",
+    "english": "Room",
+    "ukrainian": "Кімната",
+    "spanish": "habitación",
+    "catalan": "habitació",
+    "notes": null
+  },
+  {
+    "id": 228,
+    "category": "HOUSING",
+    "english": "Rent (payment)",
+    "ukrainian": "Орендна плата",
+    "spanish": "alquiler",
+    "catalan": "lloguer",
+    "notes": null
+  },
+  {
+    "id": 229,
+    "category": "HOUSING",
+    "english": "Rental agreement",
+    "ukrainian": "Договір оренди",
+    "spanish": "contrato de alquiler",
+    "catalan": "contracte de lloguer",
+    "notes": null
+  },
+  {
+    "id": 230,
+    "category": "HOUSING",
+    "english": "Deposit (rental)",
+    "ukrainian": "Застава за оренду",
+    "spanish": "fianza",
+    "catalan": "fiança",
+    "notes": null
+  },
+  {
+    "id": 231,
+    "category": "HOUSING",
+    "english": "Landlord",
+    "ukrainian": "Орендодавець",
+    "spanish": "arrendador",
+    "catalan": "arrendador",
+    "notes": "Жіноча форма: arrendadora / arrendadora."
+  },
+  {
+    "id": 232,
+    "category": "HOUSING",
+    "english": "Tenant",
+    "ukrainian": "Орендар",
+    "spanish": "inquilino",
+    "catalan": "llogater",
+    "notes": "Жіноча форма: inquilina / llogatera."
+  },
+  {
+    "id": 233,
+    "category": "HOUSING",
+    "english": "Key",
+    "ukrainian": "Ключ",
+    "spanish": "llave",
+    "catalan": "clau",
+    "notes": null
+  },
+  {
+    "id": 234,
+    "category": "HOUSING",
+    "english": "Door",
+    "ukrainian": "Двері",
+    "spanish": "puerta",
+    "catalan": "porta",
+    "notes": null
+  },
+  {
+    "id": 235,
+    "category": "HOUSING",
+    "english": "Window",
+    "ukrainian": "Вікно",
+    "spanish": "ventana",
+    "catalan": "finestra",
+    "notes": null
+  },
+  {
+    "id": 236,
+    "category": "HOUSING",
+    "english": "Kitchen",
+    "ukrainian": "Кухня",
+    "spanish": "cocina",
+    "catalan": "cuina",
+    "notes": null
+  },
+  {
+    "id": 237,
+    "category": "HOUSING",
+    "english": "Bathroom",
+    "ukrainian": "Ванна кімната",
+    "spanish": "baño",
+    "catalan": "bany",
+    "notes": null
+  },
+  {
+    "id": 238,
+    "category": "HOUSING",
+    "english": "Heating",
+    "ukrainian": "Опалення",
+    "spanish": "calefacción",
+    "catalan": "calefacció",
+    "notes": null
+  },
+  {
+    "id": 239,
+    "category": "HOUSING",
+    "english": "Air conditioning",
+    "ukrainian": "Кондиціонування",
+    "spanish": "aire acondicionado",
+    "catalan": "aire condicionat",
+    "notes": null
+  },
+  {
+    "id": 240,
+    "category": "HOUSING",
+    "english": "Washing machine",
+    "ukrainian": "Пральна машина",
+    "spanish": "lavadora",
+    "catalan": "rentadora",
+    "notes": null
+  },
+  {
+    "id": 241,
+    "category": "HOUSING",
+    "english": "Fridge",
+    "ukrainian": "Холодильник",
+    "spanish": "nevera",
+    "catalan": "nevera",
+    "notes": null
+  },
+  {
+    "id": 242,
+    "category": "HOUSING",
+    "english": "Electricity",
+    "ukrainian": "Електроенергія",
+    "spanish": "electricidad",
+    "catalan": "electricitat",
+    "notes": null
+  },
+  {
+    "id": 243,
+    "category": "HOUSING",
+    "english": "Water leak",
+    "ukrainian": "Протікання води",
+    "spanish": "fuga de agua",
+    "catalan": "fuita d'aigua",
+    "notes": null
+  },
+  {
+    "id": 244,
+    "category": "HOUSING",
+    "english": "Breakdown",
+    "ukrainian": "Несправність",
+    "spanish": "avería",
+    "catalan": "avaria",
+    "notes": null
+  },
+  {
+    "id": 245,
+    "category": "HOUSING",
+    "english": "Neighbour",
+    "ukrainian": "Сусід",
+    "spanish": "vecino",
+    "catalan": "veí",
+    "notes": "Жіноча форма: vecina / veïna."
+  },
+  {
+    "id": 246,
+    "category": "HYGIENE",
+    "english": "Toothbrush",
+    "ukrainian": "Зубна щітка",
+    "spanish": "cepillo de dientes",
+    "catalan": "raspall de dents",
+    "notes": null
+  },
+  {
+    "id": 247,
+    "category": "HYGIENE",
+    "english": "Shower gel",
+    "ukrainian": "Гель для душу",
+    "spanish": "gel de ducha",
+    "catalan": "gel de dutxa",
+    "notes": null
+  },
+  {
+    "id": 248,
+    "category": "HYGIENE",
+    "english": "Sanitary pads",
+    "ukrainian": "Гігієнічні прокладки",
+    "spanish": "compresas",
+    "catalan": "compreses",
+    "notes": null
+  },
+  {
+    "id": 249,
+    "category": "HYGIENE",
+    "english": "Sunscreen",
+    "ukrainian": "Сонцезахисний крем",
+    "spanish": "protector solar",
+    "catalan": "protector solar",
+    "notes": null
+  },
+  {
+    "id": 250,
+    "category": "CLEANING",
+    "english": "Laundry detergent",
+    "ukrainian": "Засіб для прання",
+    "spanish": "detergente para la ropa",
+    "catalan": "detergent per a la roba",
+    "notes": null
+  },
+  {
+    "id": 251,
+    "category": "CLEANING",
+    "english": "Washing-up liquid",
+    "ukrainian": "Засіб для миття посуду",
+    "spanish": "lavavajillas a mano",
+    "catalan": "rentavaixelles a mà",
+    "notes": null
+  },
+  {
+    "id": 252,
+    "category": "CLEANING",
+    "english": "Bleach",
+    "ukrainian": "Відбілювач на основі хлору",
+    "spanish": "lejía",
+    "catalan": "lleixiu",
+    "notes": null
+  },
+  {
+    "id": 253,
+    "category": "CLEANING",
+    "english": "Bin bag",
+    "ukrainian": "Пакет для сміття",
+    "spanish": "bolsa de basura",
+    "catalan": "bossa d'escombraries",
+    "notes": null
+  },
+  {
+    "id": 254,
+    "category": "CLEANING",
+    "english": "Rubbish",
+    "ukrainian": "Сміття",
+    "spanish": "basura",
+    "catalan": "escombraries",
+    "notes": null
+  },
+  {
+    "id": 255,
+    "category": "CLEANING",
+    "english": "Recycling",
+    "ukrainian": "Переробка відходів",
+    "spanish": "reciclaje",
+    "catalan": "reciclatge",
+    "notes": null
+  },
+  {
+    "id": 256,
+    "category": "CLEANING",
+    "english": "Glass (material)",
+    "ukrainian": "Скло",
+    "spanish": "vidrio",
+    "catalan": "vidre",
+    "notes": null
+  },
+  {
+    "id": 257,
+    "category": "CLEANING",
+    "english": "Cardboard",
+    "ukrainian": "Картон",
+    "spanish": "cartón",
+    "catalan": "cartró",
+    "notes": null
+  },
+  {
+    "id": 258,
+    "category": "CLEANING",
+    "english": "Organic waste",
+    "ukrainian": "Органічні відходи",
+    "spanish": "residuos orgánicos",
+    "catalan": "residus orgànics",
+    "notes": null
+  },
+  {
+    "id": 259,
+    "category": "HEALTH",
+    "english": "Pharmacy",
+    "ukrainian": "Аптека",
+    "spanish": "farmacia",
+    "catalan": "farmàcia",
+    "notes": null
+  },
+  {
+    "id": 260,
+    "category": "HEALTH",
+    "english": "Primary care centre",
+    "ukrainian": "Центр первинної медичної допомоги",
+    "spanish": "centro de atención primaria",
+    "catalan": "centre d'atenció primària",
+    "notes": "У Каталонії часто вживають скорочення CAP. Це словникова назва, не інструкція щодо доступу до послуг."
+  },
+  {
+    "id": 261,
+    "category": "HEALTH",
+    "english": "Doctor",
+    "ukrainian": "Лікар",
+    "spanish": "médico",
+    "catalan": "metge",
+    "notes": "Жіноча форма: médica / metgessa."
+  },
+  {
+    "id": 262,
+    "category": "HEALTH",
+    "english": "Nurse",
+    "ukrainian": "Медсестра",
+    "spanish": "enfermera",
+    "catalan": "infermera",
+    "notes": "Чоловіча форма: enfermero / infermer."
+  },
+  {
+    "id": 263,
+    "category": "HEALTH",
+    "english": "Appointment",
+    "ukrainian": "Запис на прийом",
+    "spanish": "cita",
+    "catalan": "cita",
+    "notes": null
+  },
+  {
+    "id": 264,
+    "category": "HEALTH",
+    "english": "Health card",
+    "ukrainian": "Медична картка",
+    "spanish": "tarjeta sanitaria",
+    "catalan": "targeta sanitària",
+    "notes": null
+  },
+  {
+    "id": 265,
+    "category": "HEALTH",
+    "english": "Prescription",
+    "ukrainian": "Рецепт на ліки",
+    "spanish": "receta médica",
+    "catalan": "recepta mèdica",
+    "notes": null
+  },
+  {
+    "id": 266,
+    "category": "HEALTH",
+    "english": "Pain",
+    "ukrainian": "Біль",
+    "spanish": "dolor",
+    "catalan": "dolor",
+    "notes": null
+  },
+  {
+    "id": 267,
+    "category": "HEALTH",
+    "english": "Fever",
+    "ukrainian": "Підвищена температура",
+    "spanish": "fiebre",
+    "catalan": "febre",
+    "notes": null
+  },
+  {
+    "id": 268,
+    "category": "HEALTH",
+    "english": "Cough",
+    "ukrainian": "Кашель",
+    "spanish": "tos",
+    "catalan": "tos",
+    "notes": null
+  },
+  {
+    "id": 269,
+    "category": "HEALTH",
+    "english": "Allergy",
+    "ukrainian": "Алергія",
+    "spanish": "alergia",
+    "catalan": "al·lèrgia",
+    "notes": null
+  },
+  {
+    "id": 270,
+    "category": "HEALTH",
+    "english": "Medicine",
+    "ukrainian": "Лікарський засіб",
+    "spanish": "medicamento",
+    "catalan": "medicament",
+    "notes": null
+  },
+  {
+    "id": 271,
+    "category": "EMERGENCY",
+    "english": "Help!",
+    "ukrainian": "Допоможіть!",
+    "spanish": "¡Socorro!",
+    "catalan": "Auxili!",
+    "notes": null
+  },
+  {
+    "id": 272,
+    "category": "EMERGENCY",
+    "english": "Emergency",
+    "ukrainian": "Надзвичайна ситуація",
+    "spanish": "emergencia",
+    "catalan": "emergència",
+    "notes": null
+  },
+  {
+    "id": 273,
+    "category": "EMERGENCY",
+    "english": "Ambulance",
+    "ukrainian": "Швидка допомога",
+    "spanish": "ambulancia",
+    "catalan": "ambulància",
+    "notes": null
+  },
+  {
+    "id": 274,
+    "category": "EMERGENCY",
+    "english": "Police",
+    "ukrainian": "Поліція",
+    "spanish": "policía",
+    "catalan": "policia",
+    "notes": null
+  },
+  {
+    "id": 275,
+    "category": "EMERGENCY",
+    "english": "Firefighters",
+    "ukrainian": "Пожежники",
+    "spanish": "bomberos",
+    "catalan": "bombers",
+    "notes": null
+  },
+  {
+    "id": 276,
+    "category": "EMERGENCY",
+    "english": "I need help",
+    "ukrainian": "Мені потрібна допомога",
+    "spanish": "necesito ayuda",
+    "catalan": "necessito ajuda",
+    "notes": null
+  },
+  {
+    "id": 277,
+    "category": "EMERGENCY",
+    "english": "My phone has been stolen",
+    "ukrainian": "У мене вкрали телефон",
+    "spanish": "me han robado el móvil",
+    "catalan": "m'han robat el mòbil",
+    "notes": null
+  },
+  {
+    "id": 278,
+    "category": "EMERGENCY",
+    "english": "I have lost my wallet",
+    "ukrainian": "Я загубив гаманець",
+    "spanish": "he perdido la cartera",
+    "catalan": "he perdut la cartera",
+    "notes": null
+  },
+  {
+    "id": 279,
+    "category": "ADMINISTRATION",
+    "english": "Passport",
+    "ukrainian": "Паспорт",
+    "spanish": "pasaporte",
+    "catalan": "passaport",
+    "notes": null
+  },
+  {
+    "id": 280,
+    "category": "ADMINISTRATION",
+    "english": "Identity document",
+    "ukrainian": "Документ, що посвідчує особу",
+    "spanish": "documento de identidad",
+    "catalan": "document d'identitat",
+    "notes": null
+  },
+  {
+    "id": 281,
+    "category": "ADMINISTRATION",
+    "english": "Residence permit",
+    "ukrainian": "Дозвіл на проживання",
+    "spanish": "permiso de residencia",
+    "catalan": "permís de residència",
+    "notes": null
+  },
+  {
+    "id": 282,
+    "category": "ADMINISTRATION",
+    "english": "Municipal registration",
+    "ukrainian": "Реєстрація місця проживання в муніципалітеті",
+    "spanish": "empadronamiento",
+    "catalan": "empadronament",
+    "notes": "Назва адміністративної процедури; вимоги до неї тут не описуються."
+  },
+  {
+    "id": 283,
+    "category": "ADMINISTRATION",
+    "english": "Appointment booked in advance",
+    "ukrainian": "Попередній запис",
+    "spanish": "cita previa",
+    "catalan": "cita prèvia",
+    "notes": null
+  },
+  {
+    "id": 284,
+    "category": "ADMINISTRATION",
+    "english": "Form",
+    "ukrainian": "Бланк; форма",
+    "spanish": "formulario",
+    "catalan": "formulari",
+    "notes": null
+  },
+  {
+    "id": 285,
+    "category": "ADMINISTRATION",
+    "english": "Signature",
+    "ukrainian": "Підпис",
+    "spanish": "firma",
+    "catalan": "signatura",
+    "notes": null
+  },
+  {
+    "id": 286,
+    "category": "ADMINISTRATION",
+    "english": "Photocopy",
+    "ukrainian": "Ксерокопія",
+    "spanish": "fotocopia",
+    "catalan": "fotocòpia",
+    "notes": null
+  },
+  {
+    "id": 287,
+    "category": "ADMINISTRATION",
+    "english": "Certificate",
+    "ukrainian": "Довідка; свідоцтво",
+    "spanish": "certificado",
+    "catalan": "certificat",
+    "notes": null
+  },
+  {
+    "id": 288,
+    "category": "ADMINISTRATION",
+    "english": "Application (official)",
+    "ukrainian": "Заява",
+    "spanish": "solicitud",
+    "catalan": "sol·licitud",
+    "notes": null
+  },
+  {
+    "id": 289,
+    "category": "BANKING",
+    "english": "Bank account",
+    "ukrainian": "Банківський рахунок",
+    "spanish": "cuenta bancaria",
+    "catalan": "compte bancari",
+    "notes": null
+  },
+  {
+    "id": 290,
+    "category": "BANKING",
+    "english": "Cash machine",
+    "ukrainian": "Банкомат",
+    "spanish": "cajero automático",
+    "catalan": "caixer automàtic",
+    "notes": null
+  },
+  {
+    "id": 291,
+    "category": "BANKING",
+    "english": "Bank transfer",
+    "ukrainian": "Банківський переказ",
+    "spanish": "transferencia bancaria",
+    "catalan": "transferència bancària",
+    "notes": null
+  },
+  {
+    "id": 292,
+    "category": "BANKING",
+    "english": "Invoice",
+    "ukrainian": "Рахунок-фактура",
+    "spanish": "factura",
+    "catalan": "factura",
+    "notes": null
+  },
+  {
+    "id": 293,
+    "category": "BANKING",
+    "english": "Fee",
+    "ukrainian": "Комісія",
+    "spanish": "comisión",
+    "catalan": "comissió",
+    "notes": null
+  },
+  {
+    "id": 294,
+    "category": "TIME",
+    "english": "Today",
+    "ukrainian": "Сьогодні",
+    "spanish": "hoy",
+    "catalan": "avui",
+    "notes": null
+  },
+  {
+    "id": 295,
+    "category": "TIME",
+    "english": "Tomorrow",
+    "ukrainian": "Завтра",
+    "spanish": "mañana",
+    "catalan": "demà",
+    "notes": null
+  },
+  {
+    "id": 296,
+    "category": "TIME",
+    "english": "Yesterday",
+    "ukrainian": "Учора",
+    "spanish": "ayer",
+    "catalan": "ahir",
+    "notes": null
+  },
+  {
+    "id": 297,
+    "category": "TIME",
+    "english": "Now",
+    "ukrainian": "Зараз",
+    "spanish": "ahora",
+    "catalan": "ara",
+    "notes": null
+  },
+  {
+    "id": 298,
+    "category": "TIME",
+    "english": "Later",
+    "ukrainian": "Пізніше",
+    "spanish": "más tarde",
+    "catalan": "més tard",
+    "notes": null
+  },
+  {
+    "id": 299,
+    "category": "TIME",
+    "english": "Morning",
+    "ukrainian": "Ранок",
+    "spanish": "mañana",
+    "catalan": "matí",
+    "notes": "Іспанське mañana також означає «завтра»; значення визначає контекст."
+  },
+  {
+    "id": 300,
+    "category": "TIME",
+    "english": "Afternoon",
+    "ukrainian": "Час після обіду",
+    "spanish": "tarde",
+    "catalan": "tarda",
+    "notes": null
+  },
+  {
+    "id": 301,
+    "category": "TIME",
+    "english": "Night",
+    "ukrainian": "Ніч",
+    "spanish": "noche",
+    "catalan": "nit",
+    "notes": null
+  },
+  {
+    "id": 302,
+    "category": "TIME",
+    "english": "Monday",
+    "ukrainian": "Понеділок",
+    "spanish": "lunes",
+    "catalan": "dilluns",
+    "notes": null
+  },
+  {
+    "id": 303,
+    "category": "TIME",
+    "english": "Tuesday",
+    "ukrainian": "Вівторок",
+    "spanish": "martes",
+    "catalan": "dimarts",
+    "notes": null
+  },
+  {
+    "id": 304,
+    "category": "TIME",
+    "english": "Wednesday",
+    "ukrainian": "Середа",
+    "spanish": "miércoles",
+    "catalan": "dimecres",
+    "notes": null
+  },
+  {
+    "id": 305,
+    "category": "TIME",
+    "english": "Thursday",
+    "ukrainian": "Четвер",
+    "spanish": "jueves",
+    "catalan": "dijous",
+    "notes": null
+  },
+  {
+    "id": 306,
+    "category": "TIME",
+    "english": "Friday",
+    "ukrainian": "П’ятниця",
+    "spanish": "viernes",
+    "catalan": "divendres",
+    "notes": null
+  },
+  {
+    "id": 307,
+    "category": "TIME",
+    "english": "Saturday",
+    "ukrainian": "Субота",
+    "spanish": "sábado",
+    "catalan": "dissabte",
+    "notes": null
+  },
+  {
+    "id": 308,
+    "category": "TIME",
+    "english": "Sunday",
+    "ukrainian": "Неділя",
+    "spanish": "domingo",
+    "catalan": "diumenge",
+    "notes": null
+  },
+  {
+    "id": 309,
+    "category": "TIME",
+    "english": "Week",
+    "ukrainian": "Тиждень",
+    "spanish": "semana",
+    "catalan": "setmana",
+    "notes": null
+  },
+  {
+    "id": 310,
+    "category": "TIME",
+    "english": "Month",
+    "ukrainian": "Місяць",
+    "spanish": "mes",
+    "catalan": "mes",
+    "notes": null
+  },
+  {
+    "id": 311,
+    "category": "TIME",
+    "english": "Year",
+    "ukrainian": "Рік",
+    "spanish": "año",
+    "catalan": "any",
+    "notes": null
+  },
+  {
+    "id": 312,
+    "category": "TIME",
+    "english": "Open (shop)",
+    "ukrainian": "Відчинено",
+    "spanish": "abierto",
+    "catalan": "obert",
+    "notes": null
+  },
+  {
+    "id": 313,
+    "category": "TIME",
+    "english": "Closed (shop)",
+    "ukrainian": "Зачинено",
+    "spanish": "cerrado",
+    "catalan": "tancat",
+    "notes": null
+  },
+  {
+    "id": 314,
+    "category": "TIME",
+    "english": "Opening hours",
+    "ukrainian": "Години роботи",
+    "spanish": "horario de apertura",
+    "catalan": "horari d'obertura",
+    "notes": null
+  },
+  {
+    "id": 315,
+    "category": "NUMBERS",
+    "english": "Zero",
+    "ukrainian": "Нуль",
+    "spanish": "cero",
+    "catalan": "zero",
+    "notes": null
+  },
+  {
+    "id": 316,
+    "category": "NUMBERS",
+    "english": "One",
+    "ukrainian": "Один",
+    "spanish": "uno",
+    "catalan": "un",
+    "notes": "Каталанською окремо під час лічби також u; жіноча форма una. Іспанською перед іменником чоловічого роду — un."
+  },
+  {
+    "id": 317,
+    "category": "NUMBERS",
+    "english": "Two",
+    "ukrainian": "Два",
+    "spanish": "dos",
+    "catalan": "dos",
+    "notes": "Каталанською жіноча форма — dues."
+  },
+  {
+    "id": 318,
+    "category": "NUMBERS",
+    "english": "Three",
+    "ukrainian": "Три",
+    "spanish": "tres",
+    "catalan": "tres",
+    "notes": null
+  },
+  {
+    "id": 319,
+    "category": "NUMBERS",
+    "english": "Four",
+    "ukrainian": "Чотири",
+    "spanish": "cuatro",
+    "catalan": "quatre",
+    "notes": null
+  },
+  {
+    "id": 320,
+    "category": "NUMBERS",
+    "english": "Five",
+    "ukrainian": "П’ять",
+    "spanish": "cinco",
+    "catalan": "cinc",
+    "notes": null
+  },
+  {
+    "id": 321,
+    "category": "NUMBERS",
+    "english": "Six",
+    "ukrainian": "Шість",
+    "spanish": "seis",
+    "catalan": "sis",
+    "notes": null
+  },
+  {
+    "id": 322,
+    "category": "NUMBERS",
+    "english": "Seven",
+    "ukrainian": "Сім",
+    "spanish": "siete",
+    "catalan": "set",
+    "notes": null
+  },
+  {
+    "id": 323,
+    "category": "NUMBERS",
+    "english": "Eight",
+    "ukrainian": "Вісім",
+    "spanish": "ocho",
+    "catalan": "vuit",
+    "notes": null
+  },
+  {
+    "id": 324,
+    "category": "NUMBERS",
+    "english": "Nine",
+    "ukrainian": "Дев’ять",
+    "spanish": "nueve",
+    "catalan": "nou",
+    "notes": null
+  },
+  {
+    "id": 325,
+    "category": "NUMBERS",
+    "english": "Ten",
+    "ukrainian": "Десять",
+    "spanish": "diez",
+    "catalan": "deu",
+    "notes": null
+  },
+  {
+    "id": 326,
+    "category": "NUMBERS",
+    "english": "Twenty",
+    "ukrainian": "Двадцять",
+    "spanish": "veinte",
+    "catalan": "vint",
+    "notes": null
+  },
+  {
+    "id": 327,
+    "category": "NUMBERS",
+    "english": "Hundred",
+    "ukrainian": "Сто",
+    "spanish": "cien",
+    "catalan": "cent",
+    "notes": null
+  },
+  {
+    "id": 328,
+    "category": "VERBS",
+    "english": "To be (identity)",
+    "ukrainian": "Бути (ідентичність)",
+    "spanish": "ser",
+    "catalan": "ser",
+    "notes": "Базова навчальна підказка; правила ser / estar у двох мовах не повністю збігаються."
+  },
+  {
+    "id": 329,
+    "category": "VERBS",
+    "english": "To be (state)",
+    "ukrainian": "Бути (стан)",
+    "spanish": "estar",
+    "catalan": "estar",
+    "notes": "Базова навчальна підказка; уживання для місця та стану залежить від мови й контексту."
+  },
+  {
+    "id": 330,
+    "category": "VERBS",
+    "english": "To have",
+    "ukrainian": "Мати",
+    "spanish": "tener",
+    "catalan": "tenir",
+    "notes": null
+  },
+  {
+    "id": 331,
+    "category": "VERBS",
+    "english": "To go",
+    "ukrainian": "Йти; їхати",
+    "spanish": "ir",
+    "catalan": "anar",
+    "notes": null
+  },
+  {
+    "id": 332,
+    "category": "VERBS",
+    "english": "To come",
+    "ukrainian": "Приходити",
+    "spanish": "venir",
+    "catalan": "venir",
+    "notes": null
+  },
+  {
+    "id": 333,
+    "category": "VERBS",
+    "english": "To want",
+    "ukrainian": "Хотіти",
+    "spanish": "querer",
+    "catalan": "voler",
+    "notes": null
+  },
+  {
+    "id": 334,
+    "category": "VERBS",
+    "english": "To be able to",
+    "ukrainian": "Могти",
+    "spanish": "poder",
+    "catalan": "poder",
+    "notes": null
+  },
+  {
+    "id": 335,
+    "category": "VERBS",
+    "english": "To need",
+    "ukrainian": "Потребувати",
+    "spanish": "necesitar",
+    "catalan": "necessitar",
+    "notes": null
+  },
+  {
+    "id": 336,
+    "category": "VERBS",
+    "english": "To buy",
+    "ukrainian": "Купувати",
+    "spanish": "comprar",
+    "catalan": "comprar",
+    "notes": null
+  },
+  {
+    "id": 337,
+    "category": "VERBS",
+    "english": "To pay",
+    "ukrainian": "Платити",
+    "spanish": "pagar",
+    "catalan": "pagar",
+    "notes": null
+  },
+  {
+    "id": 338,
+    "category": "VERBS",
+    "english": "To eat",
+    "ukrainian": "Їсти",
+    "spanish": "comer",
+    "catalan": "menjar",
+    "notes": null
+  },
+  {
+    "id": 339,
+    "category": "VERBS",
+    "english": "To drink",
+    "ukrainian": "Пити",
+    "spanish": "beber",
+    "catalan": "beure",
+    "notes": null
+  },
+  {
+    "id": 340,
+    "category": "VERBS",
+    "english": "To speak",
+    "ukrainian": "Говорити",
+    "spanish": "hablar",
+    "catalan": "parlar",
+    "notes": null
+  },
+  {
+    "id": 341,
+    "category": "VERBS",
+    "english": "To understand",
+    "ukrainian": "Розуміти",
+    "spanish": "entender",
+    "catalan": "entendre",
+    "notes": null
+  },
+  {
+    "id": 342,
+    "category": "VERBS",
+    "english": "To work",
+    "ukrainian": "Працювати",
+    "spanish": "trabajar",
+    "catalan": "treballar",
+    "notes": null
+  },
+  {
+    "id": 343,
+    "category": "VERBS",
+    "english": "To live (reside)",
+    "ukrainian": "Проживати",
+    "spanish": "vivir",
+    "catalan": "viure",
+    "notes": null
+  },
+  {
+    "id": 344,
+    "category": "VERBS",
+    "english": "To look for",
+    "ukrainian": "Шукати",
+    "spanish": "buscar",
+    "catalan": "buscar",
+    "notes": null
+  },
+  {
+    "id": 345,
+    "category": "VERBS",
+    "english": "To wait",
+    "ukrainian": "Чекати",
+    "spanish": "esperar",
+    "catalan": "esperar",
+    "notes": null
+  },
+  {
+    "id": 346,
+    "category": "VERBS",
+    "english": "To open",
+    "ukrainian": "Відчиняти",
+    "spanish": "abrir",
+    "catalan": "obrir",
+    "notes": null
+  },
+  {
+    "id": 347,
+    "category": "VERBS",
+    "english": "To close",
+    "ukrainian": "Зачиняти",
+    "spanish": "cerrar",
+    "catalan": "tancar",
+    "notes": null
+  },
+  {
+    "id": 348,
+    "category": "WEATHER",
+    "english": "Rain",
+    "ukrainian": "Дощ",
+    "spanish": "lluvia",
+    "catalan": "pluja",
+    "notes": null
+  },
+  {
+    "id": 349,
+    "category": "WEATHER",
+    "english": "Sun",
+    "ukrainian": "Сонце",
+    "spanish": "sol",
+    "catalan": "sol",
+    "notes": null
+  },
+  {
+    "id": 350,
+    "category": "WEATHER",
+    "english": "Heat",
+    "ukrainian": "Спека",
+    "spanish": "calor",
+    "catalan": "calor",
+    "notes": null
+  },
+  {
+    "id": 351,
+    "category": "WEATHER",
+    "english": "Cold (weather)",
+    "ukrainian": "Холод",
+    "spanish": "frío",
+    "catalan": "fred",
+    "notes": null
+  },
+  {
+    "id": 352,
+    "category": "WEATHER",
+    "english": "Wind",
+    "ukrainian": "Вітер",
+    "spanish": "viento",
+    "catalan": "vent",
+    "notes": null
+  },
+  {
+    "id": 353,
+    "category": "TECHNOLOGY",
+    "english": "Mobile phone",
+    "ukrainian": "Мобільний телефон",
+    "spanish": "teléfono móvil",
+    "catalan": "telèfon mòbil",
+    "notes": null
+  },
+  {
+    "id": 354,
+    "category": "TECHNOLOGY",
+    "english": "Charger",
+    "ukrainian": "Зарядний пристрій",
+    "spanish": "cargador",
+    "catalan": "carregador",
+    "notes": null
+  },
+  {
+    "id": 355,
+    "category": "TECHNOLOGY",
+    "english": "Password",
+    "ukrainian": "Пароль",
+    "spanish": "contraseña",
+    "catalan": "contrasenya",
+    "notes": null
+  },
+  {
+    "id": 356,
+    "category": "TECHNOLOGY",
+    "english": "Internet connection",
+    "ukrainian": "Інтернет-з’єднання",
+    "spanish": "conexión a internet",
+    "catalan": "connexió a internet",
+    "notes": null
+  },
+  {
+    "id": 357,
+    "category": "TECHNOLOGY",
+    "english": "Email address",
+    "ukrainian": "Адреса електронної пошти",
+    "spanish": "dirección de correo electrónico",
+    "catalan": "adreça de correu electrònic",
+    "notes": null
+  }
 ]

@@ -1,38 +1,1766 @@
 [
-  { "id": 1,  "category": "greeting",  "english": "Good morning!",                        "ukrainian": "Добридень!",                              "spanish": "¡Buenos días!",                        "catalan": "Bon dia!",                          "notes": "Used in the morning" },
-  { "id": 2,  "category": "greeting",  "english": "Good afternoon!",                      "ukrainian": "Добрий день!",                            "spanish": "¡Buenas tardes!",                      "catalan": "Bona tarda!",                       "notes": "Used in the afternoon" },
-  { "id": 3,  "category": "greeting",  "english": "Goodbye!",                             "ukrainian": "До побачення!",                           "spanish": "¡Hasta luego!",                        "catalan": "Fins aviat!",                       "notes": null },
-  { "id": 4,  "category": "greeting",  "english": "Thank you!",                           "ukrainian": "Дякую!",                                  "spanish": "¡Gracias!",                            "catalan": "Gràcies!",                          "notes": null },
-  { "id": 5,  "category": "greeting",  "english": "Please",                               "ukrainian": "Будь ласка",                              "spanish": "Por favor",                            "catalan": "Si us plau",                        "notes": null },
-  { "id": 6,  "category": "greeting",  "english": "Excuse me",                            "ukrainian": "Вибачте",                                 "spanish": "Perdone / Disculpe",                   "catalan": "Perdoni",                           "notes": "To get attention or apologize" },
-
-  { "id": 7,  "category": "price",     "english": "How much does this cost?",             "ukrainian": "Скільки це коштує?",                      "spanish": "¿Cuánto cuesta esto?",                 "catalan": "Quant costa això?",                 "notes": null },
-  { "id": 8,  "category": "price",     "english": "How much does a kilo cost?",           "ukrainian": "Скільки коштує кілограм?",                "spanish": "¿Cuánto cuesta el kilo?",              "catalan": "Quant costa el quilo?",             "notes": null },
-  { "id": 9,  "category": "price",     "english": "It's very expensive",                  "ukrainian": "Це дорого",                               "spanish": "Es muy caro",                          "catalan": "És molt car",                       "notes": null },
-  { "id": 10, "category": "price",     "english": "Are there any discounts?",             "ukrainian": "Чи є знижки?",                            "spanish": "¿Hay descuentos?",                     "catalan": "Hi ha descomptes?",                 "notes": null },
-  { "id": 11, "category": "price",     "english": "Are there any offers?",                "ukrainian": "Чи є акції?",                             "spanish": "¿Hay ofertas?",                        "catalan": "Hi ha ofertes?",                    "notes": null },
-
-  { "id": 12, "category": "location",  "english": "Where is...?",                         "ukrainian": "Де знаходиться...?",                      "spanish": "¿Dónde está...?",                      "catalan": "On és...?",                         "notes": null },
-  { "id": 13, "category": "location",  "english": "Where is the checkout?",               "ukrainian": "Де каса?",                                "spanish": "¿Dónde está la caja?",                 "catalan": "On és la caixa?",                   "notes": "Cashier / checkout" },
-  { "id": 14, "category": "location",  "english": "Where are the dairy products?",        "ukrainian": "Де молочні продукти?",                    "spanish": "¿Dónde están los lácteos?",            "catalan": "On són els làctics?",               "notes": null },
-  { "id": 15, "category": "location",  "english": "Where are the fruits and vegetables?", "ukrainian": "Де фрукти та овочі?",                     "spanish": "¿Dónde están las frutas y verduras?",  "catalan": "On són les fruites i verdures?",    "notes": null },
-
-  { "id": 16, "category": "quantity",  "english": "Give me..., please",                   "ukrainian": "Дайте мені, будь ласка...",               "spanish": "Póngame..., por favor",                "catalan": "Posi'm..., si us plau",             "notes": "At a deli counter" },
-  { "id": 17, "category": "quantity",  "english": "I need 500 grams of...",               "ukrainian": "Мені потрібно 500 грамів...",              "spanish": "Necesito quinientos gramos de...",     "catalan": "Necessito cinc-cents grams de...",  "notes": null },
-  { "id": 18, "category": "quantity",  "english": "Give me a kilogram of...",             "ukrainian": "Дайте мені кілограм...",                  "spanish": "Póngame un kilo de...",                "catalan": "Posi'm un quilo de...",             "notes": null },
-  { "id": 19, "category": "quantity",  "english": "A little more, please",                "ukrainian": "Трохи більше, будь ласка",                "spanish": "Un poco más, por favor",               "catalan": "Una mica més, si us plau",          "notes": null },
-  { "id": 20, "category": "quantity",  "english": "A little less, please",                "ukrainian": "Трохи менше, будь ласка",                 "spanish": "Un poco menos, por favor",             "catalan": "Una mica menys, si us plau",        "notes": null },
-  { "id": 21, "category": "quantity",  "english": "How much does it weigh?",              "ukrainian": "Скільки важить?",                         "spanish": "¿Cuánto pesa?",                        "catalan": "Quant pesa?",                       "notes": null },
-
-  { "id": 22, "category": "product",   "english": "Do you have...?",                      "ukrainian": "Чи є у вас...?",                          "spanish": "¿Tiene...?",                           "catalan": "Té...?",                            "notes": null },
-  { "id": 23, "category": "product",   "english": "Is it fresh?",                         "ukrainian": "Це свіже?",                               "spanish": "¿Está fresco?",                        "catalan": "Està fresc?",                       "notes": null },
-  { "id": 24, "category": "product",   "english": "When does it expire?",                 "ukrainian": "Коли закінчується термін придатності?",   "spanish": "¿Cuándo caduca?",                      "catalan": "Quan caduca?",                      "notes": null },
-  { "id": 25, "category": "product",   "english": "Is it gluten-free?",                   "ukrainian": "Це без глютену?",                         "spanish": "¿Es sin gluten?",                      "catalan": "És sense gluten?",                  "notes": null },
-  { "id": 26, "category": "product",   "english": "Do you have something similar?",       "ukrainian": "Є щось схоже?",                           "spanish": "¿Tiene algo parecido?",                "catalan": "Té alguna cosa semblant?",          "notes": null },
-
-  { "id": 27, "category": "payment",   "english": "Can I pay by card?",                   "ukrainian": "Я можу заплатити карткою?",               "spanish": "¿Puedo pagar con tarjeta?",            "catalan": "Puc pagar amb targeta?",            "notes": null },
-  { "id": 28, "category": "payment",   "english": "I'll pay cash",                        "ukrainian": "Я плачу готівкою",                        "spanish": "Pago en efectivo",                     "catalan": "Pago en efectiu",                   "notes": null },
-  { "id": 29, "category": "payment",   "english": "A bag, please",                        "ukrainian": "Пакет, будь ласка",                       "spanish": "Una bolsa, por favor",                 "catalan": "Una bossa, si us plau",             "notes": null },
-  { "id": 30, "category": "payment",   "english": "Receipt, please",                      "ukrainian": "Дайте мені чек, будь ласка",              "spanish": "El ticket, por favor",                 "catalan": "El tíquet, si us plau",             "notes": null },
-  { "id": 31, "category": "payment",   "english": "Change",                               "ukrainian": "Решта",                                   "spanish": "El cambio",                            "catalan": "El canvi",                          "notes": "Coins back" }
+  {
+    "id": 1,
+    "category": "greeting",
+    "english": "Good morning!",
+    "ukrainian": "Доброго ранку!",
+    "spanish": "¡Buenos días!",
+    "catalan": "Bon dia!",
+    "notes": "Привітання вранці."
+  },
+  {
+    "id": 2,
+    "category": "greeting",
+    "english": "Good afternoon!",
+    "ukrainian": "Добрий день!",
+    "spanish": "¡Buenas tardes!",
+    "catalan": "Bona tarda!",
+    "notes": "Привітання після обіду."
+  },
+  {
+    "id": 3,
+    "category": "greeting",
+    "english": "See you later!",
+    "ukrainian": "До зустрічі!",
+    "spanish": "¡Hasta luego!",
+    "catalan": "Fins aviat!",
+    "notes": "Природні формули прощання; буквально: іспанською «до пізніше», каталанською «до скорого»."
+  },
+  {
+    "id": 4,
+    "category": "greeting",
+    "english": "Thank you!",
+    "ukrainian": "Дякую!",
+    "spanish": "¡Gracias!",
+    "catalan": "Gràcies!",
+    "notes": null
+  },
+  {
+    "id": 5,
+    "category": "greeting",
+    "english": "Please",
+    "ukrainian": "Будь ласка",
+    "spanish": "Por favor",
+    "catalan": "Si us plau",
+    "notes": null
+  },
+  {
+    "id": 6,
+    "category": "greeting",
+    "english": "Excuse me",
+    "ukrainian": "Вибачте",
+    "spanish": "Perdone",
+    "catalan": "Perdoni",
+    "notes": "Ввічливе звертання до однієї особи, щоб привернути увагу або перепросити; також Disculpe / Disculpi."
+  },
+  {
+    "id": 7,
+    "category": "price",
+    "english": "How much does this cost?",
+    "ukrainian": "Скільки це коштує?",
+    "spanish": "¿Cuánto cuesta esto?",
+    "catalan": "Quant costa això?",
+    "notes": null
+  },
+  {
+    "id": 8,
+    "category": "price",
+    "english": "How much does a kilo cost?",
+    "ukrainian": "Скільки коштує кілограм?",
+    "spanish": "¿Cuánto cuesta el kilo?",
+    "catalan": "Quant costa el quilo?",
+    "notes": null
+  },
+  {
+    "id": 9,
+    "category": "price",
+    "english": "It's very expensive",
+    "ukrainian": "Це дуже дорого",
+    "spanish": "Es muy caro",
+    "catalan": "És molt car",
+    "notes": "Форми чоловічого роду; про іменник жіночого роду: Es muy cara / És molt cara."
+  },
+  {
+    "id": 10,
+    "category": "price",
+    "english": "Are there any discounts?",
+    "ukrainian": "Чи є знижки?",
+    "spanish": "¿Hay descuentos?",
+    "catalan": "Hi ha descomptes?",
+    "notes": null
+  },
+  {
+    "id": 11,
+    "category": "price",
+    "english": "Are there any offers?",
+    "ukrainian": "Чи є акції?",
+    "spanish": "¿Hay ofertas?",
+    "catalan": "Hi ha ofertes?",
+    "notes": null
+  },
+  {
+    "id": 12,
+    "category": "location",
+    "english": "Where is...?",
+    "ukrainian": "Де знаходиться...?",
+    "spanish": "¿Dónde está...?",
+    "catalan": "On és...?",
+    "notes": null
+  },
+  {
+    "id": 13,
+    "category": "location",
+    "english": "Where is the checkout?",
+    "ukrainian": "Де каса?",
+    "spanish": "¿Dónde está la caja?",
+    "catalan": "On és la caixa?",
+    "notes": "Йдеться про місце оплати покупок."
+  },
+  {
+    "id": 14,
+    "category": "location",
+    "english": "Where are the dairy products?",
+    "ukrainian": "Де молочні продукти?",
+    "spanish": "¿Dónde están los lácteos?",
+    "catalan": "On són els làctics?",
+    "notes": null
+  },
+  {
+    "id": 15,
+    "category": "location",
+    "english": "Where are the fruits and vegetables?",
+    "ukrainian": "Де фрукти та овочі?",
+    "spanish": "¿Dónde están las frutas y verduras?",
+    "catalan": "On són les fruites i verdures?",
+    "notes": null
+  },
+  {
+    "id": 16,
+    "category": "quantity",
+    "english": "Give me..., please",
+    "ukrainian": "Дайте мені, будь ласка...",
+    "spanish": "Póngame..., por favor",
+    "catalan": "Posi'm..., si us plau",
+    "notes": "Ввічливе звертання до однієї особи біля прилавка."
+  },
+  {
+    "id": 17,
+    "category": "quantity",
+    "english": "I need 500 grams of...",
+    "ukrainian": "Мені потрібно 500 грамів...",
+    "spanish": "Necesito quinientos gramos de...",
+    "catalan": "Necessito cinc-cents grams de...",
+    "notes": null
+  },
+  {
+    "id": 18,
+    "category": "quantity",
+    "english": "Give me a kilogram of...",
+    "ukrainian": "Дайте мені кілограм...",
+    "spanish": "Póngame un kilo de...",
+    "catalan": "Posi'm un quilo de...",
+    "notes": null
+  },
+  {
+    "id": 19,
+    "category": "quantity",
+    "english": "A little more, please",
+    "ukrainian": "Трохи більше, будь ласка",
+    "spanish": "Un poco más, por favor",
+    "catalan": "Una mica més, si us plau",
+    "notes": null
+  },
+  {
+    "id": 20,
+    "category": "quantity",
+    "english": "A little less, please",
+    "ukrainian": "Трохи менше, будь ласка",
+    "spanish": "Un poco menos, por favor",
+    "catalan": "Una mica menys, si us plau",
+    "notes": null
+  },
+  {
+    "id": 21,
+    "category": "quantity",
+    "english": "How much does it weigh?",
+    "ukrainian": "Скільки важить?",
+    "spanish": "¿Cuánto pesa?",
+    "catalan": "Quant pesa?",
+    "notes": null
+  },
+  {
+    "id": 22,
+    "category": "product",
+    "english": "Do you have...?",
+    "ukrainian": "Чи є у вас...?",
+    "spanish": "¿Tiene...?",
+    "catalan": "Té...?",
+    "notes": null
+  },
+  {
+    "id": 23,
+    "category": "product",
+    "english": "Is it fresh?",
+    "ukrainian": "Це свіже?",
+    "spanish": "¿Está fresco?",
+    "catalan": "Està fresc?",
+    "notes": "Форми чоловічого роду; жіночі форми: ¿Está fresca? / Està fresca?"
+  },
+  {
+    "id": 24,
+    "category": "product",
+    "english": "When does it expire?",
+    "ukrainian": "Коли закінчується термін придатності?",
+    "spanish": "¿Cuándo caduca?",
+    "catalan": "Quan caduca?",
+    "notes": null
+  },
+  {
+    "id": 25,
+    "category": "product",
+    "english": "Is it gluten-free?",
+    "ukrainian": "Це без глютену?",
+    "spanish": "¿No contiene gluten?",
+    "catalan": "No conté gluten?",
+    "notes": "Запитання про склад продукту; не замінює перевірку маркування алергенів."
+  },
+  {
+    "id": 26,
+    "category": "product",
+    "english": "Do you have something similar?",
+    "ukrainian": "Є щось схоже?",
+    "spanish": "¿Tiene algo parecido?",
+    "catalan": "Té alguna cosa semblant?",
+    "notes": null
+  },
+  {
+    "id": 27,
+    "category": "payment",
+    "english": "Can I pay by card?",
+    "ukrainian": "Я можу заплатити карткою?",
+    "spanish": "¿Puedo pagar con tarjeta?",
+    "catalan": "Puc pagar amb targeta?",
+    "notes": null
+  },
+  {
+    "id": 28,
+    "category": "payment",
+    "english": "I'll pay cash",
+    "ukrainian": "Я плачу готівкою",
+    "spanish": "Pago en efectivo",
+    "catalan": "Pago en efectiu",
+    "notes": null
+  },
+  {
+    "id": 29,
+    "category": "payment",
+    "english": "A bag, please",
+    "ukrainian": "Пакет, будь ласка",
+    "spanish": "Una bolsa, por favor",
+    "catalan": "Una bossa, si us plau",
+    "notes": null
+  },
+  {
+    "id": 30,
+    "category": "payment",
+    "english": "Receipt, please",
+    "ukrainian": "Дайте мені чек, будь ласка",
+    "spanish": "El tique, por favor",
+    "catalan": "El tiquet, si us plau",
+    "notes": null
+  },
+  {
+    "id": 31,
+    "category": "payment",
+    "english": "Change",
+    "ukrainian": "Решта",
+    "spanish": "El cambio",
+    "catalan": "El canvi",
+    "notes": "Решта після оплати; може бути монетами або банкнотами."
+  },
+  {
+    "id": 32,
+    "category": "greeting",
+    "english": "Hello!",
+    "ukrainian": "Привіт!",
+    "spanish": "¡Hola!",
+    "catalan": "Hola!",
+    "notes": null
+  },
+  {
+    "id": 33,
+    "category": "greeting",
+    "english": "Good evening / Good night!",
+    "ukrainian": "Добрий вечір / На добраніч!",
+    "spanish": "¡Buenas noches!",
+    "catalan": "Bona nit!",
+    "notes": "Bona nit вживають увечері та перед сном; у другій половині дня — Bona tarda."
+  },
+  {
+    "id": 34,
+    "category": "greeting",
+    "english": "Goodbye!",
+    "ukrainian": "До побачення!",
+    "spanish": "¡Adiós!",
+    "catalan": "Adeu!",
+    "notes": null
+  },
+  {
+    "id": 35,
+    "category": "greeting",
+    "english": "See you tomorrow!",
+    "ukrainian": "До завтра!",
+    "spanish": "¡Hasta mañana!",
+    "catalan": "Fins demà!",
+    "notes": null
+  },
+  {
+    "id": 36,
+    "category": "greeting",
+    "english": "Have a nice day!",
+    "ukrainian": "Гарного дня!",
+    "spanish": "¡Que tenga un buen día!",
+    "catalan": "Que tingui un bon dia!",
+    "notes": null
+  },
+  {
+    "id": 37,
+    "category": "greeting",
+    "english": "You're welcome",
+    "ukrainian": "Нема за що",
+    "spanish": "De nada",
+    "catalan": "De res",
+    "notes": null
+  },
+  {
+    "id": 38,
+    "category": "greeting",
+    "english": "Thank you very much!",
+    "ukrainian": "Дуже дякую!",
+    "spanish": "¡Muchas gracias!",
+    "catalan": "Moltes gràcies!",
+    "notes": null
+  },
+  {
+    "id": 39,
+    "category": "greeting",
+    "english": "Sorry, it was my mistake",
+    "ukrainian": "Вибачте, це моя помилка",
+    "spanish": "Perdone, ha sido un error mío",
+    "catalan": "Perdoni, ha estat un error meu",
+    "notes": null
+  },
+  {
+    "id": 40,
+    "category": "communication",
+    "english": "I don't understand",
+    "ukrainian": "Я не розумію",
+    "spanish": "No entiendo",
+    "catalan": "No ho entenc",
+    "notes": null
+  },
+  {
+    "id": 41,
+    "category": "communication",
+    "english": "Could you repeat that, please?",
+    "ukrainian": "Повторіть, будь ласка",
+    "spanish": "¿Puede repetirlo, por favor?",
+    "catalan": "Ho pot repetir, si us plau?",
+    "notes": null
+  },
+  {
+    "id": 42,
+    "category": "communication",
+    "english": "Could you speak more slowly?",
+    "ukrainian": "Можете говорити повільніше?",
+    "spanish": "¿Puede hablar más despacio?",
+    "catalan": "Pot parlar més a poc a poc?",
+    "notes": null
+  },
+  {
+    "id": 43,
+    "category": "communication",
+    "english": "Could you write it down?",
+    "ukrainian": "Можете це записати?",
+    "spanish": "¿Puede escribirlo?",
+    "catalan": "Ho pot escriure?",
+    "notes": null
+  },
+  {
+    "id": 44,
+    "category": "communication",
+    "english": "What does this word mean?",
+    "ukrainian": "Що означає це слово?",
+    "spanish": "¿Qué significa esta palabra?",
+    "catalan": "Què vol dir aquesta paraula?",
+    "notes": null
+  },
+  {
+    "id": 45,
+    "category": "communication",
+    "english": "How do you say this in Catalan?",
+    "ukrainian": "Як це сказати каталанською?",
+    "spanish": "¿Cómo se dice esto en catalán?",
+    "catalan": "Com es diu això en català?",
+    "notes": null
+  },
+  {
+    "id": 46,
+    "category": "communication",
+    "english": "How do you say this in Spanish?",
+    "ukrainian": "Як це сказати іспанською?",
+    "spanish": "¿Cómo se dice esto en español?",
+    "catalan": "Com es diu això en castellà?",
+    "notes": null
+  },
+  {
+    "id": 47,
+    "category": "communication",
+    "english": "I'm learning Catalan",
+    "ukrainian": "Я вивчаю каталанську",
+    "spanish": "Estoy aprendiendo catalán",
+    "catalan": "Estic aprenent català",
+    "notes": null
+  },
+  {
+    "id": 48,
+    "category": "communication",
+    "english": "I'm learning Spanish",
+    "ukrainian": "Я вивчаю іспанську",
+    "spanish": "Estoy aprendiendo español",
+    "catalan": "Estic aprenent castellà",
+    "notes": null
+  },
+  {
+    "id": 49,
+    "category": "communication",
+    "english": "Do you speak English?",
+    "ukrainian": "Ви розмовляєте англійською?",
+    "spanish": "¿Habla inglés?",
+    "catalan": "Parla anglès?",
+    "notes": null
+  },
+  {
+    "id": 50,
+    "category": "communication",
+    "english": "I speak a little Catalan",
+    "ukrainian": "Я трохи розмовляю каталанською",
+    "spanish": "Hablo un poco de catalán",
+    "catalan": "Parlo una mica de català",
+    "notes": null
+  },
+  {
+    "id": 51,
+    "category": "communication",
+    "english": "Could you help me, please?",
+    "ukrainian": "Можете мені допомогти?",
+    "spanish": "¿Puede ayudarme, por favor?",
+    "catalan": "Em pot ajudar, si us plau?",
+    "notes": null
+  },
+  {
+    "id": 52,
+    "category": "communication",
+    "english": "One moment, please",
+    "ukrainian": "Хвилинку, будь ласка",
+    "spanish": "Un momento, por favor",
+    "catalan": "Un moment, si us plau",
+    "notes": null
+  },
+  {
+    "id": 53,
+    "category": "communication",
+    "english": "That's fine, thank you",
+    "ukrainian": "Так добре, дякую",
+    "spanish": "Así está bien, gracias",
+    "catalan": "Així està bé, gràcies",
+    "notes": null
+  },
+  {
+    "id": 54,
+    "category": "communication",
+    "english": "No, thank you",
+    "ukrainian": "Ні, дякую",
+    "spanish": "No, gracias",
+    "catalan": "No, gràcies",
+    "notes": null
+  },
+  {
+    "id": 55,
+    "category": "communication",
+    "english": "I don't know",
+    "ukrainian": "Я не знаю",
+    "spanish": "No lo sé",
+    "catalan": "No ho sé",
+    "notes": null
+  },
+  {
+    "id": 56,
+    "category": "shopping",
+    "english": "Who is last in the queue?",
+    "ukrainian": "Хто останній у черзі?",
+    "spanish": "¿Quién es el último?",
+    "catalan": "Qui és l'últim?",
+    "notes": "Якщо звертаєтеся саме до жінки: ¿Es usted la última? / És vostè l’última?"
+  },
+  {
+    "id": 57,
+    "category": "shopping",
+    "english": "Is this the queue?",
+    "ukrainian": "Це черга?",
+    "spanish": "¿Es esta la cola?",
+    "catalan": "És aquesta la cua?",
+    "notes": null
+  },
+  {
+    "id": 58,
+    "category": "shopping",
+    "english": "Is it my turn?",
+    "ukrainian": "Моя черга?",
+    "spanish": "¿Me toca?",
+    "catalan": "Em toca?",
+    "notes": null
+  },
+  {
+    "id": 59,
+    "category": "shopping",
+    "english": "I'm just looking, thank you",
+    "ukrainian": "Я лише дивлюся, дякую",
+    "spanish": "Solo estoy mirando, gracias",
+    "catalan": "Només estic mirant, gràcies",
+    "notes": null
+  },
+  {
+    "id": 60,
+    "category": "shopping",
+    "english": "I'll take this one",
+    "ukrainian": "Я візьму ось це",
+    "spanish": "Me llevo esto",
+    "catalan": "M'enduc això",
+    "notes": null
+  },
+  {
+    "id": 61,
+    "category": "shopping",
+    "english": "That's all, thank you",
+    "ukrainian": "Це все, дякую",
+    "spanish": "Eso es todo, gracias",
+    "catalan": "Això és tot, gràcies",
+    "notes": null
+  },
+  {
+    "id": 62,
+    "category": "shopping",
+    "english": "I don't need a bag",
+    "ukrainian": "Мені не потрібен пакет",
+    "spanish": "No necesito bolsa",
+    "catalan": "No necessito bossa",
+    "notes": null
+  },
+  {
+    "id": 63,
+    "category": "shopping",
+    "english": "I have my own bag",
+    "ukrainian": "У мене є свій пакет",
+    "spanish": "Llevo mi propia bolsa",
+    "catalan": "Porto la meva bossa",
+    "notes": null
+  },
+  {
+    "id": 64,
+    "category": "shopping",
+    "english": "Can I use my own container?",
+    "ukrainian": "Можна використати власний контейнер?",
+    "spanish": "¿Puedo usar mi propio recipiente?",
+    "catalan": "Puc fer servir el meu propi recipient?",
+    "notes": null
+  },
+  {
+    "id": 65,
+    "category": "shopping",
+    "english": "Could you wrap it separately?",
+    "ukrainian": "Можете запакувати це окремо?",
+    "spanish": "¿Puede envolverlo por separado?",
+    "catalan": "Ho pot embolicar per separat?",
+    "notes": null
+  },
+  {
+    "id": 66,
+    "category": "shopping",
+    "english": "Could you deliver it to my home?",
+    "ukrainian": "Можете доставити це додому?",
+    "spanish": "¿Puede enviármelo a casa?",
+    "catalan": "M'ho pot enviar a casa?",
+    "notes": null
+  },
+  {
+    "id": 67,
+    "category": "shopping",
+    "english": "Can I order it online?",
+    "ukrainian": "Можна замовити це онлайн?",
+    "spanish": "¿Puedo pedirlo por internet?",
+    "catalan": "Ho puc demanar per internet?",
+    "notes": null
+  },
+  {
+    "id": 68,
+    "category": "shopping",
+    "english": "When will it be available?",
+    "ukrainian": "Коли це буде в наявності?",
+    "spanish": "¿Cuándo estará disponible?",
+    "catalan": "Quan estarà disponible?",
+    "notes": null
+  },
+  {
+    "id": 69,
+    "category": "shopping",
+    "english": "Where can I collect my order?",
+    "ukrainian": "Де забрати моє замовлення?",
+    "spanish": "¿Dónde puedo recoger mi pedido?",
+    "catalan": "On puc recollir la meva comanda?",
+    "notes": null
+  },
+  {
+    "id": 70,
+    "category": "location",
+    "english": "Where is the bread?",
+    "ukrainian": "Де хліб?",
+    "spanish": "¿Dónde está el pan?",
+    "catalan": "On és el pa?",
+    "notes": null
+  },
+  {
+    "id": 71,
+    "category": "location",
+    "english": "Where are the eggs?",
+    "ukrainian": "Де яйця?",
+    "spanish": "¿Dónde están los huevos?",
+    "catalan": "On són els ous?",
+    "notes": null
+  },
+  {
+    "id": 72,
+    "category": "location",
+    "english": "Where are the frozen foods?",
+    "ukrainian": "Де заморожені продукти?",
+    "spanish": "¿Dónde están los congelados?",
+    "catalan": "On són els congelats?",
+    "notes": null
+  },
+  {
+    "id": 73,
+    "category": "location",
+    "english": "Where are the cleaning products?",
+    "ukrainian": "Де засоби для прибирання?",
+    "spanish": "¿Dónde están los productos de limpieza?",
+    "catalan": "On són els productes de neteja?",
+    "notes": null
+  },
+  {
+    "id": 74,
+    "category": "location",
+    "english": "Where is the nearest supermarket?",
+    "ukrainian": "Де найближчий супермаркет?",
+    "spanish": "¿Dónde está el supermercado más cercano?",
+    "catalan": "On és el supermercat més proper?",
+    "notes": null
+  },
+  {
+    "id": 75,
+    "category": "location",
+    "english": "Where is the toilet?",
+    "ukrainian": "Де туалет?",
+    "spanish": "¿Dónde está el baño?",
+    "catalan": "On és el lavabo?",
+    "notes": null
+  },
+  {
+    "id": 76,
+    "category": "location",
+    "english": "Where is the exit?",
+    "ukrainian": "Де вихід?",
+    "spanish": "¿Dónde está la salida?",
+    "catalan": "On és la sortida?",
+    "notes": null
+  },
+  {
+    "id": 77,
+    "category": "location",
+    "english": "Is there a lift?",
+    "ukrainian": "Тут є ліфт?",
+    "spanish": "¿Hay ascensor?",
+    "catalan": "Hi ha ascensor?",
+    "notes": null
+  },
+  {
+    "id": 78,
+    "category": "price",
+    "english": "What is the price per kilo?",
+    "ukrainian": "Яка ціна за кілограм?",
+    "spanish": "¿Cuál es el precio por kilo?",
+    "catalan": "Quin és el preu per quilo?",
+    "notes": null
+  },
+  {
+    "id": 79,
+    "category": "price",
+    "english": "Is this price per item?",
+    "ukrainian": "Це ціна за штуку?",
+    "spanish": "¿Este precio es por unidad?",
+    "catalan": "Aquest preu és per unitat?",
+    "notes": null
+  },
+  {
+    "id": 80,
+    "category": "price",
+    "english": "Is VAT included?",
+    "ukrainian": "ПДВ включено?",
+    "spanish": "¿El IVA está incluido?",
+    "catalan": "L'IVA està inclòs?",
+    "notes": null
+  },
+  {
+    "id": 81,
+    "category": "price",
+    "english": "Is there a cheaper option?",
+    "ukrainian": "Є дешевший варіант?",
+    "spanish": "¿Hay una opción más barata?",
+    "catalan": "Hi ha una opció més barata?",
+    "notes": null
+  },
+  {
+    "id": 82,
+    "category": "price",
+    "english": "What is the total?",
+    "ukrainian": "Скільки разом?",
+    "spanish": "¿Cuánto es en total?",
+    "catalan": "Quant és en total?",
+    "notes": null
+  },
+  {
+    "id": 83,
+    "category": "price",
+    "english": "The shelf price is different",
+    "ukrainian": "На полиці інша ціна",
+    "spanish": "El precio de la estantería es diferente",
+    "catalan": "El preu del prestatge és diferent",
+    "notes": null
+  },
+  {
+    "id": 84,
+    "category": "price",
+    "english": "Does the discount apply to this product?",
+    "ukrainian": "На цей товар діє знижка?",
+    "spanish": "¿El descuento se aplica a este producto?",
+    "catalan": "El descompte s'aplica a aquest producte?",
+    "notes": null
+  },
+  {
+    "id": 85,
+    "category": "quantity",
+    "english": "Half a kilo of tomatoes, please",
+    "ukrainian": "Пів кілограма помідорів, будь ласка",
+    "spanish": "Medio kilo de tomates, por favor",
+    "catalan": "Mig quilo de tomàquets, si us plau",
+    "notes": null
+  },
+  {
+    "id": 86,
+    "category": "quantity",
+    "english": "A quarter of a kilo of cheese, please",
+    "ukrainian": "Чверть кілограма сиру, будь ласка",
+    "spanish": "Un cuarto de kilo de queso, por favor",
+    "catalan": "Un quart de quilo de formatge, si us plau",
+    "notes": null
+  },
+  {
+    "id": 87,
+    "category": "quantity",
+    "english": "Two hundred grams of ham, please",
+    "ukrainian": "Двісті грамів шинки, будь ласка",
+    "spanish": "Doscientos gramos de jamón, por favor",
+    "catalan": "Dos-cents grams de pernil, si us plau",
+    "notes": null
+  },
+  {
+    "id": 88,
+    "category": "quantity",
+    "english": "Six eggs, please",
+    "ukrainian": "Шість яєць, будь ласка",
+    "spanish": "Seis huevos, por favor",
+    "catalan": "Sis ous, si us plau",
+    "notes": null
+  },
+  {
+    "id": 89,
+    "category": "quantity",
+    "english": "A dozen eggs, please",
+    "ukrainian": "Дванадцять яєць, будь ласка",
+    "spanish": "Una docena de huevos, por favor",
+    "catalan": "Una dotzena d'ous, si us plau",
+    "notes": null
+  },
+  {
+    "id": 90,
+    "category": "quantity",
+    "english": "Two slices, please",
+    "ukrainian": "Дві скибки, будь ласка",
+    "spanish": "Dos lonchas, por favor",
+    "catalan": "Dos talls, si us plau",
+    "notes": "Для шинки або сиру. Скибки хліба — rebanadas / llesques."
+  },
+  {
+    "id": 91,
+    "category": "quantity",
+    "english": "Thinly sliced, please",
+    "ukrainian": "Тонкими скибками, будь ласка",
+    "spanish": "En lonchas finas, por favor",
+    "catalan": "A talls fins, si us plau",
+    "notes": null
+  },
+  {
+    "id": 92,
+    "category": "quantity",
+    "english": "Could you cut it into pieces?",
+    "ukrainian": "Можете нарізати це шматочками?",
+    "spanish": "¿Puede cortarlo en trozos?",
+    "catalan": "Ho pot tallar a trossos?",
+    "notes": null
+  },
+  {
+    "id": 93,
+    "category": "quantity",
+    "english": "Could you clean the fish?",
+    "ukrainian": "Можете почистити рибу?",
+    "spanish": "¿Puede limpiar el pescado?",
+    "catalan": "Pot netejar el peix?",
+    "notes": null
+  },
+  {
+    "id": 94,
+    "category": "quantity",
+    "english": "Without bones, please",
+    "ukrainian": "Без кісток, будь ласка",
+    "spanish": "Sin huesos, por favor",
+    "catalan": "Sense ossos, si us plau",
+    "notes": null
+  },
+  {
+    "id": 95,
+    "category": "quantity",
+    "english": "Without fish bones, please",
+    "ukrainian": "Без рибних кісток, будь ласка",
+    "spanish": "Sin espinas, por favor",
+    "catalan": "Sense espines, si us plau",
+    "notes": null
+  },
+  {
+    "id": 96,
+    "category": "quantity",
+    "english": "One bottle of water, please",
+    "ukrainian": "Одну пляшку води, будь ласка",
+    "spanish": "Una botella de agua, por favor",
+    "catalan": "Una ampolla d'aigua, si us plau",
+    "notes": null
+  },
+  {
+    "id": 97,
+    "category": "product",
+    "english": "Is it ripe?",
+    "ukrainian": "Це стигле?",
+    "spanish": "¿Está maduro?",
+    "catalan": "És madur?",
+    "notes": "Наведено форми чоловічого роду; закінчення прикметника може змінюватися залежно від назви предмета."
+  },
+  {
+    "id": 98,
+    "category": "product",
+    "english": "Is it locally produced?",
+    "ukrainian": "Це місцевого виробництва?",
+    "spanish": "¿Es de producción local?",
+    "catalan": "És de producció local?",
+    "notes": "Наведено форми чоловічого роду; закінчення прикметника може змінюватися залежно від назви предмета."
+  },
+  {
+    "id": 99,
+    "category": "product",
+    "english": "Is it frozen?",
+    "ukrainian": "Це заморожене?",
+    "spanish": "¿Está congelado?",
+    "catalan": "Està congelat?",
+    "notes": "Наведено форми чоловічого роду; закінчення прикметника може змінюватися залежно від назви предмета."
+  },
+  {
+    "id": 100,
+    "category": "product",
+    "english": "Is it ready to eat?",
+    "ukrainian": "Це готове до споживання?",
+    "spanish": "¿Está listo para comer?",
+    "catalan": "Està a punt per menjar?",
+    "notes": "Наведено форми чоловічого роду; закінчення прикметника може змінюватися залежно від назви предмета."
+  },
+  {
+    "id": 101,
+    "category": "product",
+    "english": "Does it contain milk?",
+    "ukrainian": "Це містить молоко?",
+    "spanish": "¿Contiene leche?",
+    "catalan": "Conté llet?",
+    "notes": null
+  },
+  {
+    "id": 102,
+    "category": "product",
+    "english": "Does it contain eggs?",
+    "ukrainian": "Це містить яйця?",
+    "spanish": "¿Contiene huevos?",
+    "catalan": "Conté ous?",
+    "notes": null
+  },
+  {
+    "id": 103,
+    "category": "product",
+    "english": "Does it contain nuts?",
+    "ukrainian": "Це містить горіхи?",
+    "spanish": "¿Contiene frutos secos?",
+    "catalan": "Conté fruita seca?",
+    "notes": null
+  },
+  {
+    "id": 104,
+    "category": "product",
+    "english": "Is it lactose-free?",
+    "ukrainian": "Це без лактози?",
+    "spanish": "¿No contiene lactosa?",
+    "catalan": "No conté lactosa?",
+    "notes": null
+  },
+  {
+    "id": 105,
+    "category": "product",
+    "english": "Is it suitable for vegans?",
+    "ukrainian": "Це підходить для веганів?",
+    "spanish": "¿Es apto para veganos?",
+    "catalan": "És apte per a vegans?",
+    "notes": "Наведено форми чоловічого роду; закінчення прикметника може змінюватися залежно від назви предмета."
+  },
+  {
+    "id": 106,
+    "category": "product",
+    "english": "Does it contain pork?",
+    "ukrainian": "Це містить свинину?",
+    "spanish": "¿Contiene carne de cerdo?",
+    "catalan": "Conté carn de porc?",
+    "notes": null
+  },
+  {
+    "id": 107,
+    "category": "product",
+    "english": "Is there any added sugar?",
+    "ukrainian": "Є доданий цукор?",
+    "spanish": "¿Lleva azúcar añadido?",
+    "catalan": "Porta sucre afegit?",
+    "notes": null
+  },
+  {
+    "id": 108,
+    "category": "product",
+    "english": "Can I see the ingredients?",
+    "ukrainian": "Можна подивитися склад?",
+    "spanish": "¿Puedo ver los ingredientes?",
+    "catalan": "Puc veure els ingredients?",
+    "notes": null
+  },
+  {
+    "id": 109,
+    "category": "product",
+    "english": "Do you have wholemeal bread?",
+    "ukrainian": "У вас є цільнозерновий хліб?",
+    "spanish": "¿Tiene pan integral?",
+    "catalan": "Té pa integral?",
+    "notes": null
+  },
+  {
+    "id": 110,
+    "category": "product",
+    "english": "Do you have oat milk?",
+    "ukrainian": "У вас є вівсяний напій?",
+    "spanish": "¿Tiene bebida de avena?",
+    "catalan": "Té beguda de civada?",
+    "notes": "На упаковці зазвичай пишуть «вівсяний напій»: bebida de avena / beguda de civada."
+  },
+  {
+    "id": 111,
+    "category": "payment",
+    "english": "Can I pay with my phone?",
+    "ukrainian": "Можна оплатити телефоном?",
+    "spanish": "¿Puedo pagar con el móvil?",
+    "catalan": "Puc pagar amb el mòbil?",
+    "notes": null
+  },
+  {
+    "id": 112,
+    "category": "payment",
+    "english": "The card payment hasn't gone through",
+    "ukrainian": "Оплата карткою не пройшла",
+    "spanish": "El pago con tarjeta no se ha realizado",
+    "catalan": "El pagament amb targeta no s'ha efectuat",
+    "notes": null
+  },
+  {
+    "id": 113,
+    "category": "payment",
+    "english": "Could I try another card?",
+    "ukrainian": "Можна спробувати іншу картку?",
+    "spanish": "¿Puedo probar con otra tarjeta?",
+    "catalan": "Puc provar amb una altra targeta?",
+    "notes": null
+  },
+  {
+    "id": 114,
+    "category": "payment",
+    "english": "I need an invoice",
+    "ukrainian": "Мені потрібен рахунок-фактура",
+    "spanish": "Necesito una factura",
+    "catalan": "Necessito una factura",
+    "notes": null
+  },
+  {
+    "id": 115,
+    "category": "payment",
+    "english": "I think there is a mistake on the receipt",
+    "ukrainian": "Здається, у чеку помилка",
+    "spanish": "Creo que hay un error en el tique",
+    "catalan": "Crec que hi ha un error al tiquet",
+    "notes": null
+  },
+  {
+    "id": 116,
+    "category": "payment",
+    "english": "You've charged me twice",
+    "ukrainian": "Ви списали оплату двічі",
+    "spanish": "Me ha cobrado dos veces",
+    "catalan": "M'ha cobrat dues vegades",
+    "notes": null
+  },
+  {
+    "id": 117,
+    "category": "payment",
+    "english": "I think the change is wrong",
+    "ukrainian": "Здається, решту дали неправильно",
+    "spanish": "Creo que el cambio no es correcto",
+    "catalan": "Crec que el canvi no és correcte",
+    "notes": null
+  },
+  {
+    "id": 118,
+    "category": "payment",
+    "english": "Could you check the total?",
+    "ukrainian": "Можете перевірити суму?",
+    "spanish": "¿Puede comprobar el total?",
+    "catalan": "Pot comprovar el total?",
+    "notes": null
+  },
+  {
+    "id": 119,
+    "category": "returns",
+    "english": "I'd like to return this product",
+    "ukrainian": "Я хочу повернути цей товар",
+    "spanish": "Quisiera devolver este producto",
+    "catalan": "Voldria retornar aquest producte",
+    "notes": null
+  },
+  {
+    "id": 120,
+    "category": "returns",
+    "english": "I'd like to exchange it for another size",
+    "ukrainian": "Я хочу обміняти це на інший розмір",
+    "spanish": "Quisiera cambiarlo por otra talla",
+    "catalan": "Voldria canviar-ho per una altra talla",
+    "notes": null
+  },
+  {
+    "id": 121,
+    "category": "returns",
+    "english": "It doesn't work",
+    "ukrainian": "Це не працює",
+    "spanish": "No funciona",
+    "catalan": "No funciona",
+    "notes": null
+  },
+  {
+    "id": 122,
+    "category": "returns",
+    "english": "It is damaged",
+    "ukrainian": "Це пошкоджене",
+    "spanish": "Está dañado",
+    "catalan": "Està malmès",
+    "notes": "Наведено форми чоловічого роду; закінчення прикметника може змінюватися залежно від назви предмета."
+  },
+  {
+    "id": 123,
+    "category": "returns",
+    "english": "I have the receipt",
+    "ukrainian": "У мене є чек",
+    "spanish": "Tengo el tique",
+    "catalan": "Tinc el tiquet",
+    "notes": null
+  },
+  {
+    "id": 124,
+    "category": "returns",
+    "english": "What is your returns policy?",
+    "ukrainian": "Які у вас правила повернення?",
+    "spanish": "¿Cuál es su política de devoluciones?",
+    "catalan": "Quina és la seva política de devolucions?",
+    "notes": null
+  },
+  {
+    "id": 125,
+    "category": "returns",
+    "english": "Can I get a refund?",
+    "ukrainian": "Можна отримати повернення грошей?",
+    "spanish": "¿Puedo obtener un reembolso?",
+    "catalan": "Puc obtenir un reemborsament?",
+    "notes": null
+  },
+  {
+    "id": 126,
+    "category": "clothing",
+    "english": "Can I try this on?",
+    "ukrainian": "Можна це приміряти?",
+    "spanish": "¿Puedo probármelo?",
+    "catalan": "M'ho puc emprovar?",
+    "notes": null
+  },
+  {
+    "id": 127,
+    "category": "clothing",
+    "english": "Where are the fitting rooms?",
+    "ukrainian": "Де примірочні?",
+    "spanish": "¿Dónde están los probadores?",
+    "catalan": "On són els emprovadors?",
+    "notes": null
+  },
+  {
+    "id": 128,
+    "category": "clothing",
+    "english": "Do you have a larger size?",
+    "ukrainian": "У вас є більший розмір?",
+    "spanish": "¿Tiene una talla más grande?",
+    "catalan": "Té una talla més gran?",
+    "notes": null
+  },
+  {
+    "id": 129,
+    "category": "clothing",
+    "english": "Do you have a smaller size?",
+    "ukrainian": "У вас є менший розмір?",
+    "spanish": "¿Tiene una talla más pequeña?",
+    "catalan": "Té una talla més petita?",
+    "notes": null
+  },
+  {
+    "id": 130,
+    "category": "clothing",
+    "english": "Do you have this in another colour?",
+    "ukrainian": "У вас є це в іншому кольорі?",
+    "spanish": "¿Tiene esto en otro color?",
+    "catalan": "Té això en un altre color?",
+    "notes": null
+  },
+  {
+    "id": 131,
+    "category": "clothing",
+    "english": "It's too small for me",
+    "ukrainian": "Це замале на мене",
+    "spanish": "Me queda pequeño",
+    "catalan": "Em queda petit",
+    "notes": "Наведено форми чоловічого роду; закінчення прикметника може змінюватися залежно від назви предмета."
+  },
+  {
+    "id": 132,
+    "category": "clothing",
+    "english": "It's too big for me",
+    "ukrainian": "Це завелике на мене",
+    "spanish": "Me queda grande",
+    "catalan": "Em queda gran",
+    "notes": "Наведено форми чоловічого роду; закінчення прикметника може змінюватися залежно від назви предмета."
+  },
+  {
+    "id": 133,
+    "category": "opening_hours",
+    "english": "What time do you open?",
+    "ukrainian": "О котрій ви відчиняєте?",
+    "spanish": "¿A qué hora abren?",
+    "catalan": "A quina hora obren?",
+    "notes": null
+  },
+  {
+    "id": 134,
+    "category": "opening_hours",
+    "english": "What time do you close?",
+    "ukrainian": "О котрій ви зачиняєте?",
+    "spanish": "¿A qué hora cierran?",
+    "catalan": "A quina hora tanquen?",
+    "notes": null
+  },
+  {
+    "id": 135,
+    "category": "opening_hours",
+    "english": "Are you open on Sundays?",
+    "ukrainian": "Ви працюєте в неділю?",
+    "spanish": "¿Abren los domingos?",
+    "catalan": "Obren els diumenges?",
+    "notes": null
+  },
+  {
+    "id": 136,
+    "category": "opening_hours",
+    "english": "Are you open tomorrow?",
+    "ukrainian": "Ви завтра працюєте?",
+    "spanish": "¿Abren mañana?",
+    "catalan": "Obren demà?",
+    "notes": null
+  },
+  {
+    "id": 137,
+    "category": "restaurant",
+    "english": "A table for two, please",
+    "ukrainian": "Столик на двох, будь ласка",
+    "spanish": "Una mesa para dos, por favor",
+    "catalan": "Una taula per a dos, si us plau",
+    "notes": null
+  },
+  {
+    "id": 138,
+    "category": "restaurant",
+    "english": "I have a reservation",
+    "ukrainian": "У мене є бронювання",
+    "spanish": "Tengo una reserva",
+    "catalan": "Tinc una reserva",
+    "notes": null
+  },
+  {
+    "id": 139,
+    "category": "restaurant",
+    "english": "Could we see the menu?",
+    "ukrainian": "Можна меню?",
+    "spanish": "¿Podemos ver la carta?",
+    "catalan": "Podem veure la carta?",
+    "notes": null
+  },
+  {
+    "id": 140,
+    "category": "restaurant",
+    "english": "What is today's set menu?",
+    "ukrainian": "Який сьогодні комплексний обід?",
+    "spanish": "¿Cuál es el menú del día?",
+    "catalan": "Quin és el menú del dia?",
+    "notes": null
+  },
+  {
+    "id": 141,
+    "category": "restaurant",
+    "english": "What do you recommend?",
+    "ukrainian": "Що ви порадите?",
+    "spanish": "¿Qué nos recomienda?",
+    "catalan": "Què ens recomana?",
+    "notes": null
+  },
+  {
+    "id": 142,
+    "category": "restaurant",
+    "english": "Coffee with milk, please",
+    "ukrainian": "Каву з молоком, будь ласка",
+    "spanish": "Un café con leche, por favor",
+    "catalan": "Un cafè amb llet, si us plau",
+    "notes": null
+  },
+  {
+    "id": 143,
+    "category": "restaurant",
+    "english": "Still water, please",
+    "ukrainian": "Негазовану воду, будь ласка",
+    "spanish": "Agua sin gas, por favor",
+    "catalan": "Aigua sense gas, si us plau",
+    "notes": null
+  },
+  {
+    "id": 144,
+    "category": "restaurant",
+    "english": "Sparkling water, please",
+    "ukrainian": "Газовану воду, будь ласка",
+    "spanish": "Agua con gas, por favor",
+    "catalan": "Aigua amb gas, si us plau",
+    "notes": null
+  },
+  {
+    "id": 145,
+    "category": "restaurant",
+    "english": "Without ice, please",
+    "ukrainian": "Без льоду, будь ласка",
+    "spanish": "Sin hielo, por favor",
+    "catalan": "Sense gel, si us plau",
+    "notes": null
+  },
+  {
+    "id": 146,
+    "category": "restaurant",
+    "english": "Without sugar, please",
+    "ukrainian": "Без цукру, будь ласка",
+    "spanish": "Sin azúcar, por favor",
+    "catalan": "Sense sucre, si us plau",
+    "notes": null
+  },
+  {
+    "id": 147,
+    "category": "restaurant",
+    "english": "To take away, please",
+    "ukrainian": "Із собою, будь ласка",
+    "spanish": "Para llevar, por favor",
+    "catalan": "Per emportar, si us plau",
+    "notes": null
+  },
+  {
+    "id": 148,
+    "category": "restaurant",
+    "english": "The bill, please",
+    "ukrainian": "Рахунок, будь ласка",
+    "spanish": "La cuenta, por favor",
+    "catalan": "El compte, si us plau",
+    "notes": null
+  },
+  {
+    "id": 149,
+    "category": "restaurant",
+    "english": "Can we pay separately?",
+    "ukrainian": "Можна оплатити окремо?",
+    "spanish": "¿Podemos pagar por separado?",
+    "catalan": "Podem pagar per separat?",
+    "notes": null
+  },
+  {
+    "id": 150,
+    "category": "restaurant",
+    "english": "I have a nut allergy",
+    "ukrainian": "У мене алергія на горіхи",
+    "spanish": "Tengo alergia a los frutos secos",
+    "catalan": "Tinc al·lèrgia a la fruita seca",
+    "notes": null
+  },
+  {
+    "id": 151,
+    "category": "restaurant",
+    "english": "I have coeliac disease",
+    "ukrainian": "У мене целіакія",
+    "spanish": "Tengo celiaquía",
+    "catalan": "Tinc celiaquia",
+    "notes": null
+  },
+  {
+    "id": 152,
+    "category": "restaurant",
+    "english": "Could you check with the kitchen?",
+    "ukrainian": "Можете уточнити на кухні?",
+    "spanish": "¿Puede consultarlo con la cocina?",
+    "catalan": "Ho pot consultar a la cuina?",
+    "notes": null
+  },
+  {
+    "id": 153,
+    "category": "transport",
+    "english": "Where is the nearest metro station?",
+    "ukrainian": "Де найближча станція метро?",
+    "spanish": "¿Dónde está la estación de metro más cercana?",
+    "catalan": "On és l'estació de metro més propera?",
+    "notes": null
+  },
+  {
+    "id": 154,
+    "category": "transport",
+    "english": "Which line do I need?",
+    "ukrainian": "Яка лінія мені потрібна?",
+    "spanish": "¿Qué línea tengo que coger?",
+    "catalan": "Quina línia he d'agafar?",
+    "notes": null
+  },
+  {
+    "id": 155,
+    "category": "transport",
+    "english": "Does this bus go to the city centre?",
+    "ukrainian": "Цей автобус їде до центру?",
+    "spanish": "¿Este autobús va al centro?",
+    "catalan": "Aquest autobús va al centre?",
+    "notes": null
+  },
+  {
+    "id": 156,
+    "category": "transport",
+    "english": "Where do I change trains?",
+    "ukrainian": "Де мені зробити пересадку?",
+    "spanish": "¿Dónde tengo que hacer transbordo?",
+    "catalan": "On he de fer transbordament?",
+    "notes": null
+  },
+  {
+    "id": 157,
+    "category": "transport",
+    "english": "Which platform does the train leave from?",
+    "ukrainian": "З якої платформи вирушає потяг?",
+    "spanish": "¿De qué andén sale el tren?",
+    "catalan": "De quina andana surt el tren?",
+    "notes": null
+  },
+  {
+    "id": 158,
+    "category": "transport",
+    "english": "Does this ticket cover the airport journey?",
+    "ukrainian": "Цей квиток підходить для поїздки до аеропорту?",
+    "spanish": "¿Este billete sirve para ir al aeropuerto?",
+    "catalan": "Aquest bitllet serveix per anar a l'aeroport?",
+    "notes": null
+  },
+  {
+    "id": 159,
+    "category": "transport",
+    "english": "Is this seat free?",
+    "ukrainian": "Це місце вільне?",
+    "spanish": "¿Está libre este asiento?",
+    "catalan": "Està lliure aquest seient?",
+    "notes": null
+  },
+  {
+    "id": 160,
+    "category": "transport",
+    "english": "I'd like to get off at the next stop",
+    "ukrainian": "Я хочу вийти на наступній зупинці",
+    "spanish": "Quiero bajar en la próxima parada",
+    "catalan": "Vull baixar a la pròxima parada",
+    "notes": null
+  },
+  {
+    "id": 161,
+    "category": "transport",
+    "english": "Could you tell me when we arrive?",
+    "ukrainian": "Можете сказати, коли ми приїдемо?",
+    "spanish": "¿Puede avisarme cuando lleguemos?",
+    "catalan": "Em pot avisar quan arribem?",
+    "notes": null
+  },
+  {
+    "id": 162,
+    "category": "directions",
+    "english": "How can I get to this address?",
+    "ukrainian": "Як дістатися до цієї адреси?",
+    "spanish": "¿Cómo puedo llegar a esta dirección?",
+    "catalan": "Com puc arribar a aquesta adreça?",
+    "notes": null
+  },
+  {
+    "id": 163,
+    "category": "directions",
+    "english": "Is it far from here?",
+    "ukrainian": "Це далеко звідси?",
+    "spanish": "¿Está lejos de aquí?",
+    "catalan": "És lluny d'aquí?",
+    "notes": null
+  },
+  {
+    "id": 164,
+    "category": "directions",
+    "english": "Can I walk there?",
+    "ukrainian": "Туди можна дійти пішки?",
+    "spanish": "¿Puedo ir andando?",
+    "catalan": "Hi puc anar a peu?",
+    "notes": null
+  },
+  {
+    "id": 165,
+    "category": "directions",
+    "english": "Is it on the right or on the left?",
+    "ukrainian": "Це праворуч чи ліворуч?",
+    "spanish": "¿Está a la derecha o a la izquierda?",
+    "catalan": "És a la dreta o a l'esquerra?",
+    "notes": null
+  },
+  {
+    "id": 166,
+    "category": "directions",
+    "english": "Could you show me on the map?",
+    "ukrainian": "Можете показати на карті?",
+    "spanish": "¿Puede enseñármelo en el mapa?",
+    "catalan": "M'ho pot ensenyar al mapa?",
+    "notes": null
+  },
+  {
+    "id": 167,
+    "category": "housing",
+    "english": "Is the flat still available?",
+    "ukrainian": "Квартира ще доступна?",
+    "spanish": "¿El piso sigue disponible?",
+    "catalan": "El pis encara està disponible?",
+    "notes": null
+  },
+  {
+    "id": 168,
+    "category": "housing",
+    "english": "Can I arrange a viewing?",
+    "ukrainian": "Можна домовитися про перегляд?",
+    "spanish": "¿Puedo concertar una visita?",
+    "catalan": "Puc concertar una visita?",
+    "notes": null
+  },
+  {
+    "id": 169,
+    "category": "housing",
+    "english": "How much is the monthly rent?",
+    "ukrainian": "Яка місячна орендна плата?",
+    "spanish": "¿Cuánto es el alquiler mensual?",
+    "catalan": "Quant és el lloguer mensual?",
+    "notes": null
+  },
+  {
+    "id": 170,
+    "category": "housing",
+    "english": "Are utility bills included?",
+    "ukrainian": "Комунальні платежі включені?",
+    "spanish": "¿Están incluidos los suministros?",
+    "catalan": "Hi estan inclosos els subministraments?",
+    "notes": null
+  },
+  {
+    "id": 171,
+    "category": "housing",
+    "english": "How much is the deposit?",
+    "ukrainian": "Яка сума застави?",
+    "spanish": "¿De cuánto es la fianza?",
+    "catalan": "De quant és la fiança?",
+    "notes": null
+  },
+  {
+    "id": 172,
+    "category": "housing",
+    "english": "The hot water isn't working",
+    "ukrainian": "Немає гарячої води",
+    "spanish": "No funciona el agua caliente",
+    "catalan": "No funciona l'aigua calenta",
+    "notes": null
+  },
+  {
+    "id": 173,
+    "category": "housing",
+    "english": "There is a water leak",
+    "ukrainian": "Протікає вода",
+    "spanish": "Hay una fuga de agua",
+    "catalan": "Hi ha una fuita d'aigua",
+    "notes": null
+  },
+  {
+    "id": 174,
+    "category": "housing",
+    "english": "Could you send someone to repair it?",
+    "ukrainian": "Можете надіслати когось для ремонту?",
+    "spanish": "¿Puede enviar a alguien para repararlo?",
+    "catalan": "Pot enviar algú per reparar-ho?",
+    "notes": null
+  },
+  {
+    "id": 175,
+    "category": "health",
+    "english": "Where is the nearest pharmacy?",
+    "ukrainian": "Де найближча аптека?",
+    "spanish": "¿Dónde está la farmacia más cercana?",
+    "catalan": "On és la farmàcia més propera?",
+    "notes": null
+  },
+  {
+    "id": 176,
+    "category": "health",
+    "english": "I'd like to make a medical appointment",
+    "ukrainian": "Я хочу записатися до лікаря",
+    "spanish": "Quisiera pedir cita con el médico",
+    "catalan": "Voldria demanar hora amb el metge",
+    "notes": null
+  },
+  {
+    "id": 177,
+    "category": "health",
+    "english": "I have a fever",
+    "ukrainian": "У мене підвищена температура",
+    "spanish": "Tengo fiebre",
+    "catalan": "Tinc febre",
+    "notes": null
+  },
+  {
+    "id": 178,
+    "category": "health",
+    "english": "My head hurts",
+    "ukrainian": "У мене болить голова",
+    "spanish": "Me duele la cabeza",
+    "catalan": "Em fa mal el cap",
+    "notes": null
+  },
+  {
+    "id": 179,
+    "category": "health",
+    "english": "I need an interpreter",
+    "ukrainian": "Мені потрібен перекладач",
+    "spanish": "Necesito un intérprete",
+    "catalan": "Necessito un intèrpret",
+    "notes": null
+  },
+  {
+    "id": 180,
+    "category": "health",
+    "english": "Does this medicine require a prescription?",
+    "ukrainian": "На ці ліки потрібен рецепт?",
+    "spanish": "¿Este medicamento necesita receta?",
+    "catalan": "Aquest medicament necessita recepta?",
+    "notes": null
+  },
+  {
+    "id": 181,
+    "category": "emergency",
+    "english": "I need help urgently",
+    "ukrainian": "Мені терміново потрібна допомога",
+    "spanish": "Necesito ayuda urgente",
+    "catalan": "Necessito ajuda urgent",
+    "notes": null
+  },
+  {
+    "id": 182,
+    "category": "emergency",
+    "english": "Call an ambulance, please",
+    "ukrainian": "Викличте швидку, будь ласка",
+    "spanish": "Llame a una ambulancia, por favor",
+    "catalan": "Truqui a una ambulància, si us plau",
+    "notes": null
+  },
+  {
+    "id": 183,
+    "category": "emergency",
+    "english": "Call the police, please",
+    "ukrainian": "Викличте поліцію, будь ласка",
+    "spanish": "Llame a la policía, por favor",
+    "catalan": "Truqui a la policia, si us plau",
+    "notes": null
+  },
+  {
+    "id": 184,
+    "category": "emergency",
+    "english": "My phone has been stolen",
+    "ukrainian": "У мене вкрали телефон",
+    "spanish": "Me han robado el móvil",
+    "catalan": "M'han robat el mòbil",
+    "notes": null
+  },
+  {
+    "id": 185,
+    "category": "emergency",
+    "english": "I have lost my passport",
+    "ukrainian": "Я загубив паспорт",
+    "spanish": "He perdido el pasaporte",
+    "catalan": "He perdut el passaport",
+    "notes": null
+  },
+  {
+    "id": 186,
+    "category": "administration",
+    "english": "I have an appointment",
+    "ukrainian": "У мене є попередній запис",
+    "spanish": "Tengo cita previa",
+    "catalan": "Tinc cita prèvia",
+    "notes": null
+  },
+  {
+    "id": 187,
+    "category": "administration",
+    "english": "I'd like to register as a resident",
+    "ukrainian": "Я хочу зареєструвати місце проживання",
+    "spanish": "Quisiera empadronarme",
+    "catalan": "Voldria empadronar-me",
+    "notes": null
+  },
+  {
+    "id": 188,
+    "category": "administration",
+    "english": "What documents do I need?",
+    "ukrainian": "Які документи мені потрібні?",
+    "spanish": "¿Qué documentos necesito?",
+    "catalan": "Quins documents necessito?",
+    "notes": null
+  },
+  {
+    "id": 189,
+    "category": "administration",
+    "english": "Where do I have to sign?",
+    "ukrainian": "Де мені підписати?",
+    "spanish": "¿Dónde tengo que firmar?",
+    "catalan": "On he de signar?",
+    "notes": null
+  },
+  {
+    "id": 190,
+    "category": "administration",
+    "english": "Can I do this online?",
+    "ukrainian": "Можна оформити це онлайн?",
+    "spanish": "¿Puedo hacer este trámite por internet?",
+    "catalan": "Puc fer aquest tràmit per internet?",
+    "notes": null
+  },
+  {
+    "id": 191,
+    "category": "administration",
+    "english": "Could you give me a copy?",
+    "ukrainian": "Можете дати мені копію?",
+    "spanish": "¿Puede darme una copia?",
+    "catalan": "Em pot donar una còpia?",
+    "notes": null
+  },
+  {
+    "id": 192,
+    "category": "technology",
+    "english": "Is there Wi-Fi here?",
+    "ukrainian": "Тут є Wi-Fi?",
+    "spanish": "¿Hay wifi aquí?",
+    "catalan": "Hi ha wifi aquí?",
+    "notes": null
+  },
+  {
+    "id": 193,
+    "category": "technology",
+    "english": "What is the Wi-Fi password?",
+    "ukrainian": "Який пароль від Wi-Fi?",
+    "spanish": "¿Cuál es la contraseña del wifi?",
+    "catalan": "Quina és la contrasenya del wifi?",
+    "notes": null
+  },
+  {
+    "id": 194,
+    "category": "technology",
+    "english": "Can I charge my phone here?",
+    "ukrainian": "Можна тут зарядити телефон?",
+    "spanish": "¿Puedo cargar el móvil aquí?",
+    "catalan": "Puc carregar el mòbil aquí?",
+    "notes": null
+  },
+  {
+    "id": 195,
+    "category": "technology",
+    "english": "The internet connection isn't working",
+    "ukrainian": "Інтернет не працює",
+    "spanish": "No funciona la conexión a internet",
+    "catalan": "No funciona la connexió a internet",
+    "notes": null
+  },
+  {
+    "id": 196,
+    "category": "technology",
+    "english": "Could you send it to me by email?",
+    "ukrainian": "Можете надіслати це електронною поштою?",
+    "spanish": "¿Puede enviármelo por correo electrónico?",
+    "catalan": "M'ho pot enviar per correu electrònic?",
+    "notes": null
+  }
 ]
