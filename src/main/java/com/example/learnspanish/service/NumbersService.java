@@ -40,7 +40,15 @@ public class NumbersService {
         new NumberEntry(70,      "setenta",     "setanta",      null),
         new NumberEntry(80,      "ochenta",     "vuitanta",     "Catalan derives from vuit (8); Spanish from ocho"),
         new NumberEntry(90,      "noventa",     "noranta",      null),
-        new NumberEntry(100,     "cien",        "cent",         "Spanish 'cien' alone, 'ciento' in compounds (101=ciento uno)"), new NumberEntry(200,     "doscientos",    "dos-cents",     null), new NumberEntry(300,     "trescientos",   "tres-cents",    null), new NumberEntry(400,     "cuatrocientos", "quatre-cents",  null), new NumberEntry(500,     "quinientos",    "cinc-cents",    "Іспанська форма quinientos — неправильна."), new NumberEntry(600,     "seiscientos",   "sis-cents",     null), new NumberEntry(700,     "setecientos",   "set-cents",     "Іспанською setecientos, без i після set."), new NumberEntry(800,     "ochocientos",   "vuit-cents",    null), new NumberEntry(900,     "novecientos",   "nou-cents",     "Іспанською novecientos, не nuevecientos."),
+        new NumberEntry(100,     "cien",        "cent",         "Spanish 'cien' alone, 'ciento' in compounds (101=ciento uno)"),
+        new NumberEntry(200,     "doscientos",    "dos-cents",     null),
+        new NumberEntry(300,     "trescientos",   "tres-cents",    null),
+        new NumberEntry(400,     "cuatrocientos", "quatre-cents",  null),
+        new NumberEntry(500,     "quinientos",    "cinc-cents",    "Іспанська форма quinientos — неправильна."),
+        new NumberEntry(600,     "seiscientos",   "sis-cents",     null),
+        new NumberEntry(700,     "setecientos",   "set-cents",     "Іспанською setecientos, без i після set."),
+        new NumberEntry(800,     "ochocientos",   "vuit-cents",    null),
+        new NumberEntry(900,     "novecientos",   "nou-cents",     "Іспанською novecientos, не nuevecientos."),
         new NumberEntry(1000,    "mil",         "mil",          null),
         new NumberEntry(1000000, "un millón",   "un milió",     "Accent position differs: millón vs milió")
     );

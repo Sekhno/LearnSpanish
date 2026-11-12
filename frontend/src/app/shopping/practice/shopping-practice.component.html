@@ -6,6 +6,31 @@
       <h2>Shopping Practice</h2>
       <p>Переклади 10 слів з англійської на іспанську або каталанську.<br>
          Вибери правильний варіант із трьох запропонованих.</p>
+
+      <div class="filter-section">
+        <button mat-stroked-button (click)="filterOpen.set(!filterOpen())">
+          <mat-icon>{{ filterOpen() ? 'expand_less' : 'tune' }}</mat-icon>
+          Фільтр категорій
+          @if (selectedCategories().length) {
+            <span class="filter-badge">{{ selectedCategories().length }}</span>
+          }
+        </button>
+
+        @if (filterOpen()) {
+          <mat-chip-set class="category-chips">
+            @for (cat of availableCategories; track cat) {
+              <mat-chip [class.active-chip]="selectedCategories().includes(cat)"
+                        (click)="toggleCategory(cat)">
+                {{ categoryIcons[cat] ?? '📦' }} {{ categoryLabels[cat] ?? cat }}
+              </mat-chip>
+            }
+          </mat-chip-set>
+          @if (selectedCategories().length) {
+            <span class="filter-hint">Обрано {{ selectedCategories().length }} з {{ availableCategories.length }} категорій</span>
+          }
+        }
+      </div>
+
       <button mat-raised-button color="primary" (click)="startQuiz()">
         <mat-icon>play_arrow</mat-icon>
         Розпочати
@@ -32,7 +57,8 @@
         <mat-card-content>
           <div class="word-display">
             <span class="big-word">{{ currentQuestion().english }}</span>
-            <span class="word-hint">Як це буде {{ currentQuestion().targetLanguage === 'spanish' ? 'іспанською' : 'каталанською' }}?</span>
+            <span class="ukrainian-hint">{{ currentQuestion().ukrainian }}</span>
+            <span class="word-hint">Як це буде {{ currentQuestion().targetLanguage === 'spanish' ? 'іспанською 🇪🇸' : 'каталанською 🏴󠁥󠁳󠁣󠁴󠁿' }}?</span>
           </div>
 
           <div class="options-grid">

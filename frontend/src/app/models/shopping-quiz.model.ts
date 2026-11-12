@@ -1,6 +1,7 @@
 export interface ShoppingQuizQuestion {
   id: number;
   english: string;
+  ukrainian: string;
   targetLanguage: string;
   options: string[];
 }

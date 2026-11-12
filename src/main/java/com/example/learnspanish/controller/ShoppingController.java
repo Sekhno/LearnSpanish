@@ -42,9 +42,16 @@ public class ShoppingController {
     }
 
     @GetMapping("/quiz")
-    public List<ShoppingQuizQuestionDto> generateQuiz() {
+    public List<ShoppingQuizQuestionDto> generateQuiz(
+            @RequestParam(required = false) List<String> categories) {
         List<ShoppingItem> all = shoppingService.getItems();
-        List<ShoppingItem> shuffled = new ArrayList<>(all);
+
+        List<ShoppingItem> pool = (categories != null && !categories.isEmpty())
+                ? all.stream().filter(i -> categories.contains(i.category())).toList()
+                : all;
+        if (pool.isEmpty()) pool = all;
+
+        List<ShoppingItem> shuffled = new ArrayList<>(pool);
         Collections.shuffle(shuffled);
         List<ShoppingItem> selected = shuffled.subList(0, Math.min(10, shuffled.size()));
 
@@ -53,6 +60,7 @@ public class ShoppingController {
             String lang = rng.nextBoolean() ? "spanish" : "catalan";
             String correct = lang.equals("spanish") ? item.spanish() : item.catalan();
 
+            // Always use all items for wrong options to guarantee 2 distractors
             List<String> wrongPool = all.stream()
                     .filter(i -> i.id() != item.id())
                     .map(i -> lang.equals("spanish") ? i.spanish() : i.catalan())
@@ -63,7 +71,7 @@ public class ShoppingController {
             options.add(correct);
             Collections.shuffle(options);
 
-            return new ShoppingQuizQuestionDto(item.id(), item.english(), lang, options);
+            return new ShoppingQuizQuestionDto(item.id(), item.english(), item.ukrainian(), lang, options);
         }).toList();
     }
 

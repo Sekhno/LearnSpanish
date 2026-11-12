@@ -15,9 +15,15 @@
   mat-chip { cursor: pointer; }
 
   .active-chip {
-    background-color: #3f51b5 !important;
-    color: white !important;
+    background-color: rgba(#3f51b5, 0.4);
   }
+}
+
+// Vocabulary search
+.search-bar {
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 16px;
 }
 
 // Vocabulary category sections

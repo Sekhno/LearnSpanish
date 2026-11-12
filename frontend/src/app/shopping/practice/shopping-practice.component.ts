@@ -1,9 +1,10 @@
-import { Component, Output, EventEmitter, inject, signal, computed } from '@angular/core';
+import { Component, Input, Output, EventEmitter, inject, signal, computed } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatChipsModule } from '@angular/material/chips';
 import { TopicsService } from '../../services/topics.service';
 import {
   ShoppingQuizQuestion,
@@ -15,14 +16,22 @@ type QuizState = 'idle' | 'loading' | 'running' | 'submitting' | 'finished';
 
 @Component({
   selector: 'app-shopping-practice',
-  imports: [MatButtonModule, MatCardModule, MatIconModule, MatProgressBarModule, MatProgressSpinnerModule],
+  imports: [MatButtonModule, MatCardModule, MatIconModule, MatProgressBarModule, MatProgressSpinnerModule,
+            MatChipsModule],
   templateUrl: './shopping-practice.component.html',
   styleUrl: './shopping-practice.component.scss'
 })
 export class ShoppingPracticeComponent {
+  @Input() availableCategories: string[] = [];
+  @Input() categoryLabels: Record<string, string> = {};
+  @Input() categoryIcons: Record<string, string> = {};
+
   @Output() quizCompleted = new EventEmitter<void>();
 
   private readonly topicsService = inject(TopicsService);
+
+  readonly filterOpen = signal(false);
+  readonly selectedCategories = signal<string[]>([]);
 
   readonly state = signal<QuizState>('idle');
   readonly questions = signal<ShoppingQuizQuestion[]>([]);
@@ -56,7 +65,8 @@ export class ShoppingPracticeComponent {
     this.selectedAnswer.set(null);
     this.result.set(null);
 
-    this.topicsService.generateShoppingQuiz().subscribe({
+    const cats = this.selectedCategories();
+    this.topicsService.generateShoppingQuiz(cats.length ? cats : undefined).subscribe({
       next: (questions) => { this.questions.set(questions); this.state.set('running'); },
       error: () => this.state.set('idle')
     });
@@ -107,6 +117,15 @@ export class ShoppingPracticeComponent {
     }
     if (option === selected) return 'selected';
     return 'default';
+  }
+
+  toggleCategory(cat: string): void {
+    const current = this.selectedCategories();
+    if (current.includes(cat)) {
+      this.selectedCategories.set(current.filter(c => c !== cat));
+    } else {
+      this.selectedCategories.set([...current, cat]);
+    }
   }
 
   isAnswerRevealed(): boolean {

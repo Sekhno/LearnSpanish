@@ -32,6 +32,26 @@
         </mat-chip-set>
       </div>
 
+      <mat-form-field class="search-bar" appearance="outline">
+        <mat-label>Пошук</mat-label>
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput
+               [value]="phraseSearch()"
+               (input)="phraseSearch.set($any($event.target).value)"
+               placeholder="english, українська, español, català...">
+        @if (phraseSearch()) {
+          <button matSuffix mat-icon-button (click)="phraseSearch.set('')">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+
+      @if (filteredPhrases().length === 0) {
+        <div class="empty-history">
+          <mat-icon>search_off</mat-icon>
+          <p>Нічого не знайдено за запитом «{{ phraseSearch() }}»</p>
+        </div>
+      } @else {
       <mat-card>
         <mat-card-content>
           <table mat-table [dataSource]="filteredPhrases()" class="phrases-table">
@@ -101,6 +121,7 @@
           </table>
         </mat-card-content>
       </mat-card>
+      } <!-- end @if filteredPhrases -->
     </div>
   </mat-tab>
 
@@ -113,6 +134,26 @@
     </ng-template>
 
     <div class="tab-content">
+      <mat-form-field class="search-bar" appearance="outline">
+        <mat-label>Пошук</mat-label>
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput
+               [value]="itemSearch()"
+               (input)="itemSearch.set($any($event.target).value)"
+               placeholder="english, українська, español, català...">
+        @if (itemSearch()) {
+          <button matSuffix mat-icon-button (click)="itemSearch.set('')">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+
+      @if (filteredItems().length === 0) {
+        <div class="empty-history">
+          <mat-icon>search_off</mat-icon>
+          <p>Нічого не знайдено за запитом «{{ itemSearch() }}»</p>
+        </div>
+      } @else {
       @for (cat of categoryOrder(); track cat) {
         <div class="category-section">
           <h3 class="category-title">
@@ -190,6 +231,7 @@
           </mat-card>
         </div>
       }
+      } <!-- end @if filteredItems -->
     </div>
   </mat-tab>
 
@@ -200,7 +242,11 @@
       Практика
     </ng-template>
     <div class="tab-content">
-      <app-shopping-practice (quizCompleted)="loadHistory()" />
+      <app-shopping-practice
+        [availableCategories]="allCategories()"
+        [categoryLabels]="categoryLabels"
+        [categoryIcons]="categoryIcons"
+        (quizCompleted)="loadHistory()" />
     </div>
   </mat-tab>
 

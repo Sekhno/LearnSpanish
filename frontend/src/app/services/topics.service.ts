@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Topic } from '../models/topic.model';
 import { NumberEntry } from '../models/number-entry.model';
@@ -30,8 +30,15 @@ export class TopicsService {
     return this.http.get<ShoppingItem[]>(`${this.apiUrl}/shopping/items`);
   }
 
-  generateShoppingQuiz(): Observable<ShoppingQuizQuestion[]> {
-    return this.http.get<ShoppingQuizQuestion[]>(`${this.apiUrl}/shopping/quiz`);
+  generateShoppingQuiz(categories?: string[]): Observable<ShoppingQuizQuestion[]> {
+    if (!categories?.length) {
+      return this.http.get<ShoppingQuizQuestion[]>(`${this.apiUrl}/shopping/quiz`);
+    }
+    let params = new HttpParams();
+    for (const cat of categories) {
+      params = params.append('categories', cat);
+    }
+    return this.http.get<ShoppingQuizQuestion[]>(`${this.apiUrl}/shopping/quiz`, { params });
   }
 
   submitShoppingQuiz(answers: ShoppingAnswerSubmit[]): Observable<ShoppingQuizResult> {

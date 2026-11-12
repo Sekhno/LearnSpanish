@@ -8,6 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { TopicsService } from '../services/topics.service';
 import { QuizService } from '../services/quiz.service';
 import { SpeechService } from '../services/speech.service';
@@ -31,6 +33,7 @@ const PHRASE_CATEGORY_LABELS: Record<string, string> = {
     MatTabsModule, MatCardModule, MatProgressSpinnerModule,
     MatIconModule, MatButtonModule, MatTooltipModule,
     MatChipsModule, MatTableModule,
+    MatFormFieldModule, MatInputModule,
     ShoppingPracticeComponent
   ],
   templateUrl: './shopping.component.html',
@@ -48,6 +51,8 @@ export class ShoppingComponent implements OnInit {
   readonly historyLoading = signal(false);
 
   readonly activeCategory = signal<string | null>(null);
+  readonly phraseSearch = signal('');
+  readonly itemSearch = signal('');
 
   readonly phraseCategories = computed(() =>
     [...new Set(this.phrases().map(p => p.category))]
@@ -55,12 +60,31 @@ export class ShoppingComponent implements OnInit {
 
   readonly filteredPhrases = computed(() => {
     const cat = this.activeCategory();
-    return cat ? this.phrases().filter(p => p.category === cat) : this.phrases();
+    const q = this.phraseSearch().toLowerCase().trim();
+    return this.phrases().filter(p => {
+      if (cat && p.category !== cat) return false;
+      if (!q) return true;
+      return p.english.toLowerCase().includes(q) ||
+             p.ukrainian.toLowerCase().includes(q) ||
+             p.spanish.toLowerCase().includes(q) ||
+             p.catalan.toLowerCase().includes(q);
+    });
+  });
+
+  readonly filteredItems = computed(() => {
+    const q = this.itemSearch().toLowerCase().trim();
+    if (!q) return this.items();
+    return this.items().filter(item =>
+      item.english.toLowerCase().includes(q) ||
+      item.ukrainian.toLowerCase().includes(q) ||
+      item.spanish.toLowerCase().includes(q) ||
+      item.catalan.toLowerCase().includes(q)
+    );
   });
 
   readonly itemsByCategory = computed(() => {
     const grouped = new Map<string, ShoppingItem[]>();
-    for (const item of this.items()) {
+    for (const item of this.filteredItems()) {
       const list = grouped.get(item.category) ?? [];
       list.push(item);
       grouped.set(item.category, list);
@@ -69,6 +93,7 @@ export class ShoppingComponent implements OnInit {
   });
 
   readonly categoryOrder = computed(() => [...this.itemsByCategory().keys()]);
+  readonly allCategories = computed(() => [...new Set(this.items().map(i => i.category))]);
 
   readonly phraseColumns = ['english', 'ukrainian', 'spanish', 'catalan', 'notes'];
   readonly itemColumns   = ['english', 'ukrainian', 'spanish', 'catalan', 'notes'];
