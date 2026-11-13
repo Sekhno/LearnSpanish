@@ -27,6 +27,20 @@ Each topic includes three tabs:
 
 ## Tech Stack
 
+### Text-to-Speech
+
+Audio is generated offline with **Piper TTS** and served as static WAV files:
+
+| Language | Voice model | Quality |
+|----------|------------|---------|
+| Spanish (es-ES) | `es_ES-sharvard-medium` | Medium |
+| Catalan (ca-ES) | `ca_ES-upc_pau-x_low` | X-Low |
+
+Files live at `src/main/resources/static/audio/{es|ca}/{djb2(text)}.wav`.
+The filename is a **DJB2 hash** of the cleaned text, computed identically in `generate-audio.py` (Python) and `SpeechService` (TypeScript) — no lookup table needed.
+
+Playback uses the **Web Audio API** with an in-memory `AudioBuffer` cache — no browser voice installation required.
+
 ### Backend
 - **Java 21** / **Spring Boot 4.1.2**
 - Spring Web, Spring Security, Spring Data JPA
@@ -49,12 +63,39 @@ Each topic includes three tabs:
 | Java | 21+ |
 | Node.js | 18+ (tested with v23) |
 | Angular CLI | 22+ (`npm install -g @angular/cli`) |
+| Python (Homebrew) | 3.13+ (`/opt/homebrew/bin/python3`) |
 
 ---
 
 ## Getting Started
 
-### 1. Start the backend
+### 1. Generate TTS audio (first time only)
+
+The app uses pre-generated WAV files for text-to-speech via [Piper TTS](https://github.com/rhasspy/piper).
+The voice models and WAV files are **not** committed to git — run this once after cloning:
+
+```bash
+# Install Piper TTS Python package
+/opt/homebrew/bin/pip3 install piper-tts --break-system-packages
+
+# Download voice models (Spanish sharvard-medium + Catalan upc_pau-x_low)
+mkdir -p piper/models
+curl -L "https://huggingface.co/rhasspy/piper-voices/resolve/main/es/es_ES/sharvard/medium/es_ES-sharvard-medium.onnx" \
+     -o piper/models/es_ES-sharvard-medium.onnx
+curl -L "https://huggingface.co/rhasspy/piper-voices/resolve/main/es/es_ES/sharvard/medium/es_ES-sharvard-medium.onnx.json" \
+     -o piper/models/es_ES-sharvard-medium.onnx.json
+curl -L "https://huggingface.co/rhasspy/piper-voices/resolve/main/ca/ca_ES/upc_pau/x_low/ca_ES-upc_pau-x_low.onnx" \
+     -o piper/models/ca_ES-upc_pau-x_low.onnx
+curl -L "https://huggingface.co/rhasspy/piper-voices/resolve/main/ca/ca_ES/upc_pau/x_low/ca_ES-upc_pau-x_low.onnx.json" \
+     -o piper/models/ca_ES-upc_pau-x_low.onnx.json
+
+# Generate ~1234 WAV files (~30 MB)
+/opt/homebrew/bin/python3 generate-audio.py
+```
+
+Re-run `generate-audio.py` after adding new vocabulary (it skips already-generated files).
+
+### 2. Start the backend
 
 ```bash
 ./mvnw spring-boot:run
@@ -68,7 +109,7 @@ A default user is created on first start:
 |----------|----------|
 | `administrator` | `administrator` |
 
-### 2. Start the frontend
+### 3. Start the frontend
 
 ```bash
 cd frontend
