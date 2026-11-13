@@ -1,0 +1,22 @@
+[
+  { "id": 1,  "english": "Red",        "ukrainian": "Червоний",       "spanish": "rojo",      "catalan": "vermell",    "hex": "#E53935" },
+  { "id": 2,  "english": "Blue",       "ukrainian": "Синій",          "spanish": "azul",      "catalan": "blau",       "hex": "#1E88E5" },
+  { "id": 3,  "english": "Green",      "ukrainian": "Зелений",        "spanish": "verde",     "catalan": "verd",       "hex": "#43A047" },
+  { "id": 4,  "english": "Yellow",     "ukrainian": "Жовтий",         "spanish": "amarillo",  "catalan": "groc",       "hex": "#FDD835" },
+  { "id": 5,  "english": "Orange",     "ukrainian": "Помаранчевий",   "spanish": "naranja",   "catalan": "taronja",    "hex": "#FB8C00" },
+  { "id": 6,  "english": "Purple",     "ukrainian": "Фіолетовий",     "spanish": "morado",    "catalan": "morat",      "hex": "#8E24AA" },
+  { "id": 7,  "english": "Pink",       "ukrainian": "Рожевий",        "spanish": "rosa",      "catalan": "rosa",       "hex": "#E91E63" },
+  { "id": 8,  "english": "White",      "ukrainian": "Білий",          "spanish": "blanco",    "catalan": "blanc",      "hex": "#F5F5F5" },
+  { "id": 9,  "english": "Black",      "ukrainian": "Чорний",         "spanish": "negro",     "catalan": "negre",      "hex": "#212121" },
+  { "id": 10, "english": "Brown",      "ukrainian": "Коричневий",     "spanish": "marrón",    "catalan": "marró",      "hex": "#795548" },
+  { "id": 11, "english": "Grey",       "ukrainian": "Сірий",          "spanish": "gris",      "catalan": "gris",       "hex": "#9E9E9E" },
+  { "id": 12, "english": "Dark blue",  "ukrainian": "Темно-синій",    "spanish": "azul marino","catalan": "blau marí",  "hex": "#1565C0" },
+  { "id": 13, "english": "Light blue", "ukrainian": "Блакитний",      "spanish": "azul claro", "catalan": "blau clar", "hex": "#29B6F6" },
+  { "id": 14, "english": "Beige",      "ukrainian": "Бежевий",        "spanish": "beige",     "catalan": "beix",       "hex": "#F5DEB3" },
+  { "id": 15, "english": "Turquoise",  "ukrainian": "Бірюзовий",      "spanish": "turquesa",  "catalan": "turquesa",   "hex": "#00BCD4" },
+  { "id": 16, "english": "Gold",       "ukrainian": "Золотий",        "spanish": "dorado",    "catalan": "daurat",     "hex": "#FFC107" },
+  { "id": 17, "english": "Silver",     "ukrainian": "Срібний",        "spanish": "plateado",  "catalan": "platejat",   "hex": "#BDBDBD" },
+  { "id": 18, "english": "Crimson",    "ukrainian": "Малиновий",      "spanish": "carmesí",   "catalan": "carmesí",    "hex": "#B71C1C" },
+  { "id": 19, "english": "Olive",      "ukrainian": "Оливковий",      "spanish": "oliva",     "catalan": "oliva",      "hex": "#827717" },
+  { "id": 20, "english": "Violet",     "ukrainian": "Фіалковий",      "spanish": "violeta",   "catalan": "violeta",    "hex": "#7B1FA2" }
+]

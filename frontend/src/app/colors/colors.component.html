@@ -1,0 +1,189 @@
+<div class="page-header">
+  <h1>
+    <mat-icon class="header-icon">palette</mat-icon>
+    Colors — Кольори
+  </h1>
+  <p class="subtitle">Кольори іспанською та каталанською мовами.</p>
+</div>
+
+@if (loading()) {
+  <div class="loading-container"><mat-spinner /></div>
+} @else {
+
+<mat-tab-group animationDuration="200ms" color="primary">
+
+  <!-- THEORY TAB -->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="tab-icon">auto_stories</mat-icon>
+      Теорія
+      <span class="badge">{{ colors().length }}</span>
+    </ng-template>
+
+    <div class="tab-content">
+      <mat-form-field class="search-bar" appearance="outline">
+        <mat-label>Пошук</mat-label>
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput
+               [value]="search()"
+               (input)="search.set($any($event.target).value)"
+               placeholder="english, українська, español, català...">
+        @if (search()) {
+          <button matSuffix mat-icon-button (click)="search.set('')">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+
+      @if (filteredColors().length === 0) {
+        <div class="empty-history">
+          <mat-icon>search_off</mat-icon>
+          <p>Нічого не знайдено за запитом «{{ search() }}»</p>
+        </div>
+      } @else {
+      <mat-card>
+        <mat-card-content>
+          <table mat-table [dataSource]="filteredColors()" class="colors-table">
+
+            <ng-container matColumnDef="color">
+              <th mat-header-cell *matHeaderCellDef>Колір</th>
+              <td mat-cell *matCellDef="let row">
+                <div class="color-chip" [style.background-color]="row.hex"
+                     [style.border]="row.hex === '#F5F5F5' ? '1px solid #ccc' : 'none'"
+                     [matTooltip]="row.hex"></div>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="english">
+              <th mat-header-cell *matHeaderCellDef>🇬🇧 English</th>
+              <td mat-cell *matCellDef="let row"><span class="english-text">{{ row.english }}</span></td>
+            </ng-container>
+
+            <ng-container matColumnDef="ukrainian">
+              <th mat-header-cell *matHeaderCellDef>🇺🇦 Українська</th>
+              <td mat-cell *matCellDef="let row"><span class="ukrainian-text">{{ row.ukrainian }}</span></td>
+            </ng-container>
+
+            <ng-container matColumnDef="spanish">
+              <th mat-header-cell *matHeaderCellDef>
+                <div class="lang-header"><span class="flag">🇪🇸</span> Іспанська</div>
+              </th>
+              <td mat-cell *matCellDef="let row">
+                <div class="word-cell">
+                  <span class="word spanish-text">{{ row.spanish }}</span>
+                  @if (speech.isSupported) {
+                    <button mat-icon-button class="speak-btn"
+                            [class.speaking]="speech.isSpeaking(row.spanish, 'es-ES')"
+                            (click)="speech.speak(row.spanish, 'es-ES')"
+                            matTooltip="Вимовити іспанською">
+                      <mat-icon>{{ speech.isSpeaking(row.spanish, 'es-ES') ? 'volume_up' : 'volume_down' }}</mat-icon>
+                    </button>
+                  }
+                </div>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="catalan">
+              <th mat-header-cell *matHeaderCellDef>
+                <div class="lang-header"><span class="flag">🏴󠁥󠁳󠁣󠁴󠁿</span> Каталанська</div>
+              </th>
+              <td mat-cell *matCellDef="let row">
+                <div class="word-cell">
+                  <span class="word catalan-text">{{ row.catalan }}</span>
+                  @if (speech.isSupported) {
+                    <button mat-icon-button class="speak-btn"
+                            [class.speaking]="speech.isSpeaking(row.catalan, 'ca-ES')"
+                            (click)="speech.speak(row.catalan, 'ca-ES')"
+                            matTooltip="Вимовити каталанською">
+                      <mat-icon>{{ speech.isSpeaking(row.catalan, 'ca-ES') ? 'volume_up' : 'volume_down' }}</mat-icon>
+                    </button>
+                  }
+                </div>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="columns"></tr>
+            <tr mat-row *matRowDef="let row; columns: columns;" class="data-row"></tr>
+          </table>
+        </mat-card-content>
+      </mat-card>
+      }
+    </div>
+  </mat-tab>
+
+  <!-- PRACTICE TAB -->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="tab-icon">sports_esports</mat-icon>
+      Практика
+    </ng-template>
+    <div class="tab-content">
+      <app-colors-practice (quizCompleted)="loadHistory()" />
+    </div>
+  </mat-tab>
+
+  <!-- RESULTS TAB -->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="tab-icon">history</mat-icon>
+      Результати
+      @if (testResults().length > 0) {
+        <span class="badge">{{ testResults().length }}</span>
+      }
+    </ng-template>
+    <div class="tab-content">
+      @if (historyLoading()) {
+        <div class="loading-container"><mat-spinner /></div>
+      } @else if (testResults().length === 0) {
+        <div class="empty-history">
+          <mat-icon>assignment</mat-icon>
+          <p>Результатів ще немає. Пройди тест у вкладці «Практика»!</p>
+        </div>
+      } @else {
+        <mat-card>
+          <mat-card-content>
+            <table mat-table [dataSource]="testResults()" class="history-table">
+
+              <ng-container matColumnDef="completedAt">
+                <th mat-header-cell *matHeaderCellDef>Дата</th>
+                <td mat-cell *matCellDef="let row">{{ row.completedAt | date:'dd MMM yyyy, HH:mm' }}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="score">
+                <th mat-header-cell *matHeaderCellDef>Результат</th>
+                <td mat-cell *matCellDef="let row">
+                  <span class="score-badge">{{ row.score }} / {{ row.totalQuestions }}</span>
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="percentage">
+                <th mat-header-cell *matHeaderCellDef>Відсоток</th>
+                <td mat-cell *matCellDef="let row">
+                  <span class="pct"
+                        [class.great]="scorePercent(row) >= 80"
+                        [class.ok]="scorePercent(row) >= 60 && scorePercent(row) < 80"
+                        [class.poor]="scorePercent(row) < 60">
+                    {{ scorePercent(row) }}%
+                  </span>
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef>Статус</th>
+                <td mat-cell *matCellDef="let row">
+                  <mat-chip [color]="statusColor(row)" highlighted>{{ statusLabel(row) }}</mat-chip>
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="historyColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: historyColumns;"></tr>
+            </table>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  </mat-tab>
+
+</mat-tab-group>
+
+}

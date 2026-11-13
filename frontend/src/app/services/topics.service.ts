@@ -6,6 +6,10 @@ import { NumberEntry } from '../models/number-entry.model';
 import { ShoppingPhrase } from '../models/shopping-phrase.model';
 import { ShoppingItem } from '../models/shopping-item.model';
 import { ShoppingQuizQuestion, ShoppingAnswerSubmit, ShoppingQuizResult } from '../models/shopping-quiz.model';
+import { ColorEntry } from '../models/color-entry.model';
+import { ColorsQuizQuestion, ColorsAnswerSubmit, ColorsQuizResult } from '../models/colors-quiz.model';
+import { IntroductionPhrase } from '../models/introduction-phrase.model';
+import { IntroductionQuizQuestion, IntroductionAnswerSubmit, IntroductionQuizResult } from '../models/introduction-quiz.model';
 
 @Injectable({
   providedIn: 'root'
@@ -43,5 +47,29 @@ export class TopicsService {
 
   submitShoppingQuiz(answers: ShoppingAnswerSubmit[]): Observable<ShoppingQuizResult> {
     return this.http.post<ShoppingQuizResult>(`${this.apiUrl}/shopping/quiz/submit`, answers);
+  }
+
+  getColors(): Observable<ColorEntry[]> {
+    return this.http.get<ColorEntry[]>(`${this.apiUrl}/colors`);
+  }
+
+  generateColorsQuiz(): Observable<ColorsQuizQuestion[]> {
+    return this.http.get<ColorsQuizQuestion[]>(`${this.apiUrl}/colors/quiz`);
+  }
+
+  submitColorsQuiz(answers: ColorsAnswerSubmit[]): Observable<ColorsQuizResult> {
+    return this.http.post<ColorsQuizResult>(`${this.apiUrl}/colors/quiz/submit`, answers);
+  }
+
+  getIntroductionPhrases(): Observable<IntroductionPhrase[]> {
+    return this.http.get<IntroductionPhrase[]>(`${this.apiUrl}/introduction/phrases`);
+  }
+
+  generateIntroductionQuiz(): Observable<IntroductionQuizQuestion[]> {
+    return this.http.get<IntroductionQuizQuestion[]>(`${this.apiUrl}/introduction/quiz`);
+  }
+
+  submitIntroductionQuiz(answers: IntroductionAnswerSubmit[]): Observable<IntroductionQuizResult> {
+    return this.http.post<IntroductionQuizResult>(`${this.apiUrl}/introduction/quiz/submit`, answers);
   }
 }

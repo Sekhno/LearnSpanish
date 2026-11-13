@@ -19,6 +19,14 @@ export const routes: Routes = [
         path: 'shopping',
         loadComponent: () => import('./shopping/shopping.component').then(m => m.ShoppingComponent)
       },
+      {
+        path: 'colors',
+        loadComponent: () => import('./colors/colors.component').then(m => m.ColorsComponent)
+      },
+      {
+        path: 'introduction',
+        loadComponent: () => import('./introduction/introduction.component').then(m => m.IntroductionComponent)
+      },
       { path: '', redirectTo: 'numbers', pathMatch: 'full' }
     ]
   },

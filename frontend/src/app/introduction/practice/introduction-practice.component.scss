@@ -1,0 +1,71 @@
+@use '../../styles/quiz';
+@include quiz.quiz-layout();
+
+.quiz-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lang-badge {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #3f51b5;
+}
+
+.question-card mat-card-content { padding: 24px !important; }
+
+.word-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.big-phrase {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #3f51b5;
+  line-height: 1.4;
+  max-width: 520px;
+}
+
+.ukrainian-hint {
+  font-size: 1rem;
+  color: rgba(0,0,0,0.55);
+  font-weight: 500;
+}
+
+.word-hint {
+  font-size: 0.9rem;
+  color: rgba(0,0,0,0.4);
+}
+
+// vertical list for longer phrases
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 540px;
+  margin: 0 auto;
+
+  .option-btn {
+    height: auto;
+    min-height: 52px;
+    padding: 10px 16px;
+    white-space: normal;
+    line-height: 1.4;
+  }
+}
+
+.result-row {
+  flex-wrap: wrap;
+
+  .result-english  { font-weight: 600; flex-shrink: 0; min-width: 160px; }
+  .result-answer   { flex: 1; min-width: 120px; }
+  .result-correct  { color: #2e7d32; font-weight: 600; flex-shrink: 0; }
+}
+
+.wrong-text { color: #c62828; text-decoration: line-through; }

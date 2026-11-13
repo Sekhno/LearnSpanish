@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1, "category": "name", "type": "question",
+    "english": "What's your name?",
+    "ukrainian": "Як тебе звати?",
+    "spanish": "¿Cómo te llamas?",
+    "catalan": "Com et dius?",
+    "notes": null
+  },
+  {
+    "id": 2, "category": "name", "type": "answer",
+    "english": "My name is...",
+    "ukrainian": "Мене звати...",
+    "spanish": "Me llamo...",
+    "catalan": "Em dic...",
+    "notes": null
+  },
+  {
+    "id": 3, "category": "name", "type": "question",
+    "english": "What is your surname?",
+    "ukrainian": "Яке твоє прізвище?",
+    "spanish": "¿Cuál es tu apellido?",
+    "catalan": "Quin és el teu cognom?",
+    "notes": null
+  },
+  {
+    "id": 4, "category": "name", "type": "answer",
+    "english": "Nice to meet you!",
+    "ukrainian": "Приємно познайомитися!",
+    "spanish": "¡Encantado de conocerte!",
+    "catalan": "Encantat de conèixer-te!",
+    "notes": "Чол.: encantado; жін.: encantada"
+  },
+  {
+    "id": 5, "category": "origin", "type": "question",
+    "english": "Where are you from?",
+    "ukrainian": "Звідки ти?",
+    "spanish": "¿De dónde eres?",
+    "catalan": "D'on ets?",
+    "notes": null
+  },
+  {
+    "id": 6, "category": "origin", "type": "answer",
+    "english": "I am from Ukraine.",
+    "ukrainian": "Я з України.",
+    "spanish": "Soy de Ucrania.",
+    "catalan": "Sóc d'Ucraïna.",
+    "notes": null
+  },
+  {
+    "id": 7, "category": "origin", "type": "question",
+    "english": "Where do you live?",
+    "ukrainian": "Де ти живеш?",
+    "spanish": "¿Dónde vives?",
+    "catalan": "On vius?",
+    "notes": null
+  },
+  {
+    "id": 8, "category": "origin", "type": "answer",
+    "english": "I live in Barcelona.",
+    "ukrainian": "Я живу в Барселоні.",
+    "spanish": "Vivo en Barcelona.",
+    "catalan": "Visc a Barcelona.",
+    "notes": null
+  },
+  {
+    "id": 9, "category": "age", "type": "question",
+    "english": "How old are you?",
+    "ukrainian": "Скільки тобі років?",
+    "spanish": "¿Cuántos años tienes?",
+    "catalan": "Quants anys tens?",
+    "notes": null
+  },
+  {
+    "id": 10, "category": "age", "type": "answer",
+    "english": "I am 45 years old.",
+    "ukrainian": "Мені 45 років.",
+    "spanish": "Tengo 45 años.",
+    "catalan": "Tinc 45 anys.",
+    "notes": null
+  },
+  {
+    "id": 11, "category": "occupation", "type": "question",
+    "english": "What do you do for work?",
+    "ukrainian": "Ким ти працюєш?",
+    "spanish": "¿A qué te dedicas?",
+    "catalan": "A què et dediques?",
+    "notes": null
+  },
+  {
+    "id": 12, "category": "occupation", "type": "answer",
+    "english": "I am a student.",
+    "ukrainian": "Я студент.",
+    "spanish": "Soy estudiante.",
+    "catalan": "Sóc estudiant.",
+    "notes": null
+  },
+  {
+    "id": 13, "category": "occupation", "type": "answer",
+    "english": "I work in IT.",
+    "ukrainian": "Я працюю в ІТ.",
+    "spanish": "Trabajo en IT.",
+    "catalan": "Treballo en IT.",
+    "notes": null
+  },
+  {
+    "id": 14, "category": "family", "type": "question",
+    "english": "Are you married?",
+    "ukrainian": "Ти одружений / заміжня?",
+    "spanish": "¿Estás casado?",
+    "catalan": "Estàs casat?",
+    "notes": "Чол.: casado; жін.: casada"
+  },
+  {
+    "id": 15, "category": "family", "type": "question",
+    "english": "Do you have children?",
+    "ukrainian": "У тебе є діти?",
+    "spanish": "¿Tienes hijos?",
+    "catalan": "Tens fills?",
+    "notes": null
+  },
+  {
+    "id": 16, "category": "family", "type": "answer",
+    "english": "I have a brother and a sister.",
+    "ukrainian": "У мене є брат і сестра.",
+    "spanish": "Tengo un hermano y una hermana.",
+    "catalan": "Tinc un germà i una germana.",
+    "notes": null
+  },
+  {
+    "id": 17, "category": "languages", "type": "question",
+    "english": "Do you speak Spanish?",
+    "ukrainian": "Ти розмовляєш іспанською?",
+    "spanish": "¿Hablas español?",
+    "catalan": "Parles espanyol?",
+    "notes": null
+  },
+  {
+    "id": 18, "category": "languages", "type": "answer",
+    "english": "I speak a little Spanish.",
+    "ukrainian": "Я трохи розмовляю іспанською.",
+    "spanish": "Hablo un poco de español.",
+    "catalan": "Parlo una mica d'espanyol.",
+    "notes": null
+  },
+  {
+    "id": 19, "category": "languages", "type": "answer",
+    "english": "I am learning Spanish.",
+    "ukrainian": "Я вчу іспанську.",
+    "spanish": "Estoy aprendiendo español.",
+    "catalan": "Estic aprenent espanyol.",
+    "notes": null
+  },
+  {
+    "id": 20, "category": "contact", "type": "question",
+    "english": "What is your phone number?",
+    "ukrainian": "Який твій номер телефону?",
+    "spanish": "¿Cuál es tu número de teléfono?",
+    "catalan": "Quin és el teu número de telèfon?",
+    "notes": null
+  },
+  {
+    "id": 21, "category": "contact", "type": "question",
+    "english": "What is your email?",
+    "ukrainian": "Яка твоя електронна пошта?",
+    "spanish": "¿Cuál es tu correo electrónico?",
+    "catalan": "Quin és el teu correu electrònic?",
+    "notes": null
+  }
+]
