@@ -29,10 +29,11 @@ except ImportError:
 ROOT   = Path(__file__).parent
 MODELS = ROOT / "piper/models"
 ES_MODEL = MODELS / "es_ES-sharvard-medium.onnx"
-CA_MODEL = MODELS / "ca_ES-upc_pau-x_low.onnx"
+CA_MODEL = MODELS / "ca_ES-upc_ona-medium.onnx"
 DATA   = ROOT / "src/main/resources/data"
-OUT_ES = ROOT / "src/main/resources/static/audio/es"
-OUT_CA = ROOT / "src/main/resources/static/audio/ca"
+# Served via WebConfig.addResourceHandlers — kept outside the Maven classpath
+OUT_ES = ROOT / "data/audio/es"
+OUT_CA = ROOT / "data/audio/ca"
 
 OUT_ES.mkdir(parents=True, exist_ok=True)
 OUT_CA.mkdir(parents=True, exist_ok=True)
@@ -82,6 +83,7 @@ add_from_json(DATA / "colors.json")
 add_from_json(DATA / "introduction-phrases.json")
 add_from_json(DATA / "shopping-phrases.json")
 add_from_json(DATA / "shopping-items.json")
+add_from_json(DATA / "pronouns.json")
 
 # Numbers (hardcoded in Java — reproduce here)
 NUMBERS_ES = [
@@ -138,4 +140,4 @@ for i, text in enumerate(sorted(ca_texts), 1):
         print(f"  CA: {i}/{len(ca_texts)}")
 
 print(f"CA done — {ca_new} new, {len(ca_texts)-ca_new} skipped")
-print(f"\nTotal: {len(es_texts)+len(ca_texts)} WAV files in src/main/resources/static/audio/")
+print(f"\nTotal: {len(es_texts)+len(ca_texts)} WAV files in data/audio/")

@@ -37,4 +37,4 @@ build/
 
 ### Piper TTS — regenerate with: /opt/homebrew/bin/python3 generate-audio.py ###
 /piper/
-/src/main/resources/static/audio/
+/data/audio/

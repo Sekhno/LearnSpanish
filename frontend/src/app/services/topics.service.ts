@@ -10,6 +10,8 @@ import { ColorEntry } from '../models/color-entry.model';
 import { ColorsQuizQuestion, ColorsAnswerSubmit, ColorsQuizResult } from '../models/colors-quiz.model';
 import { IntroductionPhrase } from '../models/introduction-phrase.model';
 import { IntroductionQuizQuestion, IntroductionAnswerSubmit, IntroductionQuizResult } from '../models/introduction-quiz.model';
+import { PronounEntry } from '../models/pronoun-entry.model';
+import { PronounsQuizQuestion, PronounsAnswerSubmit, PronounsQuizResult } from '../models/pronouns-quiz.model';
 
 @Injectable({
   providedIn: 'root'
@@ -71,5 +73,17 @@ export class TopicsService {
 
   submitIntroductionQuiz(answers: IntroductionAnswerSubmit[]): Observable<IntroductionQuizResult> {
     return this.http.post<IntroductionQuizResult>(`${this.apiUrl}/introduction/quiz/submit`, answers);
+  }
+
+  getPronouns(): Observable<PronounEntry[]> {
+    return this.http.get<PronounEntry[]>(`${this.apiUrl}/pronouns`);
+  }
+
+  generatePronounsQuiz(): Observable<PronounsQuizQuestion[]> {
+    return this.http.get<PronounsQuizQuestion[]>(`${this.apiUrl}/pronouns/quiz`);
+  }
+
+  submitPronounsQuiz(answers: PronounsAnswerSubmit[]): Observable<PronounsQuizResult> {
+    return this.http.post<PronounsQuizResult>(`${this.apiUrl}/pronouns/quiz/submit`, answers);
   }
 }

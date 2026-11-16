@@ -15,7 +15,8 @@ public class TopicController {
             new Topic("numbers",      "Numbers",      "Learn numbers in Spanish with Catalan comparison", "pin"),
             new Topic("shopping",     "Shopping",     "Phrases and vocabulary for shopping in Spain",     "shopping_cart"),
             new Topic("colors",       "Colors",       "Learn colors in Spanish and Catalan",              "palette"),
-            new Topic("introduction", "Introduction", "Phrases for meeting and introducing yourself",     "waving_hand")
+            new Topic("introduction", "Introduction", "Phrases for meeting and introducing yourself",     "waving_hand"),
+            new Topic("pronouns",     "Pronouns",     "Personal, possessive, demonstrative and interrogative pronouns", "record_voice_over")
         );
     }
 }
