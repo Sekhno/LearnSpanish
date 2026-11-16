@@ -34,9 +34,9 @@ Audio is generated offline with **Piper TTS** and served as static WAV files:
 | Language | Voice model | Quality |
 |----------|------------|---------|
 | Spanish (es-ES) | `es_ES-sharvard-medium` | Medium |
-| Catalan (ca-ES) | `ca_ES-upc_pau-x_low` | X-Low |
+| Catalan (ca-ES) | `ca_ES-upc_ona-medium` | Medium |
 
-Files live at `src/main/resources/static/audio/{es|ca}/{djb2(text)}.wav`.
+Files live at `data/audio/{es|ca}/{djb2(text)}.wav` (outside the Maven classpath — served via `WebConfig.addResourceHandlers`).
 The filename is a **DJB2 hash** of the cleaned text, computed identically in `generate-audio.py` (Python) and `SpeechService` (TypeScript) — no lookup table needed.
 
 Playback uses the **Web Audio API** with an in-memory `AudioBuffer` cache — no browser voice installation required.
@@ -84,10 +84,10 @@ curl -L "https://huggingface.co/rhasspy/piper-voices/resolve/main/es/es_ES/sharv
      -o piper/models/es_ES-sharvard-medium.onnx
 curl -L "https://huggingface.co/rhasspy/piper-voices/resolve/main/es/es_ES/sharvard/medium/es_ES-sharvard-medium.onnx.json" \
      -o piper/models/es_ES-sharvard-medium.onnx.json
-curl -L "https://huggingface.co/rhasspy/piper-voices/resolve/main/ca/ca_ES/upc_pau/x_low/ca_ES-upc_pau-x_low.onnx" \
-     -o piper/models/ca_ES-upc_pau-x_low.onnx
-curl -L "https://huggingface.co/rhasspy/piper-voices/resolve/main/ca/ca_ES/upc_pau/x_low/ca_ES-upc_pau-x_low.onnx.json" \
-     -o piper/models/ca_ES-upc_pau-x_low.onnx.json
+curl -L "https://huggingface.co/rhasspy/piper-voices/resolve/main/ca/ca_ES/upc_ona/medium/ca_ES-upc_ona-medium.onnx" \
+     -o piper/models/ca_ES-upc_ona-medium.onnx
+curl -L "https://huggingface.co/rhasspy/piper-voices/resolve/main/ca/ca_ES/upc_ona/medium/ca_ES-upc_ona-medium.onnx.json" \
+     -o piper/models/ca_ES-upc_ona-medium.onnx.json
 
 # Generate ~1234 WAV files (~30 MB)
 /opt/homebrew/bin/python3 generate-audio.py

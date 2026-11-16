@@ -27,6 +27,10 @@ export const routes: Routes = [
         path: 'introduction',
         loadComponent: () => import('./introduction/introduction.component').then(m => m.IntroductionComponent)
       },
+      {
+        path: 'pronouns',
+        loadComponent: () => import('./pronouns/pronouns.component').then(m => m.PronounsComponent)
+      },
       { path: '', redirectTo: 'numbers', pathMatch: 'full' }
     ]
   },
