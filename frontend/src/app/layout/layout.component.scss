@@ -42,3 +42,29 @@
   background-color: rgba(0, 0, 0, 0.08) !important;
   font-weight: 500;
 }
+
+.sidenav-footer {
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+
+  .toggle-icon {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    color: rgba(0, 0, 0, 0.54);
+    flex-shrink: 0;
+  }
+
+  .toggle-label {
+    font-size: 0.875rem;
+    flex: 1;
+    color: rgba(0, 0, 0, 0.75);
+  }
+}

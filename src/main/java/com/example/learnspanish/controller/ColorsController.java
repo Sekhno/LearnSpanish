@@ -36,7 +36,7 @@ public class ColorsController {
     }
 
     @GetMapping("/quiz")
-    public List<ColorsQuizQuestionDto> generateQuiz() {
+    public List<ColorsQuizQuestionDto> generateQuiz(@RequestParam(required = false) String forceLang) {
         List<ColorEntry> all = colorsService.getColors();
         List<ColorEntry> shuffled = new ArrayList<>(all);
         Collections.shuffle(shuffled);
@@ -44,7 +44,7 @@ public class ColorsController {
 
         Random rng = new Random();
         return selected.stream().map(color -> {
-            String lang = rng.nextBoolean() ? "spanish" : "catalan";
+            String lang = "es".equals(forceLang) ? "spanish" : (rng.nextBoolean() ? "spanish" : "catalan");
             String correct = lang.equals("spanish") ? color.spanish() : color.catalan();
 
             List<String> wrongPool = all.stream()

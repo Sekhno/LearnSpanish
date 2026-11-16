@@ -6,6 +6,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatChipsModule } from '@angular/material/chips';
 import { TopicsService } from '../../services/topics.service';
+import { SettingsService } from '../../services/settings.service';
 import {
   ShoppingQuizQuestion,
   ShoppingAnswerSubmit,
@@ -29,6 +30,7 @@ export class ShoppingPracticeComponent {
   @Output() quizCompleted = new EventEmitter<void>();
 
   private readonly topicsService = inject(TopicsService);
+  private readonly settings = inject(SettingsService);
 
   readonly filterOpen = signal(false);
   readonly selectedCategories = signal<string[]>([]);
@@ -66,7 +68,7 @@ export class ShoppingPracticeComponent {
     this.result.set(null);
 
     const cats = this.selectedCategories();
-    this.topicsService.generateShoppingQuiz(cats.length ? cats : undefined).subscribe({
+    this.topicsService.generateShoppingQuiz(cats.length ? cats : undefined, this.settings.spanishOnly() ? 'es' : undefined).subscribe({
       next: (questions) => { this.questions.set(questions); this.state.set('running'); },
       error: () => this.state.set('idle')
     });

@@ -13,6 +13,18 @@
         </a>
       }
     </mat-nav-list>
+
+    <div class="sidenav-footer">
+      <mat-divider />
+      <div class="lang-toggle">
+        <mat-icon class="toggle-icon">translate</mat-icon>
+        <span class="toggle-label">Тільки іспанська</span>
+        <mat-slide-toggle
+          color="primary"
+          [checked]="settings.spanishOnly()"
+          (change)="settings.setSpanishOnly($event.checked)" />
+      </div>
+    </div>
   </mat-sidenav>
 
   <mat-sidenav-content class="main-content">

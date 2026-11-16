@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { TopicsService } from '../../services/topics.service';
+import { SettingsService } from '../../services/settings.service';
 import {
   PronounsQuizQuestion,
   PronounsAnswerSubmit,
@@ -23,6 +24,7 @@ export class PronounsPracticeComponent {
   @Output() quizCompleted = new EventEmitter<void>();
 
   private readonly topicsService = inject(TopicsService);
+  private readonly settings = inject(SettingsService);
 
   readonly state = signal<QuizState>('idle');
   readonly questions = signal<PronounsQuizQuestion[]>([]);
@@ -56,7 +58,7 @@ export class PronounsPracticeComponent {
     this.selectedAnswer.set(null);
     this.result.set(null);
 
-    this.topicsService.generatePronounsQuiz().subscribe({
+    this.topicsService.generatePronounsQuiz(this.settings.spanishOnly() ? 'es' : undefined).subscribe({
       next: (questions) => { this.questions.set(questions); this.state.set('running'); },
       error: () => this.state.set('idle')
     });
