@@ -6,8 +6,11 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatDividerModule } from '@angular/material/divider';
 import { AuthService } from '../services/auth.service';
 import { TopicsService } from '../services/topics.service';
+import { SettingsService } from '../services/settings.service';
 import { Topic } from '../models/topic.model';
 
 @Component({
@@ -15,7 +18,8 @@ import { Topic } from '../models/topic.model';
   imports: [
     RouterOutlet, RouterLink, RouterLinkActive,
     MatSidenavModule, MatToolbarModule, MatListModule,
-    MatIconModule, MatButtonModule, MatTooltipModule
+    MatIconModule, MatButtonModule, MatTooltipModule,
+    MatSlideToggleModule, MatDividerModule
   ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
@@ -24,6 +28,7 @@ export class LayoutComponent implements OnInit {
   private readonly authService = inject(AuthService);
   private readonly topicsService = inject(TopicsService);
   private readonly router = inject(Router);
+  readonly settings = inject(SettingsService);
 
   readonly user = this.authService.user;
   readonly topics = signal<Topic[]>([]);

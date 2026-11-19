@@ -36,14 +36,12 @@ export class TopicsService {
     return this.http.get<ShoppingItem[]>(`${this.apiUrl}/shopping/items`);
   }
 
-  generateShoppingQuiz(categories?: string[]): Observable<ShoppingQuizQuestion[]> {
-    if (!categories?.length) {
-      return this.http.get<ShoppingQuizQuestion[]>(`${this.apiUrl}/shopping/quiz`);
-    }
+  generateShoppingQuiz(categories?: string[], lang?: string): Observable<ShoppingQuizQuestion[]> {
     let params = new HttpParams();
-    for (const cat of categories) {
+    for (const cat of categories ?? []) {
       params = params.append('categories', cat);
     }
+    if (lang) params = params.set('forceLang', lang);
     return this.http.get<ShoppingQuizQuestion[]>(`${this.apiUrl}/shopping/quiz`, { params });
   }
 
@@ -55,8 +53,9 @@ export class TopicsService {
     return this.http.get<ColorEntry[]>(`${this.apiUrl}/colors`);
   }
 
-  generateColorsQuiz(): Observable<ColorsQuizQuestion[]> {
-    return this.http.get<ColorsQuizQuestion[]>(`${this.apiUrl}/colors/quiz`);
+  generateColorsQuiz(lang?: string): Observable<ColorsQuizQuestion[]> {
+    const params = lang ? new HttpParams().set('forceLang', lang) : undefined;
+    return this.http.get<ColorsQuizQuestion[]>(`${this.apiUrl}/colors/quiz`, { params });
   }
 
   submitColorsQuiz(answers: ColorsAnswerSubmit[]): Observable<ColorsQuizResult> {
@@ -67,8 +66,9 @@ export class TopicsService {
     return this.http.get<IntroductionPhrase[]>(`${this.apiUrl}/introduction/phrases`);
   }
 
-  generateIntroductionQuiz(): Observable<IntroductionQuizQuestion[]> {
-    return this.http.get<IntroductionQuizQuestion[]>(`${this.apiUrl}/introduction/quiz`);
+  generateIntroductionQuiz(lang?: string): Observable<IntroductionQuizQuestion[]> {
+    const params = lang ? new HttpParams().set('forceLang', lang) : undefined;
+    return this.http.get<IntroductionQuizQuestion[]>(`${this.apiUrl}/introduction/quiz`, { params });
   }
 
   submitIntroductionQuiz(answers: IntroductionAnswerSubmit[]): Observable<IntroductionQuizResult> {
@@ -79,8 +79,9 @@ export class TopicsService {
     return this.http.get<PronounEntry[]>(`${this.apiUrl}/pronouns`);
   }
 
-  generatePronounsQuiz(): Observable<PronounsQuizQuestion[]> {
-    return this.http.get<PronounsQuizQuestion[]>(`${this.apiUrl}/pronouns/quiz`);
+  generatePronounsQuiz(lang?: string): Observable<PronounsQuizQuestion[]> {
+    const params = lang ? new HttpParams().set('forceLang', lang) : undefined;
+    return this.http.get<PronounsQuizQuestion[]>(`${this.apiUrl}/pronouns/quiz`, { params });
   }
 
   submitPronounsQuiz(answers: PronounsAnswerSubmit[]): Observable<PronounsQuizResult> {

@@ -36,7 +36,7 @@ public class PronounsController {
     }
 
     @GetMapping("/quiz")
-    public List<PronounsQuizQuestionDto> generateQuiz() {
+    public List<PronounsQuizQuestionDto> generateQuiz(@RequestParam(required = false) String forceLang) {
         List<PronounEntry> all = pronounsService.getPronouns();
         List<PronounEntry> shuffled = new ArrayList<>(all);
         Collections.shuffle(shuffled);
@@ -44,7 +44,7 @@ public class PronounsController {
 
         Random rng = new Random();
         return selected.stream().map(pronoun -> {
-            String lang = rng.nextBoolean() ? "spanish" : "catalan";
+            String lang = "es".equals(forceLang) ? "spanish" : (rng.nextBoolean() ? "spanish" : "catalan");
             String correct = lang.equals("spanish") ? pronoun.spanish() : pronoun.catalan();
 
             List<String> wrongPool = all.stream()

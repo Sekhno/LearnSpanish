@@ -1,0 +1,83 @@
+<div class="home-page">
+  <header class="home-header">
+    <div class="header-brand">
+      <mat-icon class="brand-icon">school</mat-icon>
+      <span class="brand-name">LearnSpanish</span>
+    </div>
+    <div class="header-actions">
+      @if (user(); as u) {
+        <span class="username">{{ u.username }}</span>
+      }
+      <button mat-icon-button (click)="logout()" matTooltip="Выйти">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </div>
+  </header>
+
+  <main class="home-main">
+    <div class="welcome">
+      <h1 class="welcome-title">
+        @if (user(); as u) {
+          Bienvenido, {{ u.username }}!
+        } @else {
+          Bienvenido!
+        }
+      </h1>
+      <p class="welcome-sub">Выберите режим обучения</p>
+    </div>
+
+    <div class="cards-grid">
+
+      <div class="iface-card classic-card" [routerLink]="['/classic']">
+        <span class="card-label">Текущий</span>
+        <div class="card-icon classic-icon">
+          <mat-icon>menu_book</mat-icon>
+        </div>
+        <h2 class="card-title">Классический интерфейс</h2>
+        <p class="card-desc">Тематические модули для изучения основ: числа, цвета, покупки, местоимения и базовые фразы.</p>
+        <div class="chip-row">
+          <span class="chip">Числа</span>
+          <span class="chip">Цвета</span>
+          <span class="chip">Покупки</span>
+          <span class="chip">Знакомство</span>
+          <span class="chip">Местоимения</span>
+        </div>
+        <button mat-stroked-button class="open-btn">
+          Открыть <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+        </button>
+      </div>
+
+      <div class="iface-card new-card" [routerLink]="['/learn']">
+        <span class="card-label new-label">Новый</span>
+        <div class="card-icon new-icon">
+          <mat-icon>auto_stories</mat-icon>
+        </div>
+        <h2 class="card-title">Новый интерфейс</h2>
+        <p class="card-desc">Полноценный курс испанского и каталанского по стандарту CEFR с TTS, словарём и интервальным повторением.</p>
+        <div class="lang-row">
+          <div class="lang-pill es-pill">
+            <span class="flag">&#127466;&#127480;</span>
+            <span>Español</span>
+          </div>
+          <div class="lang-pill ca-pill">
+            <span class="ca-flag">CA</span>
+            <span>Català</span>
+          </div>
+        </div>
+        <div class="cefr-row">
+          <span class="level-badge a1">A1</span>
+          <span class="level-sep">&#8594;</span>
+          <span class="level-badge a2">A2</span>
+          <span class="level-sep">&#8594;</span>
+          <span class="level-badge b1">B1</span>
+          <span class="level-sep">&#8594;</span>
+          <span class="level-badge b2">B2</span>
+        </div>
+        <button mat-flat-button class="start-btn">
+          Начать обучение <mat-icon iconPositionEnd>rocket_launch</mat-icon>
+        </button>
+      </div>
+
+    </div>
+  </main>
+</div>

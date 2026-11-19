@@ -1,0 +1,63 @@
+<div class="course-page">
+  <div class="course-inner">
+
+    <!-- Language header -->
+    <div class="course-header">
+      <button mat-icon-button [routerLink]="['/learn']" class="back-btn">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <div class="course-title-block">
+        <h1 class="course-title">{{ langName() }}</h1>
+        <span class="course-subtitle">{{ langNative() }} · Курс CEFR A1–B2</span>
+      </div>
+    </div>
+
+    <!-- CEFR Levels -->
+    <div class="levels-list">
+      @for (level of curriculum(); track level.level) {
+        <div class="level-section" [class.locked-section]="!level.unlocked">
+
+          <div class="level-header" (click)="toggleLevel(level.level)">
+            <div class="level-left">
+              <span class="level-badge" [style.background]="level.color">{{ level.level }}</span>
+              <div class="level-text">
+                <span class="level-name">{{ level.name }}</span>
+                <span class="level-goal">{{ level.goal }}</span>
+              </div>
+            </div>
+            <div class="level-right">
+              @if (!level.unlocked) {
+                <mat-icon class="lock-icon">lock</mat-icon>
+              } @else {
+                <span class="module-count">{{ level.modules.length }} модулей</span>
+                <mat-icon class="expand-icon" [class.expanded]="isExpanded(level.level)">
+                  expand_more
+                </mat-icon>
+              }
+            </div>
+          </div>
+
+          @if (level.unlocked && isExpanded(level.level)) {
+            <div class="modules-list">
+              @for (module of level.modules; track module.id) {
+                <div
+                  class="module-row"
+                  [class.module-completed]="module.status === 'completed'"
+                  [class.module-available]="module.status === 'available'"
+                  [class.module-locked]="module.status === 'locked'"
+                  [routerLink]="module.status !== 'locked' ? ['/learn', langCode(), 'lesson', module.id] : null"
+                >
+                  <span class="module-num">{{ module.number }}</span>
+                  <span class="module-title">{{ module.title }}</span>
+                  <mat-icon class="module-status-icon">{{ statusIcon(module.status) }}</mat-icon>
+                </div>
+              }
+            </div>
+          }
+
+        </div>
+      }
+    </div>
+
+  </div>
+</div>

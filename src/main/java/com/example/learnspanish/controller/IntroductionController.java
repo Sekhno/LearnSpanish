@@ -36,7 +36,7 @@ public class IntroductionController {
     }
 
     @GetMapping("/quiz")
-    public List<IntroductionQuizQuestionDto> generateQuiz() {
+    public List<IntroductionQuizQuestionDto> generateQuiz(@RequestParam(required = false) String forceLang) {
         List<IntroductionPhrase> all = introductionService.getPhrases();
         List<IntroductionPhrase> shuffled = new ArrayList<>(all);
         Collections.shuffle(shuffled);
@@ -44,7 +44,7 @@ public class IntroductionController {
 
         Random rng = new Random();
         return selected.stream().map(phrase -> {
-            String lang = rng.nextBoolean() ? "spanish" : "catalan";
+            String lang = "es".equals(forceLang) ? "spanish" : (rng.nextBoolean() ? "spanish" : "catalan");
             String correct = lang.equals("spanish") ? phrase.spanish() : phrase.catalan();
 
             List<String> wrongPool = all.stream()

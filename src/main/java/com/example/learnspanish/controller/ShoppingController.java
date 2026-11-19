@@ -43,7 +43,8 @@ public class ShoppingController {
 
     @GetMapping("/quiz")
     public List<ShoppingQuizQuestionDto> generateQuiz(
-            @RequestParam(required = false) List<String> categories) {
+            @RequestParam(required = false) List<String> categories,
+            @RequestParam(required = false) String forceLang) {
         List<ShoppingItem> all = shoppingService.getItems();
 
         List<ShoppingItem> pool = (categories != null && !categories.isEmpty())
@@ -57,7 +58,7 @@ public class ShoppingController {
 
         Random rng = new Random();
         return selected.stream().map(item -> {
-            String lang = rng.nextBoolean() ? "spanish" : "catalan";
+            String lang = "es".equals(forceLang) ? "spanish" : (rng.nextBoolean() ? "spanish" : "catalan");
             String correct = lang.equals("spanish") ? item.spanish() : item.catalan();
 
             // Always use all items for wrong options to guarantee 2 distractors
