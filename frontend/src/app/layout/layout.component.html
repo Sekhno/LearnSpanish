@@ -6,8 +6,12 @@
     </mat-toolbar>
 
     <mat-nav-list>
+      <a mat-list-item [routerLink]="['/home']" class="home-link">
+        <mat-icon matListItemIcon>home</mat-icon>
+        <span matListItemTitle>На главную</span>
+      </a>
       @for (topic of topics(); track topic.id) {
-        <a mat-list-item [routerLink]="['/', topic.id]" routerLinkActive="active-link">
+        <a mat-list-item [routerLink]="['/classic', topic.id]" routerLinkActive="active-link">
           <mat-icon matListItemIcon>{{ topic.icon }}</mat-icon>
           <span matListItemTitle>{{ topic.title }}</span>
         </a>

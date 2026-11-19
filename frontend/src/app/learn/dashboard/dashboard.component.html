@@ -1,0 +1,132 @@
+<div class="dashboard">
+  <div class="dashboard-inner">
+
+    <div class="page-title">
+      <h1>
+        @if (user(); as u) {
+          Hola, {{ u.username }}!
+        } @else {
+          Hola!
+        }
+      </h1>
+      <p class="subtitle">Выберите язык для обучения</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      @for (stat of stats; track stat.label) {
+        <div class="stat-card">
+          <mat-icon class="stat-icon">{{ stat.icon }}</mat-icon>
+          <span class="stat-value">{{ stat.value }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+      }
+    </div>
+
+    <!-- Language cards -->
+    <div class="lang-section">
+      <h2 class="section-title">Курсы</h2>
+      <div class="lang-grid">
+
+        <div class="lang-card es-card" [routerLink]="['/learn', 'es']">
+          <div class="lang-header">
+            <div class="lang-flag es-flag-block">
+              <div class="es-stripe top"></div>
+              <div class="es-stripe mid"></div>
+              <div class="es-stripe bot"></div>
+            </div>
+            <div class="lang-info">
+              <h3 class="lang-name">Español</h3>
+              <span class="lang-native">Испанский</span>
+            </div>
+            <span class="lang-badge a1-badge">A1</span>
+          </div>
+
+          <div class="lang-progress">
+            <div class="progress-labels">
+              <span>Прогресс</span>
+              <span>0 / 22 уроков</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill es-fill" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <div class="lang-features">
+            <span class="feature-tag"><mat-icon>volume_up</mat-icon> TTS</span>
+            <span class="feature-tag"><mat-icon>translate</mat-icon> Словарь</span>
+            <span class="feature-tag"><mat-icon>repeat</mat-icon> Повторение</span>
+          </div>
+
+          <button mat-flat-button class="lang-btn es-btn">
+            Начать обучение <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+          </button>
+        </div>
+
+        <div class="lang-card ca-card" [routerLink]="['/learn', 'ca']">
+          <div class="lang-header">
+            <div class="lang-flag ca-flag-block">
+              @for (stripe of [1,2,3,4,5,6,7,8,9]; track stripe) {
+                <div class="ca-stripe" [class.ca-red]="stripe % 2 === 0"></div>
+              }
+            </div>
+            <div class="lang-info">
+              <h3 class="lang-name">Català</h3>
+              <span class="lang-native">Каталанский</span>
+            </div>
+            <span class="lang-badge a1-badge">A1</span>
+          </div>
+
+          <div class="lang-progress">
+            <div class="progress-labels">
+              <span>Прогресс</span>
+              <span>0 / 22 уроков</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill ca-fill" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <div class="lang-features">
+            <span class="feature-tag"><mat-icon>volume_up</mat-icon> TTS</span>
+            <span class="feature-tag"><mat-icon>translate</mat-icon> Словарь</span>
+            <span class="feature-tag"><mat-icon>repeat</mat-icon> Повторение</span>
+          </div>
+
+          <button mat-flat-button class="lang-btn ca-btn">
+            Начать обучение <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Future section placeholder -->
+    <div class="coming-soon-section">
+      <h2 class="section-title">Скоро</h2>
+      <div class="soon-grid">
+        <div class="soon-card">
+          <mat-icon>headphones</mat-icon>
+          <span>Аудирование</span>
+          <p>Прослушивание диалогов и диктанты с Piper TTS</p>
+        </div>
+        <div class="soon-card">
+          <mat-icon>mic</mat-icon>
+          <span>Говорение</span>
+          <p>Запись произношения и анализ речи</p>
+        </div>
+        <div class="soon-card">
+          <mat-icon>psychology</mat-icon>
+          <span>Интервальное повторение</span>
+          <p>Алгоритм FSRS для долговременного запоминания</p>
+        </div>
+        <div class="soon-card">
+          <mat-icon>analytics</mat-icon>
+          <span>Статистика</span>
+          <p>Отслеживание прогресса по навыкам CEFR</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

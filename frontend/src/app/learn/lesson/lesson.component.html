@@ -1,0 +1,210 @@
+<div class="lesson-page">
+  <div class="lesson-inner">
+
+    <!-- Lesson header -->
+    <div class="lesson-header">
+      <button mat-icon-button [routerLink]="['/learn', lang()]" class="back-btn">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <div class="lesson-meta">
+        <span class="lesson-lang">{{ lesson.language }}</span>
+        <span class="lesson-sep">·</span>
+        <span class="lesson-level">{{ lesson.level }}</span>
+      </div>
+      <h1 class="lesson-title">{{ lesson.title }}</h1>
+    </div>
+
+    <!-- Tab navigation -->
+    <div class="tab-nav">
+      <button
+        class="tab-btn"
+        [class.active]="activeTab() === 'theory'"
+        (click)="setTab('theory')"
+      >
+        <mat-icon>menu_book</mat-icon>
+        <span>Теория</span>
+      </button>
+      <button
+        class="tab-btn"
+        [class.active]="activeTab() === 'practice'"
+        (click)="setTab('practice')"
+      >
+        <mat-icon>edit_note</mat-icon>
+        <span>Практика</span>
+      </button>
+      <button
+        class="tab-btn"
+        [class.active]="activeTab() === 'listening'"
+        (click)="setTab('listening')"
+      >
+        <mat-icon>headphones</mat-icon>
+        <span>Аудирование</span>
+      </button>
+      <button
+        class="tab-btn"
+        [class.active]="activeTab() === 'assessment'"
+        (click)="setTab('assessment')"
+      >
+        <mat-icon>fact_check</mat-icon>
+        <span>Проверка</span>
+      </button>
+    </div>
+
+    <!-- ── THEORY TAB ─────────────────────────────────────────── -->
+    @if (activeTab() === 'theory') {
+      <div class="tab-content theory-content">
+
+        <div class="theory-intro">
+          <p>{{ lesson.intro }}</p>
+        </div>
+
+        <h2 class="section-heading">Основные фразы</h2>
+
+        <div class="phrases-list">
+          @for (phrase of lesson.phrases; track phrase.text) {
+            <div class="phrase-card">
+              <div class="phrase-main">
+                <span class="phrase-text">{{ phrase.text }}</span>
+                <button mat-icon-button class="tts-btn" disabled matTooltip="TTS — скоро">
+                  <mat-icon>volume_up</mat-icon>
+                </button>
+              </div>
+              <div class="phrase-translation">{{ phrase.translation }}</div>
+              @if (phrase.note) {
+                <div class="phrase-note">{{ phrase.note }}</div>
+              }
+            </div>
+          }
+        </div>
+
+        <h2 class="section-heading">Диалог</h2>
+
+        <div class="dialogue-block">
+          <div class="dialogue-controls">
+            <button mat-stroked-button (click)="toggleTranslation()" class="toggle-btn">
+              <mat-icon>{{ showTranslation() ? 'visibility_off' : 'visibility' }}</mat-icon>
+              {{ showTranslation() ? 'Скрыть перевод' : 'Показать перевод' }}
+            </button>
+            <button mat-stroked-button disabled class="play-btn">
+              <mat-icon>play_circle</mat-icon>
+              Воспроизвести диалог
+            </button>
+          </div>
+
+          <div class="dialogue-turns">
+            @for (turn of lesson.dialogue; track $index) {
+              <div class="dialogue-turn" [class.turn-b]="turn.speaker === 'B'">
+                <span class="speaker-label">{{ turn.speaker }}</span>
+                <div class="turn-content">
+                  <div class="turn-text">{{ turn.text }}</div>
+                  @if (showTranslation()) {
+                    <div class="turn-translation">{{ turn.translation }}</div>
+                  }
+                </div>
+                <button mat-icon-button class="tts-btn small" disabled>
+                  <mat-icon>volume_up</mat-icon>
+                </button>
+              </div>
+            }
+          </div>
+        </div>
+
+      </div>
+    }
+
+    <!-- ── PRACTICE TAB ───────────────────────────────────────── -->
+    @if (activeTab() === 'practice') {
+      <div class="tab-content practice-content">
+
+        @let ex = lesson.exercises[currentExercise()];
+
+        <div class="exercise-progress">
+          <div class="ex-counter">
+            Задание {{ currentExercise() + 1 }} / {{ lesson.exercises.length }}
+          </div>
+          <div class="ex-track">
+            @for (item of lesson.exercises; track $index) {
+              <div class="ex-dot" [class.done]="$index < currentExercise()" [class.current]="$index === currentExercise()"></div>
+            }
+          </div>
+        </div>
+
+        <div class="exercise-card">
+          <div class="ex-prompt">{{ ex.prompt }}</div>
+
+          @if (ex.type === 'multiple_choice') {
+            <div class="options-list">
+              @for (option of ex.options!; track option) {
+                <button
+                  class="option-btn"
+                  [class.selected]="selectedAnswer() === option"
+                  [class.correct-answer]="answerSubmitted() && option === ex.correct"
+                  [class.wrong-answer]="answerSubmitted() && selectedAnswer() === option && option !== ex.correct"
+                  (click)="selectAnswer(option)"
+                >
+                  {{ option }}
+                </button>
+              }
+            </div>
+          }
+
+          @if (ex.type === 'translation') {
+            <div class="translation-input">
+              <input
+                class="answer-input"
+                placeholder="Введите ответ..."
+                [value]="userInput()"
+                (input)="userInput.set($any($event.target).value)"
+                [disabled]="answerSubmitted()"
+              />
+            </div>
+          }
+
+          @if (answerSubmitted()) {
+            <div class="feedback-block" [class.correct-feedback]="isCorrect()" [class.wrong-feedback]="!isCorrect()">
+              <mat-icon>{{ isCorrect() ? 'check_circle' : 'cancel' }}</mat-icon>
+              <span>{{ isCorrect() ? 'Верно!' : 'Правильный ответ: ' + ex.correct }}</span>
+            </div>
+          }
+        </div>
+
+        <div class="exercise-actions">
+          @if (!answerSubmitted()) {
+            <button mat-flat-button class="check-btn" (click)="submitAnswer()" [disabled]="!selectedAnswer() && !userInput()">
+              Проверить
+            </button>
+          } @else if (currentExercise() < lesson.exercises.length - 1) {
+            <button mat-flat-button class="next-btn" (click)="nextExercise()">
+              Следующее <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+            </button>
+          } @else {
+            <div class="completed-msg">
+              <mat-icon>celebration</mat-icon>
+              <span>Упражнения завершены!</span>
+            </div>
+          }
+        </div>
+
+      </div>
+    }
+
+    <!-- ── LISTENING TAB ──────────────────────────────────────── -->
+    @if (activeTab() === 'listening') {
+      <div class="tab-content coming-soon-tab">
+        <mat-icon class="cs-icon">headphones</mat-icon>
+        <h2>Аудирование</h2>
+        <p>Прослушивание диалогов через Piper TTS и диктанты появятся в следующей версии.</p>
+      </div>
+    }
+
+    <!-- ── ASSESSMENT TAB ─────────────────────────────────────── -->
+    @if (activeTab() === 'assessment') {
+      <div class="tab-content coming-soon-tab">
+        <mat-icon class="cs-icon">fact_check</mat-icon>
+        <h2>Контрольная проверка</h2>
+        <p>Итоговый тест модуля с анализом ошибок появится в следующей версии.</p>
+      </div>
+    }
+
+  </div>
+</div>

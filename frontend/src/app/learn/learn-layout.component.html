@@ -1,0 +1,23 @@
+<div class="learn-shell">
+  <header class="learn-header">
+    <div class="header-left">
+      <button mat-icon-button [routerLink]="['/home']" matTooltip="На главную">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <mat-icon class="brand-icon">school</mat-icon>
+      <span class="brand-name">LearnSpanish</span>
+    </div>
+    <div class="header-right">
+      @if (user(); as u) {
+        <span class="username">{{ u.username }}</span>
+      }
+      <button mat-icon-button (click)="logout()" matTooltip="Выйти">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </div>
+  </header>
+
+  <main class="learn-content">
+    <router-outlet />
+  </main>
+</div>
